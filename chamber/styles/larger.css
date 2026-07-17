@@ -1,0 +1,112 @@
+/* ===== TABLETS AND SMALL DESKTOP ===== */
+@media screen and (min-width: 768px) {
+
+    /* --- HEADER --- */
+    header {
+        padding: 1rem 2rem;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    /* --- NAVIGATION --- */
+    #primary-nav {
+        max-height: none !important;
+        background: none;
+        margin: 0 0 1.5rem 0;
+        border-radius: 0;
+    }
+
+    #primary-nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        background: transparent;
+    }
+
+    #primary-nav ul li a {
+        color: #1a2a3a;
+        border-bottom: none;
+        padding: 0.6rem 1.8rem;
+        border-radius: 30px;
+        background: transparent;
+        transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+
+    #primary-nav ul li a:hover {
+        background: #1a2a3a;
+        color: #ffffff;
+        padding-left: 1.8rem; /* No twitching - consistent padding */
+        transform: translateY(-2px);
+    }
+
+    #primary-nav ul li a.active {
+        background: #1a2a3a;
+        color: #ffffff;
+    }
+
+    /* --- COURSE GRID --- */
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    /* --- ABOUT SECTION --- */
+    .about-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .about-text {
+        text-align: left;
+        flex: 1;
+    }
+
+    .about-content img {
+        width: 200px;
+        height: 200px;
+        flex-shrink: 0;
+    }
+
+    /* --- LOCATION --- */
+    #location img {
+        max-height: 400px;
+    }
+
+    /* --- FOOTER --- */
+    .social-links {
+        gap: 2rem;
+    }
+}
+
+/* ===== LARGE DESKTOP ===== */
+@media screen and (min-width: 1024px) {
+
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    section {
+        padding: 2.5rem;
+    }
+
+    .site-name {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    #primary-nav ul li a {
+        padding: 0.7rem 2.2rem;
+        font-size: 1.05rem;
+    }
+}
