@@ -1,0 +1,316 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f7fc;
+    color: #1a2a3a;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+a {
+    color: #1a2a3a;
+    text-decoration: none;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 4px solid #2c7be5;
+    background: #ffffff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.site-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a2a3a;
+}
+
+#hamburger {
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    color: #1a2a3a;
+    transition: transform 0.3s ease;
+}
+
+#hamburger:hover {
+    transform: scale(1.1);
+}
+
+/* ===== NAVIGATION ===== */
+#primary-nav {
+    background: #1a2a3a;
+    border-radius: 0 0 8px 8px;
+    margin: 0 0 1.5rem 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+}
+
+#primary-nav.open {
+    max-height: 350px;
+}
+
+#primary-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#primary-nav ul li a {
+    display: block;
+    padding: 0.85rem 1.5rem;
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
+}
+
+#primary-nav ul li:last-child a {
+    border-bottom: none;
+}
+
+#primary-nav ul li a:hover {
+    background: #2c7be5;
+    color: #ffffff;
+    padding-left: 2rem;
+}
+
+/* No twitching on hover - fixed width/height */
+#primary-nav ul li a.active {
+    background: #2c7be5;
+    color: #ffffff;
+}
+
+/* ===== MAIN ===== */
+main {
+    padding: 1rem 0 2rem 0;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #1a2a3a;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #1a2a3a;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+section {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.5rem;
+    /* Proximity: consistent spacing */
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2c7be5;
+}
+
+/* ===== COURSES SECTION ===== */
+.course-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.course-filters button {
+    background: #e9ecef;
+    border: none;
+    padding: 0.6rem 1.8rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    font-family: inherit;
+}
+
+.course-filters button:hover {
+    background: #1a2a3a;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.course-filters button.active {
+    background: #1a2a3a;
+    color: #ffffff;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.course-card {
+    background: #f8f9fb;
+    padding: 1.2rem;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 6px solid #2c7be5;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.course-card.completed {
+    background: #d4edda;
+    border-left-color: #28a745;
+}
+
+.course-card.completed h3::after {
+    content: " ✅";
+    font-size: 0.9rem;
+}
+
+.course-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    color: #1a2a3a;
+}
+
+.course-card p {
+    font-size: 0.95rem;
+    color: #495057;
+}
+
+.total-credits {
+    text-align: right;
+    font-weight: 700;
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    color: #1a2a3a;
+    padding-top: 0.75rem;
+    border-top: 2px solid #e9ecef;
+}
+
+/* ===== LOCATION SECTION ===== */
+#location figure {
+    margin: 0;
+    text-align: center;
+}
+
+#location img {
+    border-radius: 12px;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#project-info img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 1rem auto 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+#location figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1a2a3a;
+    color: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+footer p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+#lastModified {
+    color: #adb5bd;
+    font-size: 0.8rem;
+}
