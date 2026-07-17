@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events | Kampala Chamber of Commerce</title>
+    <meta name="description" content="Explore upcoming chamber events, workshops, and networking opportunities in Kampala." />
+    <meta name="author" content="Baker Mfitundinda" />
+    <link rel="icon" href="images/favicon.ico" />
+
+    <meta property="og:title" content="Events | Kampala Chamber of Commerce" />
+    <meta property="og:description" content="Upcoming workshops, conferences, and networking events from the Kampala Chamber of Commerce." />
+    <meta property="og:image" content="https://bakermfitundinda.github.io/wdd231/chamber/images/og-image.jpg" />
+    <meta property="og:url" content="https://bakermfitundinda.github.io/wdd231/chamber/events.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/small.css" />
+    <link rel="stylesheet" href="../styles/larger.css" />
+
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/dates.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/chamber-logo.svg" alt="Kampala Chamber of Commerce Logo" width="60" height="60" />
+                <span class="site-name">KAMPALA <span class="highlight">CHAMBER</span></span>
+            </div>
+            <button id="hamburger" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <nav id="primary-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="events.html" class="active" aria-current="page">Events</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <h1>Chamber Events</h1>
+            <p>Discover the upcoming meetings, training sessions, and networking opportunities happening soon.</p>
+        </section>
+
+        <section>
+            <h2>Upcoming Events</h2>
+            <p>We host regular events to help chamber members connect, learn, and grow their businesses in Kampala.</p>
+            <ul>
+                <li>Business Networking Breakfast  10 June</li>
+                <li>Marketing Workshop  22 June</li>
+                <li>Member Spotlight Showcase  5 July</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Kampala Chamber of Commerce</h3>
+                <p>📍 123 Kampala Road, Kampala, Uganda</p>
+                <p>📞 +256 765844486</p>
+                <p>✉️ info@kampalachamber.com</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook" width="32" height="32" /></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter" width="32" height="32" /></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32" /></a>
+                <a href="#" target="_blank" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube" width="32" height="32" /></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="currentyear"></span> Baker Mfitundinda | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

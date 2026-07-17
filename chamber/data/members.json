@@ -1,0 +1,76 @@
+{
+  "members": [
+    {
+      "name": "Kampala Tech Hub",
+      "address": "15 Lumumba Avenue, Kampala, Uganda",
+      "phone": "+256 765844486",
+      "website": "https://kampalatechhub.com",
+      "image": "company1.jpg",
+      "membershipLevel": 3,
+      "description": "Uganda's premier technology innovation center providing co-working spaces and tech incubation programs."
+    },
+    {
+      "name": "Mountain View Resort",
+      "address": "45 Jinja Road, Kampala, Uganda",
+      "phone": "+256 765844486",
+      "website": "https://mountainviewresort.ug",
+      "image": "company2.jpg",
+      "membershipLevel": 3,
+      "description": "Luxury accommodation and conference facilities with breathtaking views of Lake Victoria."
+    },
+    {
+      "name": "AfriCan Crafts",
+      "address": "22 Buganda Road, Kampala, Uganda",
+      "phone": "+256 765844486",
+      "website": "https://africancrafts.com",
+      "image": "company1.jpg",
+      "membershipLevel": 2,
+      "description": "Authentic African art, crafts, and textiles supporting local artisans and communities."
+    },
+    {
+      "name": "Savanna Insurance Group",
+      "address": "8 Parliament Avenue, Kampala, Uganda",
+      "phone": "+256 765844486",
+      "website": "https://savannainsurance.ug",
+      "image": "company2.jpg",
+      "membershipLevel": 2,
+      "description": "Comprehensive insurance solutions for individuals and businesses across East Africa."
+    },
+    {
+      "name": "Bamboo Kitchen & Bar",
+      "address": "33 Acacia Avenue, Kololo, Kampala",
+      "phone": "+256 765844486 ",
+      "website": "https://bambookitchen.com",
+      "image": "company1.jpg",
+      "membershipLevel": 2,
+      "description": "Contemporary dining experience featuring fusion cuisine and craft cocktails."
+    },
+    {
+      "name": "Green Leaf Grocers",
+      "address": "7 Nakasero Road, Kampala, Uganda",
+      "phone": "+256 765844486",
+      "website": "https://greenleafgrocers.ug",
+      "image": "company2.jpg",
+      "membershipLevel": 1,
+      "description": "Organic produce and health food store committed to sustainable farming practices."
+    },
+    {
+      "name": "Horizon Business Consultants",
+      "address": "19 Lumumba Avenue, Kampala, Uganda",
+      "phone": "+256 765844486",
+      "website": "https://horizonconsult.ug",
+      "image": "company1.jpg",
+      "membershipLevel": 2,
+      "description": "Strategic business consulting services for SMEs and corporate clients in East Africa."
+    },
+    {
+      "name": "Kampala Fitness Center",
+      "address": "25 Ggaba Road, Kampala, Uganda",
+      "phone": "+256 765844486",
+      "website": "https://kampalafitness.com",
+      "image": "company2.jpg",
+      "membershipLevel": 1,
+      "description": "State-of-the-art fitness facility offering gym, group classes, and personal training."
+    }
+  ]
+}
