@@ -105,19 +105,5 @@ function setListView() {
 gridBtn.addEventListener('click', setGridView);
 listBtn.addEventListener('click', setListView);
 
-// Hamburger menu functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('#hamburger');
-    const nav = document.querySelector('#primary-nav');
-    
-    if (hamburger && nav) {
-        hamburger.addEventListener('click', () => {
-            const isOpen = nav.classList.toggle('open');
-            hamburger.textContent = isOpen ? '✕' : '☰';
-            hamburger.setAttribute('aria-expanded', String(isOpen));
-        });
-    }
-});
-
 // Initialize
 getMembers();

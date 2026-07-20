@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chamber - WDD 231</title>
-    <meta name="description" content="Chamber Project for WDD 231 - Web Frontend Development I" />
-    <meta name="author" content="Baker Mfitundinda" />
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampala Chamber of Commerce</title>
+    <meta name="description" content="Welcome to the Kampala Chamber of Commerce. Discover local businesses, events, weather updates, and member spotlights in Kampala, Uganda.">
+    <meta name="author" content="Baker Mfitundinda">
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Kampala Chamber of Commerce">
+    <meta property="og:description" content="Welcome to Kampala's business hub. Discover members, events, and local opportunities with the Chamber.">
+    <meta property="og:image" content="https://baker-11be.github.io/wdd231/chamber/images/og-image.svg">
+    <meta property="og:url" content="https://baker-11be.github.io/wdd231/chamber/">
+    <meta property="og:type" content="website">
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
-    
-    <!-- CSS (Corrected relative paths) -->
-    <link rel="stylesheet" href="styles/small.css" />
-    <link rel="stylesheet" href="styles/larger.css" />
-    
-    <!-- JavaScript with defer -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/dates.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 </head>
 <body>
-
     <!-- ===== HEADER ===== -->
     <header>
         <div class="header-content">
-            <div class="logo">🚀</div>
-            <span class="site-name">Baker Mfitundinda</span>
+            <div class="logo">
+                <img src="images/chamber-logo.svg" alt="Kampala Chamber of Commerce logo" width="56" height="56">
+            </div>
+            <span class="site-name">Kampala Chamber</span>
         </div>
-        <button id="hamburger" aria-label="Toggle Navigation Menu">☰</button>
+        <button id="hamburger" type="button" aria-label="Toggle Navigation Menu">☰</button>
     </header>
 
     <!-- ===== NAVIGATION ===== -->
@@ -46,32 +54,102 @@
 
     <!-- ===== MAIN CONTENT ===== -->
     <main>
-        <h1>Chamber Project</h1>
-        
-        <section id="project-info">
-            <h2>WDD 231 - Chamber Project</h2>
-            <p>This is the chamber project page for WDD 231 - Web Frontend Development I.</p>
-            <img src="../images/kampala.jpg" alt="Kampala, Uganda preview image" width="400" height="300" loading="lazy" />
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Welcome to Kampala Chamber</p>
+                <h1>Connecting local businesses, events, and opportunities in Kampala.</h1>
+                <p>Join a thriving business community and grow your network through chamber events, advocacy, and member services.</p>
+                <a class="cta-button" href="join.html">Join the Chamber</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/company1.jpg" alt="Kampala business district" loading="lazy">
+            </div>
+        </section>
+
+        <section class="home-highlights">
+            <article>
+                <h2>Business Support</h2>
+                <p>Unlock networking, training, and marketing opportunities that help member companies grow across Kampala.</p>
+            </article>
+            <article>
+                <h2>Community Events</h2>
+                <p>Stay connected through local business events, workshops, and community meetings designed for entrepreneurs.</p>
+            </article>
+            <article>
+                <h2>Market Visibility</h2>
+                <p>Showcase your organization in our directory and spotlight program, and reach customers across the region.</p>
+            </article>
+        </section>
+
+        <section class="events">
+            <div class="section-header">
+                <h2>Upcoming Events</h2>
+                <p>Learn about the next opportunities to meet, learn, and grow your business.</p>
+            </div>
+            <div class="event-cards">
+                <article class="event-card">
+                    <h3>Chamber Networking Breakfast</h3>
+                    <p>Connect with local leaders and explore strategic partnerships over breakfast.</p>
+                    <p><strong>Date:</strong> Oct 14, 2026</p>
+                    <p><strong>Location:</strong> Kampala Conference Hall</p>
+                </article>
+                <article class="event-card">
+                    <h3>Small Business Growth Workshop</h3>
+                    <p>Learn marketing and finance strategies for growing your business in Kampala.</p>
+                    <p><strong>Date:</strong> Oct 21, 2026</p>
+                    <p><strong>Location:</strong> Chamber Training Center</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="weather">
+            <div class="section-header">
+                <h2>Weather in Kampala</h2>
+                <p>Get the latest weather conditions and a three-day forecast for planning events and visits.</p>
+            </div>
+            <div class="weather-card">
+                <div id="weather-current" class="weather-current">Loading weather...</div>
+                <div id="weather-forecast" class="forecast-grid"></div>
+            </div>
+        </section>
+
+        <section class="spotlights">
+            <div class="section-header">
+                <h2>Member Spotlights</h2>
+                <p>Featured chamber members selected from our gold and silver level membership.</p>
+            </div>
+            <div id="spotlights" class="spotlight-grid"></div>
         </section>
     </main>
 
     <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="social-links">
-            <a href="https://github.com/bakermfitundinda" target="_blank" aria-label="GitHub">
-                <img src="../images/logo-github-svgrepo-com.svg" alt="GitHub" width="32" height="32" />
-            </a>
-            <a href="https://linkedin.com/in/bakermfitundinda" target="_blank" aria-label="LinkedIn">
-                <img src="../images/linkedin-svgrepo-com.svg" alt="LinkedIn icon" width="32" height="32" />
-            </a>
-            <a href="https://twitter.com/bakermfitundinda" target="_blank" aria-label="Twitter">
-                <img src="../images/twitter-svgrepo-com.svg" alt="Twitter icon" width="32" height="32" />
-            </a>
-            <a href="https://youtube.com/bakermfitundinda" target="_blank" aria-label="YouTube">
-                <img src="../images/youtube-svgrepo-com.svg" alt="YouTube icon" width="32" height="32" />
-            </a>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h2>Kampala Chamber of Commerce</h2>
+                <p>📍 123 Kampala Road, Kampala, Uganda</p>
+                <p>📞 +256 765844486</p>
+                <p>✉️ info@kampalachamber.com</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank" aria-label="Facebook">
+                    <img src="images/facebook.svg" alt="Facebook" width="32" height="32">
+                </a>
+                <a href="#" target="_blank" aria-label="Twitter">
+                    <img src="images/twitter.svg" alt="Twitter" width="32" height="32">
+                </a>
+                <a href="#" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                </a>
+                <a href="#" target="_blank" aria-label="YouTube">
+                    <img src="images/youtube.svg" alt="YouTube" width="32" height="32">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="currentyear"></span> Baker Mfitundinda | WDD 231</p>
+            <p id="lastModified"></p>
         </div>
     </footer>
-
 </body>
 </html>
