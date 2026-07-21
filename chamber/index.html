@@ -1,155 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Directory | Kampala Chamber of Commerce | Kampala, Uganda</title>
-    <meta name="description" content="Welcome to the Kampala Chamber of Commerce. Discover local businesses, events, weather updates, and member spotlights in Kampala, Uganda.">
-    <meta name="author" content="Baker Mfitundinda">
-    <link rel="icon" href="images/favicon.ico">
-
-    <meta property="og:title" content="Kampala Chamber of Commerce website brings local businesses together,events and weather updates on time - Business Directory & Events">
-    <meta property="og:description" content="Explore the Kampala Chamber of Commerce website to find local businesses, upcoming events,weather updates and opportunities in Kampala, Uganda.">
-    <meta property="og:image" content="https://baker-11be.github.io/wdd231/chamber/images/og-image.svg">
-    <meta property="og:url" content="https://baker-11be.github.io/wdd231/chamber/">
-    <meta property="og:type" content="website">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/dates.js" defer></script>
-    <script src="scripts/home.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kisoro City Chamber Home</title>
+  <meta name="description" content="Welcome to the Kisoro City Chamber of Commerce home page, featuring local business spotlights, events, and weather updates." />
+  <meta name="author" content="Baker Mfitundinda" />
+  <link rel="icon" href="images/chamber.webp" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/home.js" defer></script>
 </head>
 <body>
-    <!-- ===== HEADER ===== -->
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src="images/chamber-logo.svg" alt="Kampala Chamber of Commerce logo" width="56" height="56">
-            </div>
-            <span class="site-name">Kampala Chamber</span>
-        </div>
-        <button id="hamburger" type="button" aria-label="Toggle Navigation Menu">☰</button>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <div class="header-content">
+      <a class="logo-link" href="index.html" aria-label="Kisoro City Chamber Home">
+        <img src="images/chamber.webp" alt="Kisoro City Chamber logo" class="logo" />
+      </a>
+      <div>
+        <p class="site-name">Kisoro City Chamber of Commerce</p>
+        <p class="site-tag">Connecting businesses, events, and visitors in our community.</p>
+      </div>
+    </div>
+    <button id="hamburger" aria-label="Toggle Navigation Menu">☰</button>
+  </header>
 
-    <!-- ===== NAVIGATION ===== -->
-    <nav id="primary-nav">
-        <ul>
-            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+  <nav id="primary-nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main>
-        <section class="hero">
-            <div class="hero-copy">
-                <p class="eyebrow">Welcome to Kampala Chamber</p>
-                <h1>Connecting local businesses, events, and opportunities in Kampala.</h1>
-                <p>Join a thriving business community and grow your network through chamber events, advocacy, and member services.</p>
-                <a class="cta-button" href="join.html">Join the Chamber</a>
-            </div>
-            <div class="hero-image">
-                <img src="images/company1.jpg" alt="Kampala business district" loading="lazy">
-            </div>
-        </section>
+  <main id="main-content">
+    <section class="hero-section">
+      <div class="hero-copy">
+        <p class="eyebrow">Welcome to Kisoro City</p>
+        <h1>Supporting Local Business and Community Growth</h1>
+        <p>The Kisoro City Chamber helps promote businesses, support entrepreneurs, and keep residents informed about local events and opportunities.</p>
+        <p><a class="cta-button" href="join.html">Join the Chamber</a></p>
+      </div>
+      <figure class="hero-figure">
+        <img src="images/hero.webp" alt="Kisoro City Chamber of Commerce hero image" />
+        <figcaption>Chamber branding and community support for local businesses.</figcaption>
+      </figure>
+    </section>
 
-        <section class="home-highlights">
-            <article>
-                <h2>Business Support</h2>
-                <p>Unlock networking, training, and marketing opportunities that help member companies grow across Kampala.</p>
-            </article>
-            <article>
-                <h2>Community Events</h2>
-                <p>Stay connected through local business events, workshops, and community meetings designed for entrepreneurs.</p>
-            </article>
-            <article>
-                <h2>Market Visibility</h2>
-                <p>Showcase your organization in our directory and spotlight program, and reach customers across the region.</p>
-            </article>
-        </section>
+    <section class="home-section events-section">
+      <h2>Upcoming Events</h2>
+      <div class="event-grid">
+        <article>
+          <h3>Business Networking Breakfast</h3>
+          <p>Meet with local entrepreneurs and learn about member benefits.</p>
+          <p class="event-meta">May 12 • 8:00 AM • Riverfront Conference Hall</p>
+        </article>
+        <article>
+          <h3>Small Business Marketing Workshop</h3>
+          <p>Learn how to amplify your brand and reach more customers.</p>
+          <p class="event-meta">May 23 • 10:00 AM • Kisoro City Library</p>
+        </article>
+      </div>
+    </section>
 
-        <section class="events">
-            <div class="section-header">
-                <h2>Upcoming Events</h2>
-                <p>Learn about the next opportunities to meet, learn, and grow your business.</p>
-            </div>
-            <div class="event-cards">
-                <article class="event-card">
-                    <h3>Chamber Networking Breakfast</h3>
-                    <p>Connect with local leaders and explore strategic partnerships over breakfast.</p>
-                    <p><strong>Date:</strong> Oct 14, 2026</p>
-                    <p><strong>Location:</strong> Kampala Conference Hall</p>
-                </article>
-                <article class="event-card">
-                    <h3>Small Business Growth Workshop</h3>
-                    <p>Learn marketing and finance strategies for growing your business in Kampala.</p>
-                    <p><strong>Date:</strong> Oct 21, 2026</p>
-                    <p><strong>Location:</strong> Chamber Training Center</p>
-                </article>
-            </div>
-        </section>
+    <section class="home-section weather-section">
+      <h2>Local Weather</h2>
+      <div class="weather-grid">
+        <div id="weather-current" class="weather-current" aria-live="polite"></div>
+        <div id="weather-forecast" class="weather-forecast" aria-live="polite"></div>
+      </div>
+    </section>
 
-        <section class="weather">
-            <div class="section-header">
-                <h2>Weather in Kampala</h2>
-                <p>Get the latest weather conditions and a three-day forecast for planning events and visits.</p>
-            </div>
-            <div class="weather-card">
-                <div id="weather-current" class="weather-current">Loading weather...</div>
-                <div id="weather-forecast" class="forecast-grid"></div>
-            </div>
-        </section>
+    <section class="home-section spotlight-section">
+      <h2>Member Spotlights</h2>
+      <p class="spotlight-text">Featured chamber businesses selected from silver and gold members on each page load.</p>
+      <div id="spotlights" class="spotlight-grid"></div>
+    </section>
+  </main>
 
-        <section class="spotlights">
-            <div class="section-header">
-                <h2>Member Spotlights</h2>
-                <p>Featured chamber members selected from our gold and silver level membership.</p>
-            </div>
-            <div id="spotlights" class="spotlight-grid"></div>
-        </section>
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <h2>Kampala Chamber of Commerce</h2>
-                <p>📍 123 Kampala Road, Kampala, Uganda</p>
-                <p>📞 +256 765844486</p>
-                <p>✉️ info@kampalachamber.com</p>
-            </div>
-            <div class="footer-social">
-                <a href="#" target="_blank" aria-label="Facebook">
-                    <img src="images/facebook.svg" alt="Facebook" width="32" height="32">
-                </a>
-                <a href="#" target="_blank" aria-label="Twitter">
-                    <img src="images/twitter.svg" alt="Twitter" width="32" height="32">
-                </a>
-                <a href="#" target="_blank" aria-label="LinkedIn">
-                    <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
-                </a>
-                <a href="#" target="_blank" aria-label="YouTube">
-                    <img src="images/youtube.svg" alt="YouTube" width="32" height="32">
-                </a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© <span id="currentyear"></span> Baker Mfitundinda | WDD 231</p>
-            <p id="lastModified"></p>
-        </div>
-    </footer>
+  <footer>
+    <p>Baker Mfitundinda | WDD 231</p>
+    <p class="footer-meta">&copy; <span id="current-year"></span> Kisoro    City Chamber of Commerce</p>
+  </footer>
 </body>
 </html>

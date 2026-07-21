@@ -15,28 +15,28 @@
   <circle cx="1100" cy="530" r="120" fill="#ffffff" opacity="0.1"/>
   
   <!-- Main content area -->
-  <rect x="100" y="120" width="1000" height="390" fill="#ffffff" opacity="0.95" rx="15"/>
+  <rect x="100" y="100" width="1000" height="430" fill="#ffffff" opacity="0.95" rx="15"/>
   
-  <!-- Header section -->
-  <text x="600" y="220" font-size="72" font-weight="bold" text-anchor="middle" fill="#2c7be5" font-family="Arial, sans-serif">
-    KAMPALA CHAMBER
+  <!-- Title -->
+  <text x="600" y="200" font-size="64" font-weight="bold" text-anchor="middle" fill="#2c7be5" font-family="Arial, sans-serif">
+    WDD 231
   </text>
   
-  <!-- Subheader -->
-  <text x="600" y="280" font-size="42" text-anchor="middle" fill="#1a2a3a" font-family="Arial, sans-serif">
-    of Commerce
+  <!-- Subtitle -->
+  <text x="600" y="270" font-size="48" text-anchor="middle" fill="#1a2a3a" font-family="Arial, sans-serif">
+    Web Frontend Development
   </text>
   
-  <!-- Tagline -->
-  <text x="600" y="350" font-size="28" text-anchor="middle" fill="#495057" font-family="Arial, sans-serif">
-    Business Directory & Networking
+  <!-- Student info -->
+  <text x="600" y="330" font-size="32" text-anchor="middle" fill="#495057" font-family="Arial, sans-serif">
+    Baker Mfitundinda
   </text>
   
   <!-- Bottom accent line -->
-  <rect x="300" y="390" width="600" height="4" fill="#2c7be5" rx="2"/>
+  <rect x="300" y="370" width="600" height="4" fill="#2c7be5" rx="2"/>
   
   <!-- Bottom text -->
-  <text x="600" y="460" font-size="20" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif">
-    Connect with Kampala's Leading Businesses
+  <text x="600" y="430" font-size="20" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif">
+    Learning Journey at BYU-Idaho
   </text>
 </svg>

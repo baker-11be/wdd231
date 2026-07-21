@@ -259,6 +259,462 @@ section {
     object-fit: cover;
 }
 
+/* ===== HOME PAGE ===== */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 1rem;
+    background: #2c7be5;
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    z-index: 1000;
+    transition: top 0.25s ease;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+.hero-section {
+    display: grid;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, #2c7be5 0%, #1a2a3a 100%);
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.hero-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-copy .eyebrow {
+    color: #f7d554;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.hero-copy h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.cta-button {
+    display: inline-block;
+    background: #f7d554;
+    color: #1a2a3a;
+    padding: 0.95rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background: #ffd93d;
+    transform: translateY(-1px);
+}
+
+.hero-figure {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.hero-figure img {
+    border-radius: 16px;
+}
+
+.events-section,
+.weather-section,
+.spotlight-section {
+    padding: 2rem;
+}
+
+.event-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.event-grid article {
+    background: #eef4ff;
+    padding: 1.25rem;
+    border-radius: 18px;
+}
+
+.event-meta {
+    margin-top: 1rem;
+    color: #566575;
+    font-size: 0.95rem;
+}
+
+.weather-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.weather-current,
+.weather-forecast {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 18px;
+    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
+}
+
+.weather-current-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.weather-temp {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.weather-desc {
+    margin: 0.5rem 0 0;
+    color: #566575;
+}
+
+.forecast-day {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
+    align-items: center;
+    border-top: 1px solid #e9edf7;
+    padding: 1rem 0;
+}
+
+.forecast-day:first-child {
+    border-top: none;
+}
+
+.forecast-day img {
+    width: 48px;
+    height: 48px;
+}
+
+.spotlight-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.spotlight-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
+    padding: 1.25rem;
+    align-items: center;
+}
+
+.spotlight-card img {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 16px;
+}
+
+.spotlight-card-content h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.spotlight-card-content p {
+    margin: 0.5rem 0;
+    color: #495057;
+}
+
+.member-badge {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.member-badge.gold {
+    background: #ffd49b;
+    color: #7b5600;
+}
+
+.member-badge.silver {
+    background: #d4e4ff;
+    color: #0f3d7a;
+}
+
+.footer-meta {
+    margin-top: 0.5rem;
+    color: #566575;
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .weather-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .spotlight-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* ===== DIRECTORY PAGE ===== */
+.view-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.view-actions button {
+    background: #e9ecef;
+    border: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #1a2a3a;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.view-actions button:hover,
+.view-actions button.active {
+    background: #2c7be5;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.directory-intro p {
+    max-width: 760px;
+}
+
+#directory-cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+#directory-cards.list-view {
+    grid-template-columns: 1fr;
+}
+
+.member-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 16px 35px rgba(26, 42, 58, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.member-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.member-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.member-card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.member-card h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.member-description {
+    margin: 0;
+    color: #495057;
+}
+
+.member-meta {
+    margin: 0;
+    color: #6b7d8c;
+    font-size: 0.95rem;
+}
+
+.member-meta a {
+    color: #2c7be5;
+}
+
+.membership-pill {
+    align-self: flex-start;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.member-card.gold .membership-pill {
+    background: #ffd49b;
+    color: #7b5a0f;
+}
+
+.member-card.silver .membership-pill {
+    background: #d4e4ff;
+    color: #16407c;
+}
+
+.member-card.basic .membership-pill {
+    background: #e8edf4;
+    color: #1a2a3a;
+}
+
+#directory-cards.list-view .member-card {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+#directory-cards.list-view .member-card img {
+    width: 220px;
+    height: auto;
+}
+
+#directory-cards.list-view .member-card-content {
+    padding: 1.5rem;
+}
+
+.error-message {
+    padding: 1.5rem;
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 16px;
+    color: #856404;
+}
+
+/* ===== DISCOVER PAGE ===== */
+.image-montage {
+    display: grid;
+    gap: 1rem;
+}
+
+.image-montage figure {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
+}
+
+.image-montage figcaption {
+    padding: 0.85rem 1rem;
+    color: #566575;
+    font-size: 0.95rem;
+}
+
+/* ===== JOIN PAGE ===== */
+.membership-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.membership-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
+}
+
+.membership-card h3 {
+    margin-top: 0;
+}
+
+.membership-card ul {
+    margin: 1rem 0 0;
+    padding-left: 1.2rem;
+}
+
+.membership-card li {
+    margin-bottom: 0.5rem;
+}
+
+.join-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.join-form label {
+    font-weight: 700;
+}
+
+.join-form input,
+.join-form select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #dbe5ef;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.join-form button {
+    width: max-content;
+    background: #2c7be5;
+    color: #ffffff;
+    border: none;
+    padding: 0.95rem 1.5rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.join-form button:hover,
+.join-form button:focus {
+    background: #1b5bb8;
+}
+
+.confirmation-message {
+    margin-top: 1rem;
+    color: #1b5bb8;
+    font-weight: 700;
+    display: none;
+}
+
+.confirmation-message.visible {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .image-montage {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .membership-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
 #project-info img {
     width: 100%;
     max-width: 600px;

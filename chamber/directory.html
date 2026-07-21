@@ -1,140 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chamber of Commerce Directory - Kampala, Uganda</title>
-    <meta name="description" content="Kampala Chamber of Commerce - Business directory connecting local businesses and organizations in Kampala, Uganda." />
-    <meta name="author" content="Baker Mfitundinda" />
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" />
-    
-    <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="Kampala Chamber of Commerce - Business Directory" />
-    <meta property="og:description" content="Discover Kampala's local businesses and services in the Chamber directory. Connect, compare, and grow with trusted organizations across the city." />
-    <meta property="og:image" content="https://baker-11be.github.io/wdd231/chamber/images/og-image.svg" />
-    <meta property="og:url" content="https://baker-11be.github.io/wdd231/chamber/directory.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Kampala Chamber of Commerce - Business Directory" />
-    <meta name="twitter:description" content="Connect with local businesses in Kampala. Discover services, products, and networking opportunities." />
-    <meta name="twitter:image" content="https://baker-11be.github.io/wdd231/chamber/images/og-image.svg" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/small.css" />
-    <link rel="stylesheet" href="styles/larger.css" />
-
-    <!-- JavaScript -->
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
-    <script src="scripts/dates.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kisoro City Chamber Directory</title>
+  <meta name="description" content="Directory page for the Kisoro City Chamber of Commerce with member business listings and view controls." />
+  <meta name="author" content="Baker Mfitundinda" />
+  <meta property="og:title" content="Kisoro City Chamber Directory" />
+  <meta property="og:description" content="Explore local member businesses in the Kisoro City Chamber of Commerce directory with grid and list view options." />
+  <meta property="og:image" content="https://bakermfitundinda.github.io/wdd231/chamber/images/og-image.svg" />
+  <meta property="og:url" content="https://bakermfitundinda.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="images/chamber.webp" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
 </head>
 <body>
-    <!-- ===== HEADER ===== -->
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src="images/chamber-logo.svg" alt="Kampala Chamber of Commerce Logo" width="60" height="60" />
-                <span class="site-name">KAMPALA <span class="highlight">CHAMBER</span></span>
-            </div>
-            <button id="hamburger" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
-        </div>
-    </header>
+  <header>
+    <div class="header-content">
+      <a class="logo-link" href="index.html" aria-label="Kisoro City Chamber Home">
+        <img src="images/chamber.webp" alt="Kisoro City Chamber logo" class="logo" />
+      </a>
+      <div>
+        <p class="site-name">Kisoro  City Chamber of Commerce</p>
+        <p class="site-tag">Supporting local business success and community connections</p>
+      </div>
+    </div>
+    <button id="hamburger" aria-label="Toggle Navigation Menu">☰</button>
+  </header>
 
-    <!-- ===== NAVIGATION ===== -->
-    <nav id="primary-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+  <nav id="primary-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="directory.html" class="active">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main>
-        <!-- Page Header -->
-        <section class="page-header">
-            <h1>Business Directory</h1>
-            <p>Connect with Kampala's leading businesses and organizations</p>
-        </section>
+  <main>
+    <section class="directory-intro">
+      <h1>Member Directory</h1>
+      <p>Discover local businesses that are part of the Kisoro City Chamber of Commerce. Use the view controls to switch between a card grid and a compact member list.</p>
+      <div class="view-actions">
+        <button id="gridView" class="active" type="button">Grid View</button>
+        <button id="listView" type="button">List View</button>
+      </div>
+    </section>
 
-        <!-- Directory Controls -->
-        <section class="directory-controls">
-            <div class="view-toggle">
-                <button id="grid-view" class="active" aria-label="Grid View">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="3" width="7" height="7" rx="1" />
-                        <rect x="14" y="3" width="7" height="7" rx="1" />
-                        <rect x="3" y="14" width="7" height="7" rx="1" />
-                        <rect x="14" y="14" width="7" height="7" rx="1" />
-                    </svg>
-                    Grid
-                </button>
-                <button id="list-view" aria-label="List View">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="8" y1="6" x2="21" y2="6" />
-                        <line x1="8" y1="12" x2="21" y2="12" />
-                        <line x1="8" y1="18" x2="21" y2="18" />
-                        <line x1="3" y1="6" x2="3.01" y2="6" />
-                        <line x1="3" y1="12" x2="3.01" y2="12" />
-                        <line x1="3" y1="18" x2="3.01" y2="18" />
-                    </svg>
-                    List
-                </button>
-            </div>
-            <div class="member-count">
-                <span id="member-count">0</span> Members
-            </div>
-        </section>
+    <section id="directory-cards" class="member-grid" aria-live="polite"></section>
+  </main>
 
-        <!-- Member Cards Container -->
-        <section id="member-container" class="grid-view">
-            <!-- Dynamically populated by JavaScript -->
-        </section>
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <h2>Kampala Chamber of Commerce</h2>
-                <p>📍 123 Kampala Road, Kampala, Uganda</p>
-                <p>📞 +256 765844486</p>
-                <p>✉️ info@kampalachamber.com</p>
-            </div>
-            <div class="footer-social">
-                <a href="#" target="_blank" aria-label="Facebook">
-                    <img src="images/facebook.svg" alt="Facebook" width="32" height="32" />
-                </a>
-                <a href="#" target="_blank" aria-label="Twitter">
-                    <img src="images/twitter.svg" alt="Twitter" width="32" height="32" />
-                </a>
-                <a href="#" target="_blank" aria-label="LinkedIn">
-                    <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32" />
-                </a>
-                <a href="#" target="_blank" aria-label="YouTube">
-                    <img src="images/youtube.svg" alt="YouTube" width="32" height="32" />
-                </a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© <span id="currentyear"></span> Baker Mfitundinda | WDD 231</p>
-            <p id="lastModified"></p>
-        </div>
-    </footer>
+  <footer>
+    <p>Baker Mfitundinda | WDD 231</p>
+    <p class="footer-meta">&copy; <span id="current-year"></span> Kisoro City Chamber | Last modified: <span id="last-modified"></span></p>
+  </footer>
 </body>
 </html>

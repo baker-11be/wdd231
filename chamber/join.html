@@ -1,86 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Join | Kampala Chamber of Commerce</title>
-    <meta name="description" content="Become a member of the Kampala Chamber of Commerce and grow your business with support and networking opportunities." />
-    <meta name="author" content="Baker Mfitundinda" />
-    <link rel="icon" href="images/favicon.ico" />
-
-    <meta property="og:title" content="Join | Kampala Chamber of Commerce" />
-    <meta property="og:description" content="Learn how to become a member of the Kampala Chamber of Commerce." />
-    <meta property="og:image" content="https://bakermfitundinda.github.io/wdd231/chamber/images/og-image.svg" />
-    <meta property="og:url" content="https://bakermfitundinda.github.io/wdd231/chamber/join.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/small.css" />
-    <link rel="stylesheet" href="styles/larger.css" />
-
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/dates.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Kisoro City Chamber</title>
+  <meta name="description" content="Join the Kisoro City Chamber of Commerce and enjoy membership benefits for local businesses." />
+  <meta name="author" content="Baker Mfitundinda" />
+  <link rel="icon" href="images/chamber.webp" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <script src="scripts/navigation.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src="images/chamber-logo.svg" alt="Kampala Chamber of Commerce Logo" width="60" height="60" />
-                <span class="site-name">KAMPALA <span class="highlight">CHAMBER</span></span>
-            </div>
-            <button id="hamburger" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
-        </div>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <div class="header-content">
+      <a class="logo-link" href="index.html" aria-label="Kisoro City Chamber Home">
+        <img src="images/chamber.webp" alt="Kisoro City Chamber logo" class="logo" />
+      </a>
+      <div>
+        <p class="site-name">Kisoro City Chamber of Commerce</p>
+        <p class="site-tag">Become a member and grow with our local business community.</p>
+      </div>
+    </div>
+    <button id="hamburger" aria-label="Toggle Navigation Menu">☰</button>
+  </header>
 
-    <nav id="primary-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="join.html" class="active" aria-current="page">Join</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+  <nav id="primary-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html" class="active">Join</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        <section class="page-header">
-            <h1>Join the Chamber</h1>
-            <p>Become a member and access tools, events and networking designed for Kampala businesses.</p>
-        </section>
+  <main id="main-content">
+    <section>
+      <h1>Join the Chamber</h1>
+      <p>Choose the membership level that best fits your business and unlock promotional, networking, and support benefits.</p>
+    </section>
 
-        <section>
-            <h2>Membership Benefits</h2>
-            <p>Members receive access to business support, advocacy, promotional opportunities, and a growing network of local partners.</p>
-            <p>To join, complete the membership form and contact our team through the contact page.</p>
-        </section>
-    </main>
+    <section>
+      <h2>Membership Levels</h2>
+      <div class="membership-grid">
+        <article class="membership-card">
+          <h3>Non-profit</h3>
+          <p>Ideal for community organizations and nonprofit teams seeking visibility and access to chamber events.</p>
+          <ul>
+            <li>Directory listing</li>
+            <li>Event invitations</li>
+            <li>Newsletter updates</li>
+          </ul>
+        </article>
+        <article class="membership-card silver-card">
+          <h3>Silver</h3>
+          <p>For local businesses that want steady promotion and social media support from the chamber.</p>
+          <ul>
+            <li>Priority directory placement</li>
+            <li>Social media shoutouts</li>
+            <li>Training and luncheons</li>
+          </ul>
+        </article>
+        <article class="membership-card gold-card">
+          <h3>Gold</h3>
+          <p>Our premium membership level for businesses seeking top visibility and sponsorship opportunities.</p>
+          <ul>
+            <li>Sponsor spotlight cards</li>
+            <li>Premium directory listing</li>
+            <li>Advertising and event sponsorship</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <h2>Kampala Chamber of Commerce</h2>
-                <p>📍 123 Kampala Road, Kampala, Uganda</p>
-                <p>📞 +256 765844486</p>
-                <p>✉️ info@kampalachamber.com</p>
-            </div>
-            <div class="footer-social">
-                <a href="#" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook" width="32" height="32" /></a>
-                <a href="#" target="_blank" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter" width="32" height="32" /></a>
-                <a href="#" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32" /></a>
-                <a href="#" target="_blank" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube" width="32" height="32" /></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© <span id="currentyear"></span> Baker Mfitundinda | WDD 231</p>
-            <p id="lastModified"></p>
-        </div>
-    </footer>
+    <section>
+      <h2>Apply to Join</h2>
+      <form class="join-form">
+        <label for="business-name">Business Name</label>
+        <input id="business-name" name="business-name" type="text" required />
+
+        <label for="contact-name">Contact Name</label>
+        <input id="contact-name" name="contact-name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="membership-level">Membership Level</label>
+        <select id="membership-level" name="membership-level">
+          <option value="non-profit">Non-profit</option>
+          <option value="silver">Silver</option>
+          <option value="gold">Gold</option>
+        </select>
+
+        <button type="submit">Submit Application</button>
+        <p id="join-confirmation" class="confirmation-message" role="status" tabindex="-1" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Baker Mfitundinda | WDD 231</p>
+    <p class="footer-meta">&copy; <span id="current-year">2026</span> Kisoro City Chamber of Commerce</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('.join-form');
+      const confirmation = document.getElementById('join-confirmation');
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        // Hide the form and show a single confirmation message
+        form.style.display = 'none';
+        confirmation.textContent = 'Your response has been welcomed !';
+        confirmation.classList.add('visible');
+        // Focus the confirmation for accessibility
+        confirmation.focus();
+      });
+    });
+  </script>
 </body>
 </html>

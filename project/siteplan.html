@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baker City Chamber Site Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1a2a3a;
+      --secondary: #d4a017;
+      --accent: #3a82a6;
+      --background: #f4f7fc;
+      --surface: #ffffff;
+      --text: #1f2d3d;
+      --muted: #566575;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Roboto', Arial, sans-serif; color: var(--text); background: var(--background); line-height: 1.7; }
+    header { background: var(--primary); color: white; padding: 2rem 1rem; text-align: center; }
+    header h1 { margin: 0; font-family: 'Merriweather', serif; font-size: clamp(2rem, 4vw, 3rem); }
+    main { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
+    section { background: var(--surface); border-radius: 18px; box-shadow: 0 18px 40px rgba(26, 42, 58, 0.08); margin-bottom: 1.75rem; padding: 1.75rem; }
+    h2 { margin-top: 0; color: var(--primary); font-family: 'Merriweather', serif; }
+    p { margin: 0.8rem 0; }
+    .highlight { color: var(--secondary); font-weight: 700; }
+    .swatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .swatch { border-radius: 1rem; padding: 1rem; color: white; min-height: 120px; display: flex; flex-direction: column; justify-content: flex-end; }
+    .swatch label { font-size: 0.9rem; color: rgba(255,255,255,0.9); }
+    .wireframes { display: grid; gap: 1rem; margin-top: 1rem; }
+    .wireframe { border: 2px dashed #c8d4e4; border-radius: 14px; padding: 1rem; background: #edf4fb; }
+    .wireframe h3 { margin-top: 0; }
+    .wireframe div { background: #ffffff; border-radius: 10px; padding: 1rem; margin-bottom: 0.75rem; border: 1px solid #dbe5ef; }
+    .wireframe .hero { height: 120px; display: flex; align-items: center; justify-content: center; color: #6b7d8d; font-weight: 700; }
+    .wireframe .grid { display: grid; gap: 0.75rem; }
+    .wireframe .card { height: 90px; display: flex; align-items: center; justify-content: center; color: #6b7d8d; font-weight: 700; }
+    footer { text-align: center; margin: 2rem 0 1rem; color: var(--muted); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Baker City Chamber of Commerce Site Plan</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Site Name</h2>
+      <p><strong>Baker City Chamber of Commerce</strong></p>
+      <p>This name communicates a local business network for Baker City and reinforces the chamber's role as a trusted source for community events, member services, and economic growth.</p>
+    </section>
+    <section>
+      <h2>Site Purpose</h2>
+      <p>The site will serve as a central hub for Baker City business members, providing information about membership benefits, a searchable member directory, local news, and resources for both residents and visitors.</p>
+    </section>
+    <section>
+      <h2>Scenarios</h2>
+      <ul>
+        <li>What local businesses offer services near the riverfront and how can I contact them?</li>
+        <li>How do I apply to become a chamber member and what are the available membership levels?</li>
+        <li>When is the next chamber event, and how can I register as a participant?</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Color Schema</h2>
+      <div class="swatch-grid">
+        <div class="swatch" style="background:#1a2a3a;"><strong>Primary</strong><label>Headings, navigation, text accents</label></div>
+        <div class="swatch" style="background:#d4a017;"><strong>Secondary</strong><label>Buttons, call-to-action, highlights</label></div>
+        <div class="swatch" style="background:#3a82a6;"><strong>Accent</strong><label>Links, icons, hover states</label></div>
+        <div class="swatch" style="background:#f4f7fc; color:#1a2a3a;"><strong>Background</strong><label>Page background and cards</label></div>
+      </div>
+    </section>
+    <section>
+      <h2>Typography</h2>
+      <p><strong>Roboto</strong> – body copy, navigation, buttons, and paragraph text.</p>
+      <p><strong>Merriweather</strong> – headings, section titles, and brand statements for a strong, professional tone.</p>
+      <p>These fonts support readability across desktop and mobile views while keeping the site approachable and modern.</p>
+    </section>
+    <section>
+      <h2>Wireframes</h2>
+      <div class="wireframes">
+        <div class="wireframe">
+          <h3>Desktop Layout</h3>
+          <div class="hero">Header / hero callout</div>
+          <div class="grid">
+            <div class="card">Featured business</div>
+            <div class="card">Upcoming events</div>
+            <div class="card">Membership callout</div>
+          </div>
+          <div class="card">Directory and resources section</div>
+        </div>
+        <div class="wireframe">
+          <h3>Mobile Layout</h3>
+          <div class="hero">Header / navigation</div>
+          <div class="card">Hero banner</div>
+          <div class="card">Membership callout</div>
+          <div class="card">Directory preview</div>
+          <div class="card">Footer contact</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Planned color palette, typography, page structure, and content flow for the Baker City Chamber project.</p>
+  </footer>
+</body>
+</html>

@@ -1,11 +1,12 @@
 const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
-const latitude = 0.3476;
-const longitude = 32.5825;
-const units = 'metric';
+const latitude = 44.7745;
+const longitude = -117.8345; // Kisoro City
+const units = 'imperial';
 
 const weatherCurrent = document.getElementById('weather-current');
 const weatherForecast = document.getElementById('weather-forecast');
 const spotlightContainer = document.getElementById('spotlights');
+const currentYear = document.getElementById('current-year');
 
 async function fetchWeather() {
     if (apiKey === 'YOUR_OPENWEATHERMAP_API_KEY') {
@@ -33,33 +34,43 @@ async function fetchWeather() {
 
 function displayWeather(data) {
     const current = data.current;
-    const description = current.weather[0]?.description || 'Unknown';
+    const description = current.weather[0]?.description || 'Unknown weather';
     const temp = Math.round(current.temp);
-    const feelsLike = Math.round(current.feels_like);
+    const icon = current.weather[0]?.icon;
+    const iconSrc = icon ? `https://openweathermap.org/img/wn/${icon}@2x.png` : '';
+    const altText = `${description} icon`;
 
     weatherCurrent.innerHTML = `
-        <h3>${temp}°C</h3>
-        <p>${description}</p>
-        <p>Feels like ${feelsLike}°C</p>
+        <div class="weather-current-card">
+            <img src="${iconSrc}" alt="${altText}" />
+            <div>
+                <p class="weather-temp">${temp}°F</p>
+                <p class="weather-desc">${description}</p>
+            </div>
+        </div>
     `;
 
     const forecastDays = data.daily.slice(1, 4);
-    weatherForecast.innerHTML = forecastDays.map(day => {
-        const date = new Date(day.dt * 1000);
-        const dayLabel = date.toLocaleDateString('en-UG', { weekday: 'short', month: 'short', day: 'numeric' });
-        const max = Math.round(day.temp.max);
-        const min = Math.round(day.temp.min);
-        const icon = day.weather[0]?.icon;
-        const descriptionText = day.weather[0]?.main || 'Clear';
+    weatherForecast.innerHTML = forecastDays
+        .map((day) => {
+            const date = new Date(day.dt * 1000);
+            const dayLabel = date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+            const max = Math.round(day.temp.max);
+            const min = Math.round(day.temp.min);
+            const iconCode = day.weather[0]?.icon;
+            const iconUrl = iconCode ? `https://openweathermap.org/img/wn/${iconCode}@2x.png` : '';
+            const descriptionText = day.weather[0]?.description || 'Clear';
 
-        return `
-            <article class="forecast-day">
-                <strong>${dayLabel}</strong>
-                <p>${descriptionText}</p>
-                <p>${max}° / ${min}°</p>
-            </article>
-        `;
-    }).join('');
+            return `
+                <article class="forecast-day">
+                    <strong>${dayLabel}</strong>
+                    <img src="${iconUrl}" alt="${descriptionText} icon" />
+                    <p>${descriptionText}</p>
+                    <p>${max}° / ${min}°</p>
+                </article>
+            `;
+        })
+        .join('');
 }
 
 async function fetchSpotlights() {
@@ -70,7 +81,7 @@ async function fetchSpotlights() {
         }
 
         const json = await response.json();
-        const members = json.members.filter(member => member.membershipLevel >= 2);
+        const members = json.members.filter((member) => member.membership_level >= 2);
         const spotlightMembers = getRandomMembers(members, 3);
         renderSpotlights(spotlightMembers);
     } catch (error) {
@@ -94,25 +105,36 @@ function renderSpotlights(members) {
         return;
     }
 
-    spotlightContainer.innerHTML = members.map(member => {
-        const membership = member.membershipLevel === 3 ? 'Gold Member' : 'Silver Member';
-        const badgeClass = member.membershipLevel === 3 ? 'gold' : 'silver';
+    spotlightContainer.innerHTML = members
+        .map((member) => {
+            const membership = member.membership_level === 3 ? 'Gold Member' : 'Silver Member';
+            const badgeClass = member.membership_level === 3 ? 'gold' : 'silver';
 
-        return `
-            <article class="spotlight-card">
-                <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
-                <h3>${member.name}</h3>
-                <p>${member.description}</p>
-                <p><strong>Address:</strong> ${member.address}</p>
-                <p><strong>Phone:</strong> ${member.phone}</p>
-                <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit website</a></p>
-                <span class="member-badge ${badgeClass}">${membership}</span>
-            </article>
-        `;
-    }).join('');
+            return `
+                <article class="spotlight-card">
+                    <img src="images/${member.image}" alt="${member.company_name} logo" loading="lazy" />
+                    <div class="spotlight-card-content">
+                        <h3>${member.company_name}</h3>
+                        <p>${member.description}</p>
+                        <p><strong>Address:</strong> ${member.address}</p>
+                        <p><strong>Phone:</strong> ${member.phone}</p>
+                        <p><a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit website</a></p>
+                        <span class="member-badge ${badgeClass}">${membership}</span>
+                    </div>
+                </article>
+            `;
+        })
+        .join('');
+}
+
+function setCurrentYear() {
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    setCurrentYear();
     fetchWeather();
     fetchSpotlights();
 });

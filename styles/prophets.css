@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f7f8fb;
+  color: #111;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #374785 0%, #24305e 100%);
+  color: #fff;
+}
+header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+main {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+#cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+section.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(34, 49, 63, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card h2 {
+  margin: 1rem;
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+}
+.card p {
+  margin: 0 1rem 0.75rem;
+  line-height: 1.5;
+  color: #444;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.card .details {
+  padding: 0 1rem 1rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #24305e;
+  color: #fff;
+}
+@media (max-width: 420px) {
+  header {
+    padding-top: 1.5rem;
+  }
+}
