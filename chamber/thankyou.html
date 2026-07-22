@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You | WDD231</title>
-    <meta name="robots" content="noindex" />
-    <link rel="icon" href="images/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/small.css" />
-    <link rel="stylesheet" href="css/large.css" />
-    <link rel="stylesheet" href="css/join.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Kisoro City Chamber</title>
+    <meta name="description" content="Thank you for applying to the Kisoro City Chamber of Commerce.">
+    <meta name="author" content="Baker Mfitundinda">
+    <meta name="robots" content="noindex">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Thank You | Kisoro City Chamber">
+    <meta property="og:description" content="Thank you for applying to the Kisoro City Chamber of Commerce.">
+    <meta property="og:image" content="https://baker-11be.github.io/wdd231/chamber/images/chamber.webp">
+    <meta property="og:url" content="https://baker-11be.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/chamber.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="stylesheet" href="css/join.css">
 </head>
 <body>
+
     <header>
         <div class="logo">
-            <img src="images/member1.webp" alt="Chamber logo" width="60" height="60" />
-            <h1>Chamber</h1>
+            <img src="images/chamber.webp" alt="Kisoro City Chamber logo" width="60" height="60" loading="lazy">
+            <h1>Kisoro Chamber</h1>
         </div>
         <nav>
-            <button id="hamburger" aria-label="Toggle navigation">☰</button>
+            <button id="hamburger" aria-label="Toggle navigation menu">☰</button>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
@@ -32,12 +48,12 @@
     </header>
 
     <main>
-        <h2>✅ Application Received</h2>
-        <p class="thanks-sub">Thank you for applying. Here are the details you submitted:</p>
+        <h1>✅ Application Received</h1>
+        <p class="thanks-sub">Thank you for your interest in joining the Kisoro City Chamber of Commerce. Here are the details you submitted:</p>
 
-        <!-- Dynamic data will be injected here -->
+        <!-- Dynamic data will be injected here by thankyou.js -->
         <div id="submitted-data" class="data-container">
-            <p>Loading...</p>
+            <p>Loading your submission...</p>
         </div>
 
         <p><a href="join.html" class="btn">← Back to Join Page</a></p>
@@ -45,7 +61,7 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+            <p>&copy; <span id="year"></span> Kisoro City Chamber of Commerce</p>
         </div>
     </footer>
 
