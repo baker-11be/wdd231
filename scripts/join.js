@@ -1,119 +1,97 @@
 /**
- * join.js
- * Handles:
- * - Hamburger menu toggle (if not already handled by navigation.js)
- * - Timestamp injection
- * - Modal open/close
- * - Card entrance animation (already in CSS, but ensures dynamic)
- * - Form validation enhancement
+ * join.js – Handles:
+ * - Setting the timestamp in the hidden field at form submission time
+ * - Membership card animations (optional)
+ * - Modal open/close for membership benefits
+ * - Hamburger menu toggle (if not handled elsewhere)
  */
 
 (function() {
     'use strict';
 
-    document.addEventListener('DOMContentLoaded', function() {
+    // --- 1. Timestamp on submit ---
+    const form = document.getElementById('membership-form');
+    const timestampField = document.getElementById('timestamp');
 
-        // --- 1. Hamburger Menu (fallback in case navigation.js is missing) ---
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', function() {
-                navMenu.classList.toggle('open');
-                const expanded = navMenu.classList.contains('open');
-                hamburger.setAttribute('aria-expanded', expanded);
-            });
-        }
-
-        // --- 2. Inject Current Timestamp into Hidden Field ---
-        const timestampInput = document.getElementById('timestamp');
-        if (timestampInput) {
+    if (form && timestampField) {
+        form.addEventListener('submit', function() {
+            // Set timestamp to current ISO string (UTC)
             const now = new Date();
-            // ISO format: YYYY-MM-DDTHH:mm:ss.sssZ (universal)
-            timestampInput.value = now.toISOString();
+            timestampField.value = now.toISOString(); // e.g., "2026-07-23T18:44:00.000Z"
+            // You can also use toLocaleString if you prefer local format, but ISO is safe.
+        });
+    }
+
+    // --- 2. Modal functionality ---
+    const modalLinks = document.querySelectorAll('.learn-more');
+    const modalOverlays = document.querySelectorAll('.modal-overlay');
+    const closeButtons = document.querySelectorAll('.modal-close');
+
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         }
+    }
 
-        // --- 3. Modal Logic ---
-        // Open modal when "Learn More" buttons are clicked
-        const openButtons = document.querySelectorAll('.modal-open-btn');
-        const overlays = document.querySelectorAll('.modal-overlay');
+    function closeModal(modal) {
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
 
-        openButtons.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const targetId = this.dataset.modal;
-                const targetModal = document.getElementById(targetId);
-                if (targetModal) {
-                    targetModal.classList.add('active');
-                    // Trap focus inside modal (optional improvement)
-                }
-            });
+    // Open modal when "Learn More" clicked
+    modalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const modalId = this.getAttribute('data-modal');
+            openModal(modalId);
         });
+    });
 
-        // Close modal with the "X" button
-        const closeButtons = document.querySelectorAll('.modal-close-btn');
-        closeButtons.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const modal = this.closest('.modal-overlay');
-                if (modal) {
-                    modal.classList.remove('active');
-                }
-            });
+    // Close modal on close button click
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const modal = this.closest('.modal-overlay');
+            closeModal(modal);
         });
+    });
 
-        // Close modal by clicking outside the content area (on the overlay)
-        overlays.forEach(overlay => {
-            overlay.addEventListener('click', function(e) {
-                // Only close if the click is directly on the overlay (not its children)
-                if (e.target === this) {
-                    this.classList.remove('active');
-                }
-            });
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                const activeModal = document.querySelector('.modal-overlay.active');
-                if (activeModal) {
-                    activeModal.classList.remove('active');
-                }
+    // Close modal on click outside the modal box
+    modalOverlays.forEach(overlay => {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal(this);
             }
         });
+    });
 
-        // --- 4. Form Validation Enhancement (HTML5 + custom feedback) ---
-        const form = document.getElementById('membership-form');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                // HTML5 validation will run automatically.
-                // If you want custom validation, check here.
-                // Example: Ensure title has a certain format if filled.
-                const title = document.getElementById('title');
-                if (title && title.value && title.value.length < 2) {
-                    e.preventDefault();
-                    alert('Organization Title must be at least 2 characters.');
-                    title.focus();
-                    return;
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            modalOverlays.forEach(overlay => {
+                if (overlay.style.display === 'flex') {
+                    closeModal(overlay);
                 }
-
-                // If valid, the form submits via GET to thankyou.html
-                // The timestamp is already set.
-                console.log('Form submitted with timestamp:', document.getElementById('timestamp').value);
             });
         }
+    });
 
-        // --- 5. Footer Year (if not in main.js) ---
-        const yearSpan = document.getElementById('year');
-        if (yearSpan) {
-            yearSpan.textContent = new Date().getFullYear();
-        }
-        const modifiedSpan = document.getElementById('last-modified');
-        if (modifiedSpan) {
-            modifiedSpan.textContent = new Date(document.lastModified).toLocaleDateString('en-US', {
-                year: 'numeric', month: 'short', day: 'numeric'
-            });
-        }
-
-    }); // end DOMContentLoaded
+    // --- 3. Membership card animation on load (optional) ---
+    // Add a class after a small delay to trigger CSS transitions
+    const cards = document.querySelectorAll('.membership-card');
+    if (cards.length) {
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 150 + index * 100);
+        });
+    }
 
 })();

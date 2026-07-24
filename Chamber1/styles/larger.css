@@ -1,0 +1,98 @@
+/* ===== TABLET AND DESKTOP STYLES ===== */
+
+/* ===== TABLET (600px and up) ===== */
+@media (min-width: 600px) {
+
+    /* Navigation */
+    #hamburger-menu {
+        display: none;
+    }
+
+    #nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 2rem;
+        position: static !important;
+        background: none !important;
+        padding: 0 !important;
+        width: auto !important;
+        box-shadow: none !important;
+    }
+
+    #nav-links li {
+        padding: 0 !important;
+        border-bottom: none !important;
+    }
+
+    #nav-links a {
+        padding: 0.5rem 0 !important;
+    }
+
+    /* Grid: 2 columns */
+    #members-container.grid-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Directory Header */
+    .directory-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* ===== DESKTOP (1024px and up) ===== */
+@media (min-width: 1024px) {
+
+    header {
+        padding: 1rem 4rem;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Grid: 3 columns */
+    #members-container.grid-view {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .member-card {
+        padding: 1.5rem;
+    }
+
+    .member-card img {
+        max-width: 100px;
+    }
+
+    /* Footer: horizontal layout */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 2rem 4rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .footer-social {
+        margin: 0;
+    }
+
+    .footer-credit {
+        text-align: right;
+    }
+}
+
+/* ===== LARGE DESKTOP (1400px and up) ===== */
+@media (min-width: 1400px) {
+
+    main {
+        padding: 2rem;
+    }
+
+    #members-container.grid-view {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}

@@ -3,53 +3,355 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You | WDD231</title>
+    <title>Thank You | Kisoro Chamber</title>
     <meta name="robots" content="noindex" />
     <link rel="icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/small.css" />
-    <link rel="stylesheet" href="css/large.css" />
-    <link rel="stylesheet" href="css/join.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+
+    <style>
+        /* ---- Thank You specific styles ---- */
+        .thanks-main {
+            max-width: 820px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .thanks-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .thanks-header h2 {
+            font-size: 2.2rem;
+            color: #1a3a5c;
+            margin-bottom: 0.25rem;
+        }
+        .thanks-header .thanks-sub {
+            font-size: 1.1rem;
+            color: #4a6a8a;
+            margin-top: 0;
+        }
+        .data-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            padding: 2rem 2rem 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e9edf2;
+        }
+        .data-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a3a5c;
+            border-bottom: 2px solid #e9edf2;
+            padding-bottom: 0.75rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.3px;
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.8fr;
+            gap: 0.6rem 1.5rem;
+            align-items: baseline;
+        }
+        .data-label {
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #5a7a9a;
+            padding: 0.4rem 0;
+            border-bottom: 1px dashed #eef2f6;
+        }
+        .data-value {
+            font-weight: 500;
+            font-size: 1rem;
+            color: #1e2e3e;
+            padding: 0.4rem 0;
+            border-bottom: 1px dashed #eef2f6;
+            word-break: break-word;
+        }
+        .data-value.timestamp {
+            font-size: 0.95rem;
+            color: #3a6a8a;
+        }
+        .data-value.empty {
+            color: #b0b8c0;
+            font-style: italic;
+        }
+        .membership-badge {
+            display: inline-block;
+            padding: 0.15rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #fff;
+        }
+        .membership-badge.np { background: #2d7a6e; }
+        .membership-badge.bronze { background: #b87333; }
+        .membership-badge.silver { background: #8a9bb0; }
+        .membership-badge.gold { background: #c9a84c; }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #1a3a5c;
+            color: #fff;
+            padding: 0.7rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s, transform 0.1s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #0f2a44;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #1a3a5c;
+            border: 2px solid #1a3a5c;
+        }
+        .btn-outline:hover {
+            background: #1a3a5c;
+            color: #fff;
+        }
+        .loading-placeholder {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 2rem 0;
+            color: #8a9aa8;
+            font-style: italic;
+        }
+        .no-data {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 1.5rem 0;
+            color: #6a7a8a;
+        }
+        .no-data a {
+            color: #1a3a5c;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .data-grid {
+                grid-template-columns: 1fr;
+                gap: 0.2rem;
+            }
+            .data-label {
+                border-bottom: none;
+                padding-bottom: 0;
+                margin-top: 0.5rem;
+            }
+            .data-value {
+                border-bottom: 1px solid #eef2f6;
+                padding-top: 0;
+            }
+            .data-card {
+                padding: 1.2rem;
+            }
+            .thanks-header h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- ===== HEADER ===== -->
     <header>
-        <div class="logo">
-            <img src="images/member5.webp" alt="Chamber logo" width="60" height="60" />
-            <h1>Chamber</h1>
+        <div class="header-inner">
+            <div class="logo-area">
+                <img src="images/member5.webp" alt="Kisoro Chamber Logo" width="60" height="60" />
+                <span>Kisoro Chamber</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <button id="hamburger" aria-label="Toggle navigation">☰</button>
-            <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <h2>✅ Application Received</h2>
-        <p class="thanks-sub">Thank you for applying. Here are the details you submitted:</p>
+    <!-- ===== MAIN ===== -->
+    <main class="thanks-main">
 
-        <!-- Dynamic data will be injected here -->
-        <div id="submitted-data" class="data-container">
-            <p>Loading...</p>
+        <div class="thanks-header">
+            <h2>✅ Application Received!</h2>
+            <p class="thanks-sub">Thank you for applying to join the chamber. We are thrilled to welcome new organizations to our business network.</p>
         </div>
 
-        <p><a href="join.html" class="btn">← Back to Join Page</a></p>
+        <div class="data-card">
+            <h3>📋 Submitted Application Details</h3>
+            <div id="submitted-data" class="data-grid">
+                <div class="loading-placeholder">Loading your submission...</div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="join.html" class="btn">← Back to Join Page</a>
+            <a href="index.html" class="btn btn-outline">🏠 Return to Homepage</a>
+        </div>
+
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <img src="images/historic.webp" alt="Kisoro Chamber Logo" width="50" height="50" />
+                <div>
+                    <p><strong>Kisoro Chamber of Commerce</strong></p>
+                    <p><a href="mailto:info@kisorochamber.com">info@kisorochamber.com</a></p>
+                    <p>+256 773 196 530</p>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; <span id="footer-year"></span> Kano Chamber of Commerce</p>
+                <p>Built by Baker Mfitundinda</p>
+                <p>Last Updated: <span id="footer-modified"></span></p>
+            </div>
         </div>
     </footer>
 
-    <script src="js/navigation.js" defer></script>
-    <script src="js/thankyou.js" defer></script>
+    <!-- ===== SCRIPTS ===== -->
+    <script src="scripts/navigation.js" defer></script>
+    <script>
+        // thankyou.js – embedded
+
+        (function() {
+            'use strict';
+
+            function getParam(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name) || '';
+            }
+
+            function formatTimestamp(timestamp) {
+                if (!timestamp) return 'Not recorded';
+                try {
+                    const date = new Date(timestamp);
+                    if (isNaN(date.getTime())) return timestamp;
+                    return date.toLocaleString('en-US', {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric',
+                        hour: 'numeric',
+                        minute: '2-digit',
+                        hour12: true
+                    });
+                } catch (_) {
+                    return timestamp;
+                }
+            }
+
+            function getMembershipInfo(value) {
+                const map = {
+                    'np':     { label: 'NP (Non-Profit – No Fee)',      cls: 'np' },
+                    'bronze': { label: 'Bronze',                         cls: 'bronze' },
+                    'silver': { label: 'Silver',                         cls: 'silver' },
+                    'gold':   { label: 'Gold',                           cls: 'gold' }
+                };
+                const info = map[value.toLowerCase()] || { label: value || 'Not selected', cls: '' };
+                return info;
+            }
+
+            function buildDataRows() {
+                const firstname   = getParam('firstname');
+                const lastname    = getParam('lastname');
+                const orgtitle    = getParam('orgtitle');
+                const email       = getParam('email');
+                const phone       = getParam('phone');
+                const business    = getParam('business');
+                const membership  = getParam('membership');
+                const description = getParam('description');
+                const timestamp   = getParam('timestamp');
+
+                const memInfo = getMembershipInfo(membership);
+                const membershipDisplay = memInfo.label;
+                const membershipClass = memInfo.cls;
+
+                const formattedTime = formatTimestamp(timestamp);
+
+                const fields = [
+                    { label: 'FIRST NAME',             value: firstname || '—' },
+                    { label: 'LAST NAME',              value: lastname  || '—' },
+                    { label: 'ORGANIZATIONAL TITLE',   value: orgtitle  || '—' },
+                    { label: 'EMAIL ADDRESS',          value: email     || '—' },
+                    { label: 'MOBILE NUMBER',          value: phone     || '—' },
+                    { label: 'BUSINESS/ORG NAME',      value: business  || '—' },
+                    { label: 'SELECTED TIER',          value: membershipDisplay, extra: 'membership-badge ' + membershipClass },
+                    { label: 'BUSINESS DESCRIPTION',   value: description || '—' },
+                    { label: 'SUBMISSION TIME',        value: formattedTime, extra: 'timestamp' }
+                ];
+
+                let html = '';
+                fields.forEach(field => {
+                    const valueClass = field.extra ? 'data-value ' + field.extra : 'data-value';
+                    const displayValue = field.value || '—';
+                    html += `
+                        <div class="data-label">${field.label}</div>
+                        <div class="${valueClass}">${displayValue}</div>
+                    `;
+                });
+                return html;
+            }
+
+            function renderData() {
+                const container = document.getElementById('submitted-data');
+                if (!container) return;
+
+                const hasParams = window.location.search.length > 1;
+                if (!hasParams) {
+                    container.innerHTML = `
+                        <div class="no-data">
+                            <p>No application data found. Please <a href="join.html">fill out the form</a> first.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = buildDataRows();
+            }
+
+            // Run when DOM ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', renderData);
+            } else {
+                renderData();
+            }
+
+            // Footer year
+            const yearSpan = document.getElementById('footer-year');
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+            const modSpan = document.getElementById('footer-modified');
+            if (modSpan) modSpan.textContent = document.lastModified;
+
+        })();
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Downtown Bakery & Cafe",
+        "address": "123 Main St, Your City, ST 12345",
+        "phone": "(555) 111-2222",
+        "website": "https://downtownbakery.com",
+        "image": "bakery-logo.png",
+        "membership": "gold"
+    },
+    {
+        "name": "City Hardware Supply",
+        "address": "456 Oak Ave, Your City, ST 12345",
+        "phone": "(555) 333-4444",
+        "website": "https://cityhardware.com",
+        "image": "hardware-logo.png",
+        "membership": "silver"
+    },
+    {
+        "name": "Green Valley Law Firm",
+        "address": "789 Pine St, Your City, ST 12345",
+        "phone": "(555) 555-6666",
+        "website": "https://greenvalleylaw.com",
+        "image": "law-logo.png",
+        "membership": "gold"
+    },
+    {
+        "name": "Sunrise Realty Group",
+        "address": "321 Elm Blvd, Your City, ST 12345",
+        "phone": "(555) 777-8888",
+        "website": "https://sunriserealty.com",
+        "image": "realty-logo.png",
+        "membership": "silver"
+    },
+    {
+        "name": "Mountain View Dental",
+        "address": "654 Cedar Ln, Your City, ST 12345",
+        "phone": "(555) 999-0000",
+        "website": "https://mountainviewdental.com",
+        "image": "dental-logo.png",
+        "membership": "gold"
+    },
+    {
+        "name": "Riverside Accounting",
+        "address": "987 Lake Dr, Your City, ST 12345",
+        "phone": "(555) 222-3333",
+        "website": "https://riversideaccounting.com",
+        "image": "accounting-logo.png",
+        "membership": "member"
+    },
+    {
+        "name": "Harbor Insurance Agency",
+        "address": "159 Bay St, Your City, ST 12345",
+        "phone": "(555) 444-5555",
+        "website": "https://harborinsurance.com",
+        "image": "insurance-logo.png",
+        "membership": "silver"
+    },
+    {
+        "name": "Sunflower Daycare Center",
+        "address": "753 Garden Rd, Your City, ST 12345",
+        "phone": "(555) 666-7777",
+        "website": "https://sunflowerdaycare.com",
+        "image": "daycare-logo.png",
+        "membership": "member"
+    }
+]
