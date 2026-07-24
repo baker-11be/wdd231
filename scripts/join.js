@@ -1,10 +1,11 @@
 /**
  * join.js
  * Handles:
- * - Timestamp injection into hidden field
- * - Modal open/close functionality
+ * - Hamburger menu toggle (if not already handled by navigation.js)
+ * - Timestamp injection
+ * - Modal open/close
+ * - Card entrance animation (already in CSS, but ensures dynamic)
  * - Form validation enhancement
- * - Hamburger menu (if navigation.js is missing)
  */
 
 (function() {
@@ -12,28 +13,14 @@
 
     document.addEventListener('DOMContentLoaded', function() {
 
-        // --- 1. Hamburger Menu (fallback if navigation.js not loaded) ---
+        // --- 1. Hamburger Menu (fallback in case navigation.js is missing) ---
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
-
         if (hamburger && navMenu) {
             hamburger.addEventListener('click', function() {
                 navMenu.classList.toggle('open');
-                const isOpen = navMenu.classList.contains('open');
-                hamburger.setAttribute('aria-expanded', isOpen);
-                hamburger.textContent = isOpen ? '✕' : '☰';
-            });
-
-            // Close menu when a link is clicked (mobile UX)
-            const navLinks = navMenu.querySelectorAll('a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    if (navMenu.classList.contains('open')) {
-                        navMenu.classList.remove('open');
-                        hamburger.setAttribute('aria-expanded', 'false');
-                        hamburger.textContent = '☰';
-                    }
-                });
+                const expanded = navMenu.classList.contains('open');
+                hamburger.setAttribute('aria-expanded', expanded);
             });
         }
 
@@ -41,12 +28,11 @@
         const timestampInput = document.getElementById('timestamp');
         if (timestampInput) {
             const now = new Date();
+            // ISO format: YYYY-MM-DDTHH:mm:ss.sssZ (universal)
             timestampInput.value = now.toISOString();
-            console.log('Timestamp set:', timestampInput.value);
         }
 
         // --- 3. Modal Logic ---
-
         // Open modal when "Learn More" buttons are clicked
         const openButtons = document.querySelectorAll('.modal-open-btn');
         const overlays = document.querySelectorAll('.modal-overlay');
@@ -54,11 +40,11 @@
         openButtons.forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
-                const targetId = this.getAttribute('data-modal');
+                const targetId = this.dataset.modal;
                 const targetModal = document.getElementById(targetId);
                 if (targetModal) {
                     targetModal.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                    // Trap focus inside modal (optional improvement)
                 }
             });
         });
@@ -71,17 +57,16 @@
                 const modal = this.closest('.modal-overlay');
                 if (modal) {
                     modal.classList.remove('active');
-                    document.body.style.overflow = ''; // Restore scrolling
                 }
             });
         });
 
-        // Close modal by clicking outside the content area
+        // Close modal by clicking outside the content area (on the overlay)
         overlays.forEach(overlay => {
             overlay.addEventListener('click', function(e) {
+                // Only close if the click is directly on the overlay (not its children)
                 if (e.target === this) {
                     this.classList.remove('active');
-                    document.body.style.overflow = '';
                 }
             });
         });
@@ -92,68 +77,42 @@
                 const activeModal = document.querySelector('.modal-overlay.active');
                 if (activeModal) {
                     activeModal.classList.remove('active');
-                    document.body.style.overflow = '';
                 }
             }
         });
 
-        // --- 4. Form Validation Enhancement ---
+        // --- 4. Form Validation Enhancement (HTML5 + custom feedback) ---
         const form = document.getElementById('membership-form');
-
         if (form) {
             form.addEventListener('submit', function(e) {
-                // HTML5 validation will run automatically
-
-                // Additional validation: ensure title meets pattern if filled
-                const titleInput = document.getElementById('title');
-                if (titleInput && titleInput.value) {
-                    const pattern = /^[A-Za-z\s\-]{7,}$/;
-                    if (!pattern.test(titleInput.value)) {
-                        e.preventDefault();
-                        alert('Organization Title must contain at least 7 letters, spaces, or hyphens only.');
-                        titleInput.focus();
-                        titleInput.setCustomValidity('Must contain at least 7 letters, spaces, or hyphens only.');
-                        return;
-                    } else {
-                        titleInput.setCustomValidity('');
-                    }
+                // HTML5 validation will run automatically.
+                // If you want custom validation, check here.
+                // Example: Ensure title has a certain format if filled.
+                const title = document.getElementById('title');
+                if (title && title.value && title.value.length < 2) {
+                    e.preventDefault();
+                    alert('Organization Title must be at least 2 characters.');
+                    title.focus();
+                    return;
                 }
 
-                // Ensure timestamp is set
-                const ts = document.getElementById('timestamp');
-                if (ts && !ts.value) {
-                    ts.value = new Date().toISOString();
-                }
-
-                console.log('Form submitted successfully.');
+                // If valid, the form submits via GET to thankyou.html
+                // The timestamp is already set.
+                console.log('Form submitted with timestamp:', document.getElementById('timestamp').value);
             });
-
-            // Clear custom validity on input
-            const titleInput = document.getElementById('title');
-            if (titleInput) {
-                titleInput.addEventListener('input', function() {
-                    this.setCustomValidity('');
-                });
-            }
         }
 
-        // --- 5. Footer Year ---
+        // --- 5. Footer Year (if not in main.js) ---
         const yearSpan = document.getElementById('year');
         if (yearSpan) {
             yearSpan.textContent = new Date().getFullYear();
         }
-
         const modifiedSpan = document.getElementById('last-modified');
         if (modifiedSpan) {
-            const lastMod = new Date(document.lastModified);
-            modifiedSpan.textContent = lastMod.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
+            modifiedSpan.textContent = new Date(document.lastModified).toLocaleDateString('en-US', {
+                year: 'numeric', month: 'short', day: 'numeric'
             });
         }
-
-        console.log('join.js initialized successfully.');
 
     }); // end DOMContentLoaded
 

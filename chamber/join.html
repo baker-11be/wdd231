@@ -1,43 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join the Chamber | Kisoro City Chamber</title>
-    <meta name="description" content="Apply for membership with the Kisoro City Chamber of Commerce. Join our community of local businesses and professionals.">
-    <meta name="author" content="Baker Mfitundinda">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Join the Kisoro City Chamber of Commerce">
-    <meta property="og:description" content="Apply for membership with the Kisoro City Chamber of Commerce. Join our community of local businesses and professionals.">
-    <meta property="og:image" content="https://baker-11be.github.io/wdd231/chamber/images/chamber.webp">
-    <meta property="og:url" content="https://baker-11be.github.io/wdd231/chamber/join.html">
-    <meta property="og:type" content="website">
-
-    <!-- Favicon -->
-    <link rel="icon" href="images/chamber.webp">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join the Chamber | WDD231</title>
+    <meta name="description" content="Apply for membership with the Chamber of Commerce." />
+    <link rel="icon" href="images/favicon.ico" />
+    <!-- Google Fonts (optional, but consistent) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
     <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/large.css">
-    <link rel="stylesheet" href="css/join.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/small.css" />
+    <link rel="stylesheet" href="css/large.css" />
+    <link rel="stylesheet" href="css/join.css" />
 </head>
 <body>
 
     <!-- ===== HEADER ===== -->
     <header>
         <div class="logo">
-            <img src="images/chamber.webp" alt="Kisoro City Chamber logo" width="60" height="60" loading="lazy">
-            <h1>Kisoro Chamber</h1>
+            <img src="images/logo.webp" alt="Chamber of Commerce logo" width="60" height="60" />
+            <h1>Chamber</h1>
         </div>
         <nav>
-            <button id="hamburger" aria-label="Toggle navigation menu">☰</button>
+            <button id="hamburger" aria-label="Toggle navigation">☰</button>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
@@ -47,179 +35,163 @@
         </nav>
     </header>
 
-    <!-- ===== MAIN CONTENT ===== -->
+    <!-- ===== MAIN ===== -->
     <main>
-        <h1>Join the Chamber</h1>
+        <h2>Become a Member</h2>
 
         <div class="join-grid">
-
-            <!-- ===== LEFT COLUMN: FORM ===== -->
+            <!-- LEFT COLUMN: FORM -->
             <section class="form-section">
-                <h2>Membership Application</h2>
-                <form id="membership-form" action="thankyou.html" method="get" novalidate>
-
-                    <!-- First Name -->
+                <h3>Membership Application</h3>
+                <form id="membership-form" action="thankyou.html" method="GET" novalidate>
+                    <!-- Personal Info -->
                     <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="Enter your first name">
+                    <input type="text" id="first-name" name="first-name" required autocomplete="given-name" />
 
-                    <!-- Last Name -->
                     <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Enter your last name">
+                    <input type="text" id="last-name" name="last-name" required autocomplete="family-name" />
 
-                    <!-- Organization Title (with pattern) -->
                     <label for="title">Organization Title</label>
-                    <input type="text" id="title" name="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Must contain at least 7 letters, spaces, or hyphens only">
+                    <input type="text" id="title" name="title" autocomplete="organization-title" />
 
-                    <!-- Email Address (with placeholder) -->
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com" title="Enter your email address">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
 
-                    <!-- Mobile Phone -->
-                    <label for="phone">Mobile Phone *</label>
-                    <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your phone number">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel" />
 
-                    <!-- Organization Name -->
-                    <label for="business">Organization Name *</label>
-                    <input type="text" id="business" name="business" required autocomplete="organization" title="Enter your organization name">
+                    <label for="business">Business Name *</label>
+                    <input type="text" id="business" name="business" required autocomplete="organization" />
 
                     <!-- Membership Level -->
                     <label for="level">Membership Level *</label>
-                    <select id="level" name="level" required title="Select a membership level">
-                        <option value="">— Please select —</option>
+                    <select id="level" name="level" required>
+                        <option value="">— Select a level —</option>
                         <option value="NP">NP (Non-Profit)</option>
                         <option value="Bronze">Bronze</option>
                         <option value="Silver">Silver</option>
                         <option value="Gold">Gold</option>
                     </select>
 
-                    <!-- Organization Description -->
-                    <label for="description">Organization Description</label>
-                    <textarea id="description" name="description" rows="4" placeholder="Describe your organization's mission and activities..."></textarea>
+                    <label for="description">Business Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Tell us about your organization..."></textarea>
 
-                    <!-- Hidden Timestamp (injected by JavaScript) -->
-                    <input type="hidden" id="timestamp" name="timestamp" value="">
+                    <!-- Hidden Timestamp -->
+                    <input type="hidden" id="timestamp" name="timestamp" value="" />
 
-                    <!-- Submit Button -->
                     <button type="submit">Apply Now →</button>
                 </form>
             </section>
 
-            <!-- ===== RIGHT COLUMN: MEMBERSHIP CARDS ===== -->
+            <!-- RIGHT COLUMN: MEMBERSHIP CARDS -->
             <section class="cards-section">
-                <h2>Membership Levels</h2>
+                <h3>Membership Levels</h3>
                 <div class="card-grid">
-
                     <!-- NP Card -->
                     <div class="membership-card" data-level="np">
-                        <h3>NP</h3>
-                        <p class="subtitle">Non-Profit</p>
+                        <h4>NP</h4>
+                        <p>Non-Profit</p>
                         <span class="price">Free</span>
-                        <button class="modal-open-btn" data-modal="modal-np" aria-label="Learn more about NP membership">Learn More</button>
+                        <button class="modal-open-btn" data-modal="modal-np">Learn More</button>
                     </div>
-
                     <!-- Bronze Card -->
                     <div class="membership-card" data-level="bronze">
-                        <h3>Bronze</h3>
-                        <p class="subtitle">Starting Level</p>
+                        <h4>Bronze</h4>
+                        <p>Starting Level</p>
                         <span class="price">$100/yr</span>
-                        <button class="modal-open-btn" data-modal="modal-bronze" aria-label="Learn more about Bronze membership">Learn More</button>
+                        <button class="modal-open-btn" data-modal="modal-bronze">Learn More</button>
                     </div>
-
                     <!-- Silver Card -->
                     <div class="membership-card" data-level="silver">
-                        <h3>Silver</h3>
-                        <p class="subtitle">Growth Focus</p>
+                        <h4>Silver</h4>
+                        <p>Growth Focus</p>
                         <span class="price">$250/yr</span>
-                        <button class="modal-open-btn" data-modal="modal-silver" aria-label="Learn more about Silver membership">Learn More</button>
+                        <button class="modal-open-btn" data-modal="modal-silver">Learn More</button>
                     </div>
-
                     <!-- Gold Card -->
                     <div class="membership-card" data-level="gold">
-                        <h3>Gold</h3>
-                        <p class="subtitle">Premium Access</p>
+                        <h4>Gold</h4>
+                        <p>Premium Access</p>
                         <span class="price">$500/yr</span>
-                        <button class="modal-open-btn" data-modal="modal-gold" aria-label="Learn more about Gold membership">Learn More</button>
+                        <button class="modal-open-btn" data-modal="modal-gold">Learn More</button>
                     </div>
-
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- ===== MODALS (4 Membership Benefits) ===== -->
-
+    <!-- ===== MODALS ===== -->
     <!-- NP Modal -->
-    <div id="modal-np" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-np-title">
+    <div id="modal-np" class="modal-overlay" role="dialog" aria-modal="true">
         <div class="modal-content">
             <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-            <h3 id="modal-np-title">NP Membership Benefits</h3>
+            <h3>NP Membership (Non-Profit)</h3>
             <ul>
-                <li>✅ Free of charge for non-profit organizations</li>
-                <li>✅ Basic directory listing on our website</li>
-                <li>✅ Access to community networking events</li>
-                <li>✅ Monthly newsletter with updates</li>
-                <li>✅ Eligibility for grants and funding</li>
+                <li>✔️ Free of charge</li>
+                <li>✔️ Basic directory listing</li>
+                <li>✔️ Access to community events</li>
+                <li>✔️ Monthly newsletter</li>
             </ul>
+            <p><em>Perfect for charitable organizations.</em></p>
         </div>
     </div>
 
     <!-- Bronze Modal -->
-    <div id="modal-bronze" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-bronze-title">
+    <div id="modal-bronze" class="modal-overlay" role="dialog" aria-modal="true">
         <div class="modal-content">
             <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-            <h3 id="modal-bronze-title">Bronze Membership Benefits</h3>
+            <h3>Bronze Membership</h3>
             <ul>
-                <li>✅ All NP membership benefits</li>
-                <li>✅ Business profile on chamber website</li>
-                <li>✅ Access to training workshops and seminars</li>
-                <li>✅ Networking mixers with local businesses</li>
-                <li>✅ Discount on event tickets</li>
+                <li>✔️ All NP benefits</li>
+                <li>✔️ Business profile on website</li>
+                <li>✔️ Access to training workshops</li>
+                <li>✔️ Networking mixers</li>
             </ul>
+            <p><em>Great for startups and small businesses.</em></p>
         </div>
     </div>
 
     <!-- Silver Modal -->
-    <div id="modal-silver" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-silver-title">
+    <div id="modal-silver" class="modal-overlay" role="dialog" aria-modal="true">
         <div class="modal-content">
             <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-            <h3 id="modal-silver-title">Silver Membership Benefits</h3>
+            <h3>Silver Membership</h3>
             <ul>
-                <li>✅ All Bronze membership benefits</li>
-                <li>✅ Featured directory listing with logo</li>
-                <li>✅ Social media promotion on our channels</li>
-                <li>✅ Priority registration for events</li>
-                <li>✅ Member-to-member discount program</li>
-                <li>✅ Access to member-only resources</li>
+                <li>✔️ All Bronze benefits</li>
+                <li>✔️ Featured directory listing</li>
+                <li>✔️ Social media promotion</li>
+                <li>✔️ Priority event registration</li>
+                <li>✔️ Member-to-member discounts</li>
             </ul>
+            <p><em>Ideal for growing businesses seeking visibility.</em></p>
         </div>
     </div>
 
     <!-- Gold Modal -->
-    <div id="modal-gold" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title">
+    <div id="modal-gold" class="modal-overlay" role="dialog" aria-modal="true">
         <div class="modal-content">
             <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-            <h3 id="modal-gold-title">Gold Membership Benefits</h3>
+            <h3>Gold Membership</h3>
             <ul>
-                <li>✅ All Silver membership benefits</li>
-                <li>✅ Premium spotlight on homepage</li>
-                <li>✅ Exclusive CEO roundtable events</li>
-                <li>✅ Complimentary event tickets (4 per year)</li>
-                <li>✅ Direct referral network access</li>
-                <li>✅ Priority business matchmaking</li>
-                <li>✅ Featured in annual business report</li>
+                <li>✔️ All Silver benefits</li>
+                <li>✔️ Premium spotlight on homepage</li>
+                <li>✔️ Exclusive CEO roundtables</li>
+                <li>✔️ Complimentary event tickets</li>
+                <li>✔️ Direct referral network</li>
             </ul>
+            <p><em>For industry leaders and major contributors.</em></p>
         </div>
     </div>
 
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="footer-content">
-            <p>&copy; <span id="year"></span> Kisoro City Chamber of Commerce</p>
+            <p>&copy; <span id="year"></span> Chamber of Commerce</p>
             <p>Last modified: <span id="last-modified"></span></p>
         </div>
     </footer>
 
-    <!-- ===== JAVASCRIPT (All External) ===== -->
+    <!-- JavaScript -->
     <script src="js/navigation.js" defer></script>
     <script src="js/join.js" defer></script>
 </body>
