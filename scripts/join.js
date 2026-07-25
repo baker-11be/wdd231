@@ -15,10 +15,8 @@
 
     if (form && timestampField) {
         form.addEventListener('submit', function() {
-            // Set timestamp to current ISO string (UTC)
             const now = new Date();
-            timestampField.value = now.toISOString(); // e.g., "2026-07-23T18:44:00.000Z"
-            // You can also use toLocaleString if you prefer local format, but ISO is safe.
+            timestampField.value = now.toISOString();
         });
     }
 
@@ -42,7 +40,6 @@
         }
     }
 
-    // Open modal when "Learn More" clicked
     modalLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -51,7 +48,6 @@
         });
     });
 
-    // Close modal on close button click
     closeButtons.forEach(btn => {
         btn.addEventListener('click', function() {
             const modal = this.closest('.modal-overlay');
@@ -59,7 +55,6 @@
         });
     });
 
-    // Close modal on click outside the modal box
     modalOverlays.forEach(overlay => {
         overlay.addEventListener('click', function(e) {
             if (e.target === this) {
@@ -68,7 +63,6 @@
         });
     });
 
-    // Close modal on Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             modalOverlays.forEach(overlay => {
@@ -79,8 +73,7 @@
         }
     });
 
-    // --- 3. Membership card animation on load (optional) ---
-    // Add a class after a small delay to trigger CSS transitions
+    // --- 3. Membership card animation on load ---
     const cards = document.querySelectorAll('.membership-card');
     if (cards.length) {
         cards.forEach((card, index) => {
@@ -93,5 +86,20 @@
             }, 150 + index * 100);
         });
     }
+
+    // --- 4. Hamburger (if not already handled by navigation.js) ---
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('#primary-nav ul');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('open');
+        });
+    }
+
+    // --- 5. Footer year and last modified ---
+    const yearSpan = document.getElementById('footer-year');
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    const modSpan = document.getElementById('footer-modified');
+    if (modSpan) modSpan.textContent = document.lastModified;
 
 })();
