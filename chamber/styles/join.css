@@ -56,13 +56,6 @@ nav ul li a:hover,
 nav ul li a.active {
     background: rgba(255, 255, 255, 0.15);
 }
-/* fix contrast for a in hover/active state */
-.header-inner nav ul li a:hover,
-.header-inner nav ul li a.active {
-    background: #2c7be5;
-    color: #fff;
-}
-
 .hamburger {
     display: none;
     background: none;
@@ -212,7 +205,6 @@ legend {
     transition: transform 0.3s, box-shadow 0.3s;
     opacity: 0;
     transform: translateY(25px);
-    /* animated via JS */
 }
 .membership-card:hover {
     transform: translateY(-4px) !important;

@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kisoro City Chamber Home</title>
-  <meta name="description" content="Welcome to the Kisoro City Chamber of Commerce home page, featuring local business spotlights, events, and weather updates." />
-  <meta property="og:title" content="Kisoro City Chamber of Commerce - Home" >
-  <meta property="og:description" content="Welcome to the Kisoro City Chamber of Commerce home page, featuring local business spotlights, events, and weather updates." />
-  <meta property="og:image" content="https://baker-11be.github.io/wdd231/chamber/images/chamber.webp" >
-  <meta property="og:url" content="https://baker-11be.github.io/wdd231/chamber/" >
+  <title>Discover Kisoro | Kisoro City Chamber of Commerce</title>
+  <meta name="description" content="Discover Kisoro City — a growing regional center in western Uganda with a vibrant small-business community, historic downtown, and stunning natural surroundings." />
+  <meta property="og:title" content="Discover Kisoro City | Kisoro City Chamber of Commerce" >
+  <meta property="og:description" content="Learn about Kisoro's local history, current demographics, upcoming community events, and image highlights from around the city." />
+  <meta property="og:image" content="https://baker-11be.github.io/wdd231/chamber/images/historic.webp" >
+  <meta property="og:url" content="https://baker-11be.github.io/wdd231/chamber/discover.html" >
   <meta property="og:type" content="website" />
   <meta name="author" content="Baker Mfitundinda" >
   <link rel="icon" href="images/chamber.webp">
@@ -21,7 +21,6 @@
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/larger.css" />
   <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/home.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -35,7 +34,7 @@
         <p class="site-tag">A community hub for visitors, residents, and local businesses.</p>
       </div>
     </div>
-    <button id="hamburger" aria-label="Toggle Navigation Menu">☰</button>
+    <button id="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
   </header>
 
   <nav id="primary-nav">
@@ -105,7 +104,13 @@
 
   <footer>
     <p>Baker Mfitundinda | WDD 231</p>
-    <p class="footer-meta">&copy; <span id="current-year">2026</span> Kisoro City Chamber of Commerce</p>
+    <p class="footer-meta">&copy; <span id="current-year"></span> Kisoro City Chamber of Commerce</p>
   </footer>
+  <script>
+    (function () {
+      var y = document.getElementById('current-year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>

@@ -3,65 +3,65 @@
     {
       "company_name": "Riverfront Café",
       "address": "22 Riverside Drive, Kisoro City",
-      "phone": "(+256773196530",
-      "website": "https://riverfront-cafe.example.com",
-      "image": "member-1.svg",
+      "phone": "+256 772 441 809",
+      "website": "https://riverfrontcafe.co.ug",
+      "image": "member1.webp",
       "membership_level": 3,
-      "description": "Family-owned café offering breakfast, lunch, and locally roasted coffee."
+      "description": "Family-owned café serving home-style breakfast, wood-fired lunches, and locally roasted Kisoro Coffee since 2012."
     },
     {
       "company_name": "Cascade Creative Studio",
       "address": "410 Main Street, Kisoro City",
-      "phone": "(+256773196530",
-      "website": "https://cascadecreative.example.com",
-      "image": "member-2.svg",
+      "phone": "+256 755 208 117",
+      "website": "https://cascadecreative.ug",
+      "image": "member2.webp",
       "membership_level": 2,
-      "description": "Design services for small businesses, including branding, websites, and print media."
+      "description": "Full-service design studio helping local businesses with branding, websites, signage, and community-focused print campaigns."
     },
     {
       "company_name": "Summit Outdoor Supply",
       "address": "98 Hilltop Avenue, Kisoro City",
-      "phone": "(+256773196530",
-      "website": "https://summitoutdoors.example.com",
-      "image": "member-3.svg",
+      "phone": "+256 781 663 042",
+      "website": "https://summitoutdoorsupply.co.ug",
+      "image": "member3.webp",
       "membership_level": 3,
-      "description": "Outdoor gear and apparel store specializing in hiking, camping, and river sports."
+      "description": "Guided hiking tours, camping gear, and outdoor apparel specializing in trips around Lake Mutanda and the Virunga foothills."
     },
     {
       "company_name": "Pioneer Insurance Group",
       "address": "135 Liberty Boulevard, Kisoro City",
-      "phone": "(+256773196530",
-      "website": "https://pioneerinsurance.example.com",
-      "image": "member-4.svg",
+      "phone": "+256 704 312 558",
+      "website": "https://pioneerinsurance.co.ug",
+      "image": "member4.webp",
       "membership_level": 2,
-      "description": "Personal and business insurance services with local claim support."
+      "description": "Personal, farm, and small-business insurance with local Kisoro-based claims adjusters and bilingual customer support."
     },
     {
       "company_name": "Twin Peaks Fitness",
       "address": "286 Sports Park Road, Kisoro City",
-      "phone": "(+256773196530",
-      "website": "https://twinpeaksfitness.example.com",
-      "image": "member-5.svg",
+      "phone": "+256 779 874 630",
+      "website": "https://twinpeaksfitnessug.com",
+      "image": "member5.webp",
       "membership_level": 1,
-      "description": "Community gym offering group classes, personal training, and wellness workshops."
+      "description": "Community gym with daily group classes, personal training, youth sports camps, and a weekend mountain-running club."
     },
     {
       "company_name": "Kisoro City Books",
       "address": "503 Elm Street, Kisoro City",
-      "phone": "(+256773196530",
-      "website": "https://kisorocitybooks.example.com",
-      "image": "member-6.svg",
+      "phone": "+256 752 103 986",
+      "website": "https://kisorocitybooks.co.ug",
+      "image": "member6.webp",
       "membership_level": 1,
-      "description": "Independent bookstore with event space, book clubs, and gift items."
+      "description": "Independent bookstore and community reading space with a curated section of Ugandan authors and local-history titles."
     },
     {
       "company_name": "North Fork Medical Clinic",
       "address": "710 Valley Road, Kisoro City",
-      "phone": "(+256773196530",
-      "website": "https://northforkclinic.example.com",
-      "image": "member-7.svg",
+      "phone": "+256 783 529 014",
+      "website": "https://northforkmedicalclinic.ug",
+      "image": "member7.webp",
       "membership_level": 3,
-      "description": "Primary care clinic providing family medicine, urgent care, and wellness services."
+      "description": "Primary-care clinic offering family medicine, outpatient wellness, childhood vaccinations, and after-hours urgent care in Kisoro."
     }
   ]
 }

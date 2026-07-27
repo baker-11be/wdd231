@@ -8,8 +8,8 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Meta Graph -->
-    <meta property="og:title" content="Kisoro Chamber of Commerce - Join">
-    <meta property="og:description" content="Welcome to the Kisoro City Chamber of Commerce home page, featuring local business spotlights, events, and weather updates.">
+    <meta property="og:title" content="Join the Kisoro Chamber of Commerce">
+    <meta property="og:description" content="Apply for NP, Bronze, Silver, or Gold membership with the Kisoro Chamber of Commerce and grow your business through networking, training, and community support.">
     <meta property="og:image" content="https://baker-11be.github.io/wdd231/chamber/images/hero.webp">
     <meta property="og:url" content="https://baker-11be.github.io/wdd231/chamber/join.html">
     <meta property="og:type" content="website">
@@ -17,7 +17,8 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,425 +26,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Kisoro Chamber of Commerce - Join</title>
-
-    <style>
-        /* ---------- RESET & BASE ---------- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Play', sans-serif;
-            background: #f5f7fa;
-            color: #1e2e3e;
-            line-height: 1.6;
-        }
-
-        /* ---------- HEADER ---------- */
-        header {
-            background: #1a3a5c;
-            color: #fff;
-            padding: 0.8rem 2rem;
-        }
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-        }
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-        .logo-area span {
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-        .logo-area img {
-            border-radius: 8px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            transition: background 0.2s;
-        }
-        nav ul li a:hover,
-        nav ul li a.active {
-            background: rgba(255, 255, 255, 0.15);
-        }
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-        }
-        .hamburger .bar {
-            width: 28px;
-            height: 3px;
-            background: #fff;
-            border-radius: 3px;
-        }
-
-        /* ---------- JOIN CONTAINER ---------- */
-        .join-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2.5rem;
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        /* ---- FORM SECTION ---- */
-        .form-section {
-            flex: 2 1 300px;
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 2rem 2rem 2.5rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            border: 1px solid #e9edf2;
-            min-width: 280px;
-        }
-        .form-section h1 {
-            font-size: 1.8rem;
-            color: #1a3a5c;
-            margin-bottom: 0.2rem;
-        }
-        .form-intro {
-            color: #5a7a8a;
-            margin-bottom: 1.8rem;
-        }
-
-        /* ---- FORM FIELDS ---- */
-        label {
-            display: block;
-            margin-bottom: 1.2rem;
-        }
-        .label-text {
-            display: block;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.3rem;
-            color: #1e2e3e;
-        }
-        .required {
-            color: #c0392b;
-        }
-        input,
-        textarea {
-            width: 100%;
-            padding: 0.7rem 0.9rem;
-            border: 1px solid #d0d7df;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border 0.2s;
-            background: #fafbfc;
-        }
-        input:focus,
-        textarea:focus {
-            outline: none;
-            border-color: #1a3a5c;
-            box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.1);
-            background: #fff;
-        }
-
-        fieldset {
-            border: 1px solid #d0d7df;
-            border-radius: 8px;
-            padding: 1rem 1.2rem;
-            margin-bottom: 1.2rem;
-        }
-        legend {
-            font-weight: 700;
-            color: #1e2e3e;
-            padding: 0 0.3rem;
-        }
-        .radio-label {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin: 0.4rem 0;
-            cursor: pointer;
-        }
-        .radio-label input[type="radio"] {
-            width: auto;
-            margin: 0;
-            accent-color: #1a3a5c;
-        }
-
-        .submit-btn {
-            background: #1a3a5c;
-            color: #fff;
-            border: none;
-            padding: 0.8rem 2.8rem;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 40px;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.1s;
-            width: 100%;
-            margin-top: 0.5rem;
-        }
-        .submit-btn:hover {
-            background: #0f2a44;
-            transform: translateY(-2px);
-        }
-
-        /* ---- MEMBERSHIP CARDS SECTION ---- */
-        .membership-cards-section {
-            flex: 1 1 260px;
-            min-width: 240px;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-        .membership-cards-section > h2 {
-            font-size: 1.3rem;
-            color: #1a3a5c;
-            margin-bottom: 0.2rem;
-            border-bottom: 3px solid #1a3a5c;
-            padding-bottom: 0.5rem;
-            display: inline-block;
-            align-self: flex-start;
-        }
-
-        /* ---- INDIVIDUAL CARD ---- */
-        .membership-card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 1.2rem 1.5rem 1.5rem;
-            border: 1px solid #e9edf2;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            transition: transform 0.3s, box-shadow 0.3s;
-            opacity: 0;
-            transform: translateY(25px);
-            /* animated via JS */;
-        }
-        .membership-card:hover {
-            transform: translateY(-4px) !important;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        }
-        .membership-card h3 {
-            font-size: 1.1rem;
-            color: #1a3a5c;
-            margin: 0 0 0.1rem;
-        }
-        .membership-card .cost {
-            font-weight: 700;
-            color: #2d7a6e;
-            font-size: 1rem;
-        }
-        .membership-card .short-desc {
-            font-size: 0.85rem;
-            color: #5a6a7a;
-            margin: 0.3rem 0 0.8rem;
-        }
-        .learn-more {
-            background: #1a3a5c;
-            color: #fff;
-            border: none;
-            padding: 0.4rem 1.4rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: background 0.2s;
-            font-family: inherit;
-        }
-        .learn-more:hover {
-            background: #0f2a44;
-        }
-
-        /* card colour accents */
-        .card-np { border-left: 5px solid #2d7a6e; }
-        .card-bronze { border-left: 5px solid #b87333; }
-        .card-silver { border-left: 5px solid #8a9bb0; }
-        .card-gold { border-left: 5px solid #c9a84c; }
-
-        /* ---------- MODALS ---------- */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            padding: 1rem;
-        }
-        .modal-box {
-            background: #fff;
-            max-width: 500px;
-            width: 100%;
-            padding: 2rem 2rem 2.2rem;
-            border-radius: 16px;
-            position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-        .modal-close {
-            position: absolute;
-            top: 0.3rem;
-            right: 1.2rem;
-            font-size: 2.2rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: #888;
-            transition: color 0.2s;
-            line-height: 1;
-        }
-        .modal-close:hover {
-            color: #222;
-        }
-        .modal-box h3 {
-            font-size: 1.4rem;
-            color: #1a3a5c;
-            margin-top: 0;
-            margin-bottom: 1rem;
-        }
-        .modal-box ul {
-            list-style: none;
-            padding: 0;
-        }
-        .modal-box ul li {
-            padding: 0.4rem 0;
-            border-bottom: 1px solid #f0f2f5;
-        }
-        .modal-box ul li:last-child {
-            border-bottom: none;
-        }
-
-        /* ---------- FOOTER ---------- */
-        footer {
-            background: #1a3a5c;
-            color: #c0d0e0;
-            padding: 1.5rem 2rem;
-            margin-top: 2rem;
-        }
-        .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-        }
-        .footer-contact {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .footer-contact img {
-            border-radius: 8px;
-        }
-        .footer-contact p {
-            margin: 0.1rem 0;
-        }
-        .footer-contact a {
-            color: #8ab8d8;
-            text-decoration: none;
-        }
-        .footer-contact a:hover {
-            text-decoration: underline;
-        }
-        .footer-copy {
-            text-align: right;
-            font-size: 0.85rem;
-        }
-        .footer-copy p {
-            margin: 0.1rem 0;
-        }
-
-        /* ---------- RESPONSIVE ---------- */
-        @media (max-width: 767px) {
-            .join-container {
-                flex-direction: column;
-                gap: 1.5rem;
-                padding: 0 1rem;
-            }
-            .form-section {
-                padding: 1.2rem;
-            }
-            .membership-cards-section {
-                order: 2;
-            }
-            .form-section {
-                order: 1;
-            }
-            .membership-card {
-                opacity: 1 !important;
-                transform: translateY(0) !important;
-            }
-            .footer-inner {
-                flex-direction: column;
-                text-align: center;
-            }
-            .footer-copy {
-                text-align: center;
-            }
-            .footer-contact {
-                flex-direction: column;
-            }
-            .hamburger {
-                display: flex;
-            }
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 0.5rem;
-                background: #0f2a44;
-                padding: 1rem;
-                border-radius: 8px;
-                position: absolute;
-                top: 70px;
-                right: 1rem;
-                width: 200px;
-            }
-            nav ul.open {
-                display: flex;
-            }
-            .header-inner {
-                position: relative;
-            }
-            nav {
-                width: 100%;
-                display: flex;
-                justify-content: flex-end;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .membership-card {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-        }
-    </style>
 </head>
 <body>
+
+    <a class="skip-link" href="#main-content" style="
+        position: absolute;
+        left: -9999px;
+        background: #1a3a5c;
+        color: #fff;
+        padding: 0.6rem 1.2rem;
+        border-radius: 0 0 8px 8px;
+        font-weight: 600;
+        z-index: 9999;
+    " onfocus="this.style.left='1rem'" onblur="this.style.left='-9999px'">Skip to main content</a>
 
     <!-- ===== HEADER ===== -->
     <header>
@@ -452,7 +47,7 @@
                 <img src="images/historic.webp" alt="Kisoro Chamber of Commerce Logo" width="60" height="60" />
                 <span>Kisoro Chamber</span>
             </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -469,12 +64,12 @@
     </header>
 
     <!-- ===== MAIN ===== -->
-    <main class="join-container">
+    <main class="join-container" id="main-content">
 
         <!-- LEFT: FORM -->
         <section class="form-section">
             <h1>Membership Application</h1>
-            <p class="form-intro">Fill in the details below to apply for chamber membership.</p>
+            <p class="form-intro">Thank you for your interest in joining the Kisoro Chamber of Commerce. Share a few details about yourself and your organization — we review every application personally.</p>
 
             <form method="get" action="thankyou.html" id="membership-form" novalidate>
 
@@ -482,16 +77,16 @@
                 <label for="firstname" title="Applicant's first name">
                     <span class="label-text">First Name <span class="required">*</span></span>
                     <input type="text" name="firstname" id="firstname"
-                    placeholder="First Name" required
-                    autocomplete="given-name" title="Enter your first name" />
+                    placeholder="Sarah" required
+                    autocomplete="given-name" title="Applicant's given (first) name" />
                 </label>
 
                 <!-- Last Name -->
                 <label for="lastname" title="Applicant's last name">
                     <span class="label-text">Last Name <span class="required">*</span></span>
                     <input type="text" name="lastname" id="lastname"
-                    placeholder="Last Name" required
-                    autocomplete="family-name" title="Enter your last name" />
+                    placeholder="Mugisha" required
+                    autocomplete="family-name" title="Applicant's family (last) name" />
                 </label>
 
                 <!-- Organizational Title -->
@@ -508,26 +103,26 @@
                 <label for="email" title="Applicant's email address">
                     <span class="label-text">Email Address <span class="required">*</span></span>
                     <input type="email" name="email" id="email"
-                    placeholder="name@example.com" required
+                    placeholder="sarah@kisorocraftworks.co.ug" required
                     autocomplete="email"
-                    title="Enter a valid email address" />
+                    title="A professional email we can use to reach you about your application" />
                 </label>
 
                 <!-- Mobile Phone -->
                 <label for="phone" title="Applicant's mobile phone number">
                     <span class="label-text">Mobile Phone Number <span class="required">*</span></span>
                     <input type="tel" name="phone" id="phone"
-                    placeholder="+*** 800 000 000" required
-                    autocomplete="tel" title="Enter your mobile phone number" />
+                    placeholder="+256 772 123 456" required
+                    autocomplete="tel" title="Ugandan or international mobile number we can call or text" />
                 </label>
 
                 <!-- Business Name -->
                 <label for="business" title="Business or organization name">
                     <span class="label-text">Business/Organization Name <span class="required">*</span></span>
                     <input type="text" name="business" id="business"
-                    placeholder="Business Name" required
+                    placeholder="Kisoro Craft Works Ltd." required
                     autocomplete="organization"
-                    title="Enter your business or organization name" />
+                    title="The official name of your business, nonprofit, or organization" />
                 </label>
 
                 <!-- Membership Level -->
@@ -552,18 +147,18 @@
                 </fieldset>
 
                 <!-- Business Description -->
-                <label for="description" title="Brief description of your business">
+                <label for="description" title="Brief description of your business or organization">
                     <span class="label-text">Business Description</span>
                     <textarea name="description" id="description"
-                    rows="4" placeholder="Tell us about your business…"
-                title="Briefly describe your business or organization"></textarea>
+                    rows="4" placeholder="Tell us what your organization does, who you serve, and how you'd like to engage with the chamber community…"
+                title="Share a few sentences about your work, mission, and goals for joining the chamber"></textarea>
             </label>
 
-            <!-- Hidden Timestamp – will be set on submit -->
+            <!-- Hidden Timestamp – populated by join.js on page load -->
             <input type="hidden" name="timestamp" id="timestamp" value="" />
 
-            <!-- Submit -->
-            <button type="submit" class="submit-btn">Submit Application</button>
+            <!-- Submit (input[type=submit] per assignment spec) -->
+            <input type="submit" class="submit-btn" value="Submit Application" />
 
         </form>
     </section>
@@ -577,7 +172,7 @@
             <h3>NP Membership</h3>
             <p class="cost">Free</p>
             <p class="short-desc">For non-profit organizations</p>
-            <button class="learn-more" data-modal="modal-np">Learn More</button>
+            <button class="learn-more" data-modal="modal-np" type="button">Learn More</button>
         </div>
 
         <!-- Bronze -->
@@ -585,7 +180,7 @@
             <h3>Bronze Membership</h3>
             <p class="cost">$15,000 / year</p>
             <p class="short-desc">Standard directory listing &amp; 10% training discount</p>
-            <button class="learn-more" data-modal="modal-bronze">Learn More</button>
+            <button class="learn-more" data-modal="modal-bronze" type="button">Learn More</button>
         </div>
 
         <!-- Silver -->
@@ -593,7 +188,7 @@
             <h3>Silver Membership</h3>
             <p class="cost">$30,000 / year</p>
             <p class="short-desc">Enhanced profile, 20% discounts &amp; networking events</p>
-            <button class="learn-more" data-modal="modal-silver">Learn More</button>
+            <button class="learn-more" data-modal="modal-silver" type="button">Learn More</button>
         </div>
 
         <!-- Gold -->
@@ -601,7 +196,7 @@
             <h3>Gold Membership</h3>
             <p class="cost">$50,000 / year</p>
             <p class="short-desc">Premium spotlight, 30% discounts &amp; exclusive events</p>
-            <button class="learn-more" data-modal="modal-gold">Learn More</button>
+            <button class="learn-more" data-modal="modal-gold" type="button">Learn More</button>
         </div>
     </aside>
 
@@ -610,7 +205,7 @@
 <!-- ===== MODALS ===== -->
 <div class="modal-overlay" id="modal-np">
     <div class="modal-box">
-        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
         <h3>NP Membership Benefits</h3>
         <ul>
             <li>✓ Free membership for non-profit organizations</li>
@@ -624,7 +219,7 @@
 
 <div class="modal-overlay" id="modal-bronze">
     <div class="modal-box">
-        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
         <h3>Bronze Membership Benefits</h3>
         <ul>
             <li>✓ Standard directory profile with business logo link</li>
@@ -638,7 +233,7 @@
 
 <div class="modal-overlay" id="modal-silver">
     <div class="modal-box">
-        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
         <h3>Silver Membership Benefits</h3>
         <ul>
             <li>✓ Enhanced directory profile with photo gallery</li>
@@ -653,7 +248,7 @@
 
 <div class="modal-overlay" id="modal-gold">
     <div class="modal-box">
-        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
         <h3>Gold Membership Benefits</h3>
         <ul>
             <li>✓ Premium directory profile with video and social links</li>
@@ -687,111 +282,7 @@
 </footer>
 
 <!-- ===== SCRIPTS ===== -->
-<script src="scripts/navigation.js" defer></script>
-<script>
-    (function() {
-        'use strict';
-
-        // 1. Timestamp
-        const form = document.getElementById('membership-form');
-        const timestampField = document.getElementById('timestamp');
-
-        if (form && timestampField) {
-            timestampField.value = new Date().toISOString();
-            form.addEventListener('submit', function() {
-                timestampField.value = new Date().toISOString();
-            });
-        }
-
-        // 2. Hamburger
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.querySelector('#primary-nav ul');
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', function() {
-                navMenu.classList.toggle('open');
-            });
-        }
-
-        // 3. Modals
-        const modalLinks = document.querySelectorAll('.learn-more');
-        const modalOverlays = document.querySelectorAll('.modal-overlay');
-        const closeButtons = document.querySelectorAll('.modal-close');
-
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeModal(modal) {
-            if (modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        modalLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const modalId = this.getAttribute('data-modal');
-                openModal(modalId);
-            });
-        });
-
-        closeButtons.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const modal = this.closest('.modal-overlay');
-                closeModal(modal);
-            });
-        });
-
-        modalOverlays.forEach(overlay => {
-            overlay.addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeModal(this);
-                }
-            });
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                modalOverlays.forEach(overlay => {
-                    if (overlay.style.display === 'flex') {
-                        closeModal(overlay);
-                    }
-                });
-            }
-        });
-
-        // 4. Card animation – only on desktop
-        const cards = document.querySelectorAll('.membership-card');
-        const isMobile = window.innerWidth < 768;
-
-        if (cards.length && !isMobile) {
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 150 + index * 150);
-            });
-        } else {
-            cards.forEach(card => {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            });
-        }
-
-        // 5. Footer
-        const yearSpan = document.getElementById('footer-year');
-        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-        const modSpan = document.getElementById('footer-modified');
-        if (modSpan) modSpan.textContent = document.lastModified;
-
-    })();
-</script>
+<script src="scripts/join.js" defer></script>
 
 </body>
 </html>
