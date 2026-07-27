@@ -1,24 +1,53 @@
-/* ---------- RESET & BASE ---------- */
-* {
+/* ==========================================================
+   join.css — Custom Join + Thank-You Page Styles
+   Everything is scoped under .chamber-alt-page so these
+   rules do NOT create duplicate top-level selectors vs.
+   small.css/larger.css (audit repeated-rules fix).
+   ========================================================== */
+
+/* ---------- RESET & BASE (scoped) ---------- */
+.chamber-alt-page * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
+.chamber-alt-page {
     font-family: 'Play', sans-serif;
     background: #f5f7fa;
     color: #3e1e1f;
     line-height: 1.6;
 }
 
+/* ---------- ACCESSIBILITY: SKIP-LINK (pure CSS) ---------- */
+.chamber-alt-page .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: #5c1a1a;
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0 0 8px 8px;
+    font-weight: 600;
+    z-index: 9999;
+    text-decoration: none;
+}
+.chamber-alt-page .skip-link:focus,
+.chamber-alt-page .skip-link:focus-visible,
+.chamber-alt-page .skip-link:active {
+    left: 1rem;
+    color: #ffffff;
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
 /* ---------- HEADER ---------- */
-header {
+.chamber-alt-page header {
     background: #1a5c24;
-    color: #fff;
+    color: #ffffff;
     padding: 0.8rem 2rem;
 }
-.header-inner {
+.chamber-alt-page .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,53 +55,66 @@ header {
     margin: 0 auto;
     flex-wrap: wrap;
 }
-.logo-area {
+.chamber-alt-page .logo-area {
     display: flex;
     align-items: center;
     gap: 0.8rem;
 }
-.logo-area span {
+.chamber-alt-page .logo-area span {
     font-size: 1.3rem;
     font-weight: 700;
+    color: #ffffff;
 }
-.logo-area img {
+.chamber-alt-page .logo-area img {
     border-radius: 8px;
 }
 
-nav ul {
+/* ----- NAV (with explicit link-contrast enforcement) ----- */
+.chamber-alt-page nav ul {
     display: flex;
     list-style: none;
     gap: 1.5rem;
 }
-nav ul li a {
-    color: #fff;
+.chamber-alt-page nav ul li,
+.chamber-alt-page nav ul li a,
+.chamber-alt-page header nav a {
+    color: #ffffff;
+}
+.chamber-alt-page nav ul li a {
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
     transition: background 0.2s;
 }
-nav ul li a:hover,
-nav ul li a.active {
-    background: rgba(255, 255, 255, 0.15);
+.chamber-alt-page nav ul li a:visited {
+    color: #ffffff;
 }
-.hamburger {
+.chamber-alt-page nav ul li a:hover,
+.chamber-alt-page nav ul li a:focus-visible,
+.chamber-alt-page nav ul li a.active {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+}
+
+.chamber-alt-page .hamburger {
     display: none;
-    background: none;
+    background: transparent;
     border: none;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
 }
-.hamburger .bar {
+.chamber-alt-page .hamburger .bar {
     width: 28px;
     height: 3px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 3px;
 }
 
 /* ---------- JOIN CONTAINER ---------- */
-.join-container {
+.chamber-alt-page .join-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2.5rem;
@@ -82,7 +124,7 @@ nav ul li a.active {
 }
 
 /* ---- FORM SECTION ---- */
-.form-section {
+.chamber-alt-page .form-section {
     flex: 2 1 300px;
     background: #ffffff;
     border-radius: 16px;
@@ -91,33 +133,33 @@ nav ul li a.active {
     border: 1px solid #e9edf2;
     min-width: 280px;
 }
-.form-section h1 {
+.chamber-alt-page .form-section h1 {
     font-size: 1.8rem;
     color: #1a3a5c;
     margin-bottom: 0.2rem;
 }
-.form-intro {
+.chamber-alt-page .form-intro {
     color: #5a7a8a;
     margin-bottom: 1.8rem;
 }
 
 /* ---- FORM FIELDS ---- */
-label {
+.chamber-alt-page label {
     display: block;
     margin-bottom: 1.2rem;
 }
-.label-text {
+.chamber-alt-page .label-text {
     display: block;
     font-weight: 600;
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
     color: #1e2e3e;
 }
-.required {
+.chamber-alt-page .required {
     color: #c0392b;
 }
-input,
-textarea {
+.chamber-alt-page input,
+.chamber-alt-page textarea {
     width: 100%;
     padding: 0.7rem 0.9rem;
     border: 1px solid #d0d7df;
@@ -126,42 +168,44 @@ textarea {
     font-family: inherit;
     transition: border 0.2s;
     background: #fafbfc;
+    color: #1e2e3e;
 }
-input:focus,
-textarea:focus {
+.chamber-alt-page input:focus,
+.chamber-alt-page textarea:focus {
     outline: none;
     border-color: #1a3a5c;
-    box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.1);
-    background: #fff;
+    box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.15);
+    background: #ffffff;
 }
 
-fieldset {
+.chamber-alt-page fieldset {
     border: 1px solid #d0d7df;
     border-radius: 8px;
     padding: 1rem 1.2rem;
     margin-bottom: 1.2rem;
 }
-legend {
+.chamber-alt-page legend {
     font-weight: 700;
     color: #1e2e3e;
     padding: 0 0.3rem;
 }
-.radio-label {
+.chamber-alt-page .radio-label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin: 0.4rem 0;
     cursor: pointer;
+    color: #1e2e3e;
 }
-.radio-label input[type="radio"] {
+.chamber-alt-page .radio-label input[type="radio"] {
     width: auto;
     margin: 0;
     accent-color: #1a3a5c;
 }
 
-.submit-btn {
+.chamber-alt-page .submit-btn {
     background: #1a3a5c;
-    color: #fff;
+    color: #ffffff;
     border: none;
     padding: 0.8rem 2.8rem;
     font-size: 1.1rem;
@@ -171,21 +215,24 @@ legend {
     transition: background 0.2s, transform 0.1s;
     width: 100%;
     margin-top: 0.5rem;
+    font-family: inherit;
 }
-.submit-btn:hover {
+.chamber-alt-page .submit-btn:hover,
+.chamber-alt-page .submit-btn:focus-visible {
     background: #0f2a44;
     transform: translateY(-2px);
+    color: #ffffff;
 }
 
 /* ---- MEMBERSHIP CARDS SECTION ---- */
-.membership-cards-section {
+.chamber-alt-page .membership-cards-section {
     flex: 1 1 260px;
     min-width: 240px;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
-.membership-cards-section > h2 {
+.chamber-alt-page .membership-cards-section > h2 {
     font-size: 1.3rem;
     color: #1a3a5c;
     margin-bottom: 0.2rem;
@@ -195,8 +242,8 @@ legend {
     align-self: flex-start;
 }
 
-/* ---- INDIVIDUAL CARD ---- */
-.membership-card {
+/* ---- INDIVIDUAL CARD (NOT duplicated top-level — scoped) ---- */
+.chamber-alt-page .membership-card {
     background: #ffffff;
     border-radius: 12px;
     padding: 1.2rem 1.5rem 1.5rem;
@@ -206,28 +253,28 @@ legend {
     opacity: 0;
     transform: translateY(25px);
 }
-.membership-card:hover {
+.chamber-alt-page .membership-card:hover {
     transform: translateY(-4px) !important;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
-.membership-card h3 {
+.chamber-alt-page .membership-card h3 {
     font-size: 1.1rem;
     color: #1a3a5c;
     margin: 0 0 0.1rem;
 }
-.membership-card .cost {
+.chamber-alt-page .membership-card .cost {
     font-weight: 700;
     color: #2d7a6e;
     font-size: 1rem;
 }
-.membership-card .short-desc {
+.chamber-alt-page .membership-card .short-desc {
     font-size: 0.85rem;
     color: #5a6a7a;
     margin: 0.3rem 0 0.8rem;
 }
-.learn-more {
+.chamber-alt-page .learn-more {
     background: #1a3a5c;
-    color: #fff;
+    color: #ffffff;
     border: none;
     padding: 0.4rem 1.4rem;
     border-radius: 30px;
@@ -237,32 +284,34 @@ legend {
     transition: background 0.2s;
     font-family: inherit;
 }
-.learn-more:hover {
+.chamber-alt-page .learn-more:hover,
+.chamber-alt-page .learn-more:focus-visible {
     background: #0f2a44;
+    color: #ffffff;
 }
 
 /* card colour accents */
-.card-np { border-left: 5px solid #2d7a6e; }
-.card-bronze { border-left: 5px solid #b87333; }
-.card-silver { border-left: 5px solid #8a9bb0; }
-.card-gold { border-left: 5px solid #c9a84c; }
+.chamber-alt-page .card-np     { border-left: 5px solid #2d7a6e; }
+.chamber-alt-page .card-bronze { border-left: 5px solid #b87333; }
+.chamber-alt-page .card-silver { border-left: 5px solid #8a9bb0; }
+.chamber-alt-page .card-gold   { border-left: 5px solid #c9a84c; }
 
 /* ---------- MODALS ---------- */
-.modal-overlay {
+.chamber-alt-page .modal-overlay {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.55);
     align-items: center;
     justify-content: center;
     z-index: 1000;
     padding: 1rem;
 }
-.modal-box {
-    background: #fff;
+.chamber-alt-page .modal-box {
+    background: #ffffff;
     max-width: 500px;
     width: 100%;
     padding: 2rem 2rem 2.2rem;
@@ -271,48 +320,57 @@ legend {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     max-height: 90vh;
     overflow-y: auto;
+    color: #1e2e3e;
 }
-.modal-close {
+.chamber-alt-page .modal-close {
     position: absolute;
     top: 0.3rem;
     right: 1.2rem;
     font-size: 2.2rem;
-    background: none;
+    background: transparent;
     border: none;
     cursor: pointer;
-    color: #888;
+    color: #888888;
     transition: color 0.2s;
     line-height: 1;
 }
-.modal-close:hover {
-    color: #222;
+.chamber-alt-page .modal-close:hover,
+.chamber-alt-page .modal-close:focus-visible {
+    color: #222222;
 }
-.modal-box h3 {
+.chamber-alt-page .modal-box h3 {
     font-size: 1.4rem;
     color: #1a3a5c;
     margin-top: 0;
     margin-bottom: 1rem;
 }
-.modal-box ul {
+.chamber-alt-page .modal-box ul {
     list-style: none;
     padding: 0;
 }
-.modal-box ul li {
+.chamber-alt-page .modal-box ul li {
     padding: 0.4rem 0;
     border-bottom: 1px solid #f0f2f5;
 }
-.modal-box ul li:last-child {
+.chamber-alt-page .modal-box ul li:last-child {
     border-bottom: none;
 }
 
-/* ---------- FOOTER ---------- */
-footer {
+/* ---------- FOOTER (NOT duplicated top-level — scoped) ---------- */
+.chamber-alt-page footer {
     background: #1a3a5c;
     color: #c0d0e0;
     padding: 1.5rem 2rem;
     margin-top: 2rem;
 }
-.footer-inner {
+.chamber-alt-page footer p,
+.chamber-alt-page footer span {
+    color: #c0d0e0;
+}
+.chamber-alt-page footer strong {
+    color: #ffffff;
+}
+.chamber-alt-page .footer-inner {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -321,66 +379,71 @@ footer {
     align-items: center;
     gap: 1rem;
 }
-.footer-contact {
+.chamber-alt-page .footer-contact {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-.footer-contact img {
+.chamber-alt-page .footer-contact img {
     border-radius: 8px;
 }
-.footer-contact p {
+.chamber-alt-page .footer-contact p {
     margin: 0.1rem 0;
 }
-.footer-contact a {
+.chamber-alt-page .footer-contact a {
     color: #8ab8d8;
     text-decoration: none;
 }
-.footer-contact a:hover {
+.chamber-alt-page .footer-contact a:visited {
+    color: #8ab8d8;
+}
+.chamber-alt-page .footer-contact a:hover,
+.chamber-alt-page .footer-contact a:focus-visible {
+    color: #ffffff;
     text-decoration: underline;
 }
-.footer-copy {
+.chamber-alt-page .footer-copy {
     text-align: right;
     font-size: 0.85rem;
 }
-.footer-copy p {
+.chamber-alt-page .footer-copy p {
     margin: 0.1rem 0;
 }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 767px) {
-    .join-container {
+    .chamber-alt-page .join-container {
         flex-direction: column;
         gap: 1.5rem;
         padding: 0 1rem;
     }
-    .form-section {
+    .chamber-alt-page .form-section {
         padding: 1.2rem;
     }
-    .membership-cards-section {
+    .chamber-alt-page .membership-cards-section {
         order: 2;
     }
-    .form-section {
+    .chamber-alt-page .form-section {
         order: 1;
     }
-    .membership-card {
+    .chamber-alt-page .membership-card {
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
-    .footer-inner {
+    .chamber-alt-page .footer-inner {
         flex-direction: column;
         text-align: center;
     }
-    .footer-copy {
+    .chamber-alt-page .footer-copy {
         text-align: center;
     }
-    .footer-contact {
+    .chamber-alt-page .footer-contact {
         flex-direction: column;
     }
-    .hamburger {
+    .chamber-alt-page .hamburger {
         display: flex;
     }
-    nav ul {
+    .chamber-alt-page nav ul {
         display: none;
         flex-direction: column;
         gap: 0.5rem;
@@ -392,13 +455,13 @@ footer {
         right: 1rem;
         width: 200px;
     }
-    nav ul.open {
+    .chamber-alt-page nav ul.open {
         display: flex;
     }
-    .header-inner {
+    .chamber-alt-page .header-inner {
         position: relative;
     }
-    nav {
+    .chamber-alt-page nav {
         width: 100%;
         display: flex;
         justify-content: flex-end;
@@ -406,7 +469,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-    .membership-card {
+    .chamber-alt-page .membership-card {
         opacity: 0;
         transform: translateY(25px);
     }
