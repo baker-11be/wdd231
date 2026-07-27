@@ -8,13 +8,13 @@
 body {
     font-family: 'Play', sans-serif;
     background: #f5f7fa;
-    color: #1e2e3e;
+    color: #3e1e1f;
     line-height: 1.6;
 }
 
 /* ---------- HEADER ---------- */
 header {
-    background: #1a3a5c;
+    background: #1a5c24;
     color: #fff;
     padding: 0.8rem 2rem;
 }
