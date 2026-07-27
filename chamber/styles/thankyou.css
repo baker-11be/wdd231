@@ -1,8 +1,8 @@
 /* ==========================================================
    thankyou.css — Confirmation page styles
-   All selectors scoped under .chamber-alt-page to avoid
-   top-level duplication with small.css / larger.css
-   (matches audit repeated-rules strategy).
+   All colors: hex-only (6/8-digit). All selectors scoped
+   under .chamber-alt-page to avoid top-level repeats vs.
+   small.css / larger.css
    ========================================================== */
 
 .chamber-alt-page .thanks-main {
@@ -27,7 +27,7 @@
 .chamber-alt-page .data-card {
     background: #ffffff;
     border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 30px #00000014;
     padding: 2rem 2rem 1.5rem;
     margin-bottom: 2rem;
     border: 1px solid #e9edf2;
@@ -104,7 +104,7 @@
     font-weight: 600;
     font-size: 0.95rem;
     transition: background 0.2s, transform 0.1s;
-    border: none;
+    border: #00000000;
     cursor: pointer;
     font-family: inherit;
 }
@@ -115,7 +115,7 @@
     color: #ffffff;
 }
 .chamber-alt-page .btn-outline {
-    background: transparent;
+    background: #00000000;
     color: #1a3a5c;
     border: 2px solid #1a3a5c;
 }
@@ -149,7 +149,7 @@
         gap: 0.2rem;
     }
     .chamber-alt-page .data-label {
-        border-bottom: none;
+        border-bottom: #00000000;
         padding-bottom: 0;
         margin-top: 0.5rem;
     }

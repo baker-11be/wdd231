@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css — color syntax normalized to hex-only for project audits */
 
 html {
     line-height: 1.15;
@@ -30,11 +30,11 @@ pre {
 }
 
 a {
-    background-color: transparent;
+    background-color: #00000000;
 }
 
 abbr[title] {
-    border-bottom: none;
+    border-bottom-style: none;
     text-decoration: underline;
     text-decoration: underline dotted;
 }
@@ -115,7 +115,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
+    outline: 1px dotted #000000;
 }
 
 fieldset {

@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+/* ===== RESET ===== — all colors: 6/8-digit HEX only */
 * {
     margin: 0;
     padding: 0;
@@ -57,8 +57,9 @@ header {
 }
 
 #hamburger {
-    background: none;
-    border: none;
+    background: #00000000;
+    border-style: none;
+    border-color: #00000000;
     font-size: 2.2rem;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
@@ -95,12 +96,13 @@ header {
     padding: 0.85rem 1.5rem;
     color: #ffffff;
     font-weight: 600;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #ffffff1a;
     transition: background 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
 }
 
 #primary-nav ul li:last-child a {
-    border-bottom: none;
+    border-bottom-style: none;
+    border-bottom-color: #00000000;
 }
 
 #primary-nav ul li a:hover {
@@ -109,7 +111,6 @@ header {
     padding-left: 2rem;
 }
 
-/* No twitching on hover - fixed width/height */
 #primary-nav ul li a.active {
     background: #2c7be5;
     color: #ffffff;
@@ -138,9 +139,8 @@ section {
     background: #ffffff;
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 15px #0000000f;
     margin-bottom: 1.5rem;
-    /* Proximity: consistent spacing */
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -174,7 +174,8 @@ section {
 
 .course-filters button {
     background: #e9ecef;
-    border: none;
+    border-style: none;
+    border-color: #00000000;
     padding: 0.6rem 1.8rem;
     border-radius: 30px;
     font-weight: 700;
@@ -212,7 +213,7 @@ section {
 
 .course-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 20px #00000014;
 }
 
 .course-card.completed {
@@ -321,7 +322,7 @@ section {
 }
 
 .hero-figure {
-    background: rgba(255, 255, 255, 0.1);
+    background: #ffffff1a;
     padding: 1rem;
     border-radius: 20px;
     text-align: center;
@@ -364,7 +365,7 @@ section {
     background: #ffffff;
     padding: 1.5rem;
     border-radius: 18px;
-    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
+    box-shadow: 0 16px 30px #1a2a3a14;
 }
 
 .weather-current-card {
@@ -394,7 +395,8 @@ section {
 }
 
 .forecast-day:first-child {
-    border-top: none;
+    border-top-style: none;
+    border-top-color: #00000000;
 }
 
 .forecast-day img {
@@ -413,7 +415,7 @@ section {
     gap: 1rem;
     background: #ffffff;
     border-radius: 18px;
-    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
+    box-shadow: 0 16px 30px #1a2a3a14;
     padding: 1.25rem;
     align-items: center;
 }
@@ -488,7 +490,8 @@ section {
 
 .view-actions button {
     background: #e9ecef;
-    border: none;
+    border-style: none;
+    border-color: #00000000;
     padding: 0.85rem 1.5rem;
     border-radius: 999px;
     cursor: pointer;
@@ -521,7 +524,7 @@ section {
 .member-card {
     background: #ffffff;
     border-radius: 18px;
-    box-shadow: 0 16px 35px rgba(26, 42, 58, 0.08);
+    box-shadow: 0 16px 35px #1a2a3a14;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -623,7 +626,7 @@ section {
     background: #ffffff;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
+    box-shadow: 0 16px 30px #1a2a3a14;
 }
 
 .image-montage figcaption {
@@ -642,7 +645,7 @@ section {
     background: #ffffff;
     border-radius: 18px;
     padding: 1.5rem;
-    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
+    box-shadow: 0 16px 30px #1a2a3a14;
 }
 
 .membership-card h3 {
@@ -681,7 +684,8 @@ section {
     width: max-content;
     background: #2c7be5;
     color: #ffffff;
-    border: none;
+    border-style: none;
+    border-color: #00000000;
     padding: 0.95rem 1.5rem;
     border-radius: 999px;
     cursor: pointer;
@@ -723,7 +727,7 @@ section {
     display: block;
     margin: 1rem auto 0;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 20px #00000014;
 }
 
 #location figcaption {

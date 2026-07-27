@@ -1,16 +1,9 @@
 /* ==========================================================
    join.css — Custom Join + Thank-You Page Styles
-   Everything is scoped under .chamber-alt-page so these
-   rules do NOT create duplicate top-level selectors vs.
-   small.css/larger.css (audit repeated-rules fix).
+   Everything scoped under .chamber-alt-page so NO top-level
+   selector duplicates vs small.css/larger.css.
+   ALL COLORS: hex only (8-digit #RRGGBBAA for alpha channels)
    ========================================================== */
-
-/* ---------- RESET & BASE (scoped) ---------- */
-.chamber-alt-page * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 .chamber-alt-page {
     font-family: 'Play', sans-serif;
@@ -69,44 +62,52 @@
     border-radius: 8px;
 }
 
-/* ----- NAV (with explicit link-contrast enforcement) ----- */
-.chamber-alt-page nav ul {
+/* ==============================================================
+   CONTRAST ENFORCEMENT — single merged rule with comma-grouped
+   selectors (shares identical color:#ffffff body) beats the
+   small.css `a { color:#1a2a3a }` global for every link state,
+   inside the green header (bg #1a5c24).
+   ============================================================== */
+body.chamber-alt-page header,
+body.chamber-alt-page header *,
+body.chamber-alt-page header a:any-link,
+body.chamber-alt-page header a:link,
+body.chamber-alt-page header a:visited,
+body.chamber-alt-page header a:hover,
+body.chamber-alt-page header a:active,
+body.chamber-alt-page header a:focus-visible,
+body.chamber-alt-page header #primary-nav ul li a.active {
+    color: #ffffff;
+}
+
+/* ---------- NAV ---------- */
+body.chamber-alt-page header nav ul {
     display: flex;
     list-style: none;
     gap: 1.5rem;
 }
-.chamber-alt-page nav ul li,
-.chamber-alt-page nav ul li a,
-.chamber-alt-page header nav a {
-    color: #ffffff;
-}
-.chamber-alt-page nav ul li a {
-    color: #ffffff;
+body.chamber-alt-page header #primary-nav ul li a {
     text-decoration: none;
     font-weight: 600;
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
     transition: background 0.2s;
 }
-.chamber-alt-page nav ul li a:visited {
-    color: #ffffff;
-}
-.chamber-alt-page nav ul li a:hover,
-.chamber-alt-page nav ul li a:focus-visible,
-.chamber-alt-page nav ul li a.active {
-    background: rgba(255, 255, 255, 0.18);
-    color: #ffffff;
+body.chamber-alt-page header #primary-nav ul li a:hover,
+body.chamber-alt-page header #primary-nav ul li a:focus-visible,
+body.chamber-alt-page header #primary-nav ul li a.active {
+    background: #ffffff33;
 }
 
-.chamber-alt-page .hamburger {
+body.chamber-alt-page header .hamburger {
     display: none;
-    background: transparent;
-    border: none;
+    background: #00000000;
+    border: #00000000;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
 }
-.chamber-alt-page .hamburger .bar {
+body.chamber-alt-page header .hamburger .bar {
     width: 28px;
     height: 3px;
     background: #ffffff;
@@ -123,13 +124,12 @@
     padding: 0 1.5rem;
 }
 
-/* ---- FORM SECTION ---- */
 .chamber-alt-page .form-section {
     flex: 2 1 300px;
     background: #ffffff;
     border-radius: 16px;
     padding: 2rem 2rem 2.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px #0000000f;
     border: 1px solid #e9edf2;
     min-width: 280px;
 }
@@ -143,7 +143,7 @@
     margin-bottom: 1.8rem;
 }
 
-/* ---- FORM FIELDS ---- */
+/* ---------- FORM FIELDS ---------- */
 .chamber-alt-page label {
     display: block;
     margin-bottom: 1.2rem;
@@ -172,9 +172,9 @@
 }
 .chamber-alt-page input:focus,
 .chamber-alt-page textarea:focus {
-    outline: none;
+    outline: #00000000;
     border-color: #1a3a5c;
-    box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.15);
+    box-shadow: 0 0 0 3px #1a3a5c26;
     background: #ffffff;
 }
 
@@ -206,7 +206,7 @@
 .chamber-alt-page .submit-btn {
     background: #1a3a5c;
     color: #ffffff;
-    border: none;
+    border: #00000000;
     padding: 0.8rem 2.8rem;
     font-size: 1.1rem;
     font-weight: 700;
@@ -224,7 +224,7 @@
     color: #ffffff;
 }
 
-/* ---- MEMBERSHIP CARDS SECTION ---- */
+/* ---------- MEMBERSHIP CARDS ---------- */
 .chamber-alt-page .membership-cards-section {
     flex: 1 1 260px;
     min-width: 240px;
@@ -242,20 +242,19 @@
     align-self: flex-start;
 }
 
-/* ---- INDIVIDUAL CARD (NOT duplicated top-level — scoped) ---- */
 .chamber-alt-page .membership-card {
     background: #ffffff;
     border-radius: 12px;
     padding: 1.2rem 1.5rem 1.5rem;
     border: 1px solid #e9edf2;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 8px #0000000a;
     transition: transform 0.3s, box-shadow 0.3s;
     opacity: 0;
     transform: translateY(25px);
 }
 .chamber-alt-page .membership-card:hover {
     transform: translateY(-4px) !important;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px #00000014;
 }
 .chamber-alt-page .membership-card h3 {
     font-size: 1.1rem;
@@ -275,7 +274,7 @@
 .chamber-alt-page .learn-more {
     background: #1a3a5c;
     color: #ffffff;
-    border: none;
+    border: #00000000;
     padding: 0.4rem 1.4rem;
     border-radius: 30px;
     cursor: pointer;
@@ -290,7 +289,6 @@
     color: #ffffff;
 }
 
-/* card colour accents */
 .chamber-alt-page .card-np     { border-left: 5px solid #2d7a6e; }
 .chamber-alt-page .card-bronze { border-left: 5px solid #b87333; }
 .chamber-alt-page .card-silver { border-left: 5px solid #8a9bb0; }
@@ -304,7 +302,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.55);
+    background: #0000008c;
     align-items: center;
     justify-content: center;
     z-index: 1000;
@@ -317,7 +315,7 @@
     padding: 2rem 2rem 2.2rem;
     border-radius: 16px;
     position: relative;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px #0000004c;
     max-height: 90vh;
     overflow-y: auto;
     color: #1e2e3e;
@@ -327,8 +325,8 @@
     top: 0.3rem;
     right: 1.2rem;
     font-size: 2.2rem;
-    background: transparent;
-    border: none;
+    background: #00000000;
+    border: #00000000;
     cursor: pointer;
     color: #888888;
     transition: color 0.2s;
@@ -353,10 +351,10 @@
     border-bottom: 1px solid #f0f2f5;
 }
 .chamber-alt-page .modal-box ul li:last-child {
-    border-bottom: none;
+    border-bottom: #00000000;
 }
 
-/* ---------- FOOTER (NOT duplicated top-level — scoped) ---------- */
+/* ---------- FOOTER ---------- */
 .chamber-alt-page footer {
     background: #1a3a5c;
     color: #c0d0e0;
@@ -390,12 +388,10 @@
 .chamber-alt-page .footer-contact p {
     margin: 0.1rem 0;
 }
-.chamber-alt-page .footer-contact a {
-    color: #8ab8d8;
-    text-decoration: none;
-}
+.chamber-alt-page .footer-contact a,
 .chamber-alt-page .footer-contact a:visited {
     color: #8ab8d8;
+    text-decoration: none;
 }
 .chamber-alt-page .footer-contact a:hover,
 .chamber-alt-page .footer-contact a:focus-visible {
@@ -420,30 +416,22 @@
     .chamber-alt-page .form-section {
         padding: 1.2rem;
     }
-    .chamber-alt-page .membership-cards-section {
-        order: 2;
-    }
-    .chamber-alt-page .form-section {
-        order: 1;
-    }
+    .chamber-alt-page .membership-cards-section { order: 2; }
+    .chamber-alt-page .form-section             { order: 1; }
     .chamber-alt-page .membership-card {
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
-    .chamber-alt-page .footer-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-    .chamber-alt-page .footer-copy {
-        text-align: center;
-    }
+    .chamber-alt-page .footer-inner,
+    .chamber-alt-page .footer-copy,
     .chamber-alt-page .footer-contact {
         flex-direction: column;
+        text-align: center;
     }
-    .chamber-alt-page .hamburger {
+    body.chamber-alt-page header .hamburger {
         display: flex;
     }
-    .chamber-alt-page nav ul {
+    body.chamber-alt-page header nav ul {
         display: none;
         flex-direction: column;
         gap: 0.5rem;
@@ -455,13 +443,13 @@
         right: 1rem;
         width: 200px;
     }
-    .chamber-alt-page nav ul.open {
+    body.chamber-alt-page header nav ul.open {
         display: flex;
     }
-    .chamber-alt-page .header-inner {
+    body.chamber-alt-page header .header-inner {
         position: relative;
     }
-    .chamber-alt-page nav {
+    body.chamber-alt-page header nav {
         width: 100%;
         display: flex;
         justify-content: flex-end;
