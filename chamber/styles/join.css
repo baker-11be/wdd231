@@ -43,7 +43,6 @@
     font-weight: 500;
 }
 
-/* FIXED: Required asterisk - changed from #E52C2C to darker red for better contrast */
 .required {
     color: #B71C1C;
     font-weight: 700;
@@ -248,7 +247,6 @@
     font-size: 1.1rem;
 }
 
-/* FIXED: Cost text - changed from #2C7BE5 to darker #1A5BB8 for better contrast */
 .cost {
     font-weight: 700;
     color: #1A5BB8;
@@ -262,7 +260,6 @@
     font-size: 0.95rem;
 }
 
-/* FIXED: Learn More button - changed text color to #1A5BB8 for better contrast on light background */
 .learn-more {
     background: transparent;
     border: 2px solid #1A5BB8;
@@ -281,7 +278,7 @@
     transform: scale(1.02);
 }
 
-/* Card Colors - Updated to use darker shades */
+/* Card Colors */
 .card-np { border-left-color: #5A7A8A; }
 .card-bronze { border-left-color: #B87A2E; }
 .card-silver { border-left-color: #8A94A0; }
