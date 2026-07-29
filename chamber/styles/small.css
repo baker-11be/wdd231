@@ -111,13 +111,14 @@ header {
 }
 
 #primary-nav ul li a:hover {
-    background: #2C7BE5;
+    background: #1A5BB8;
     color: #FFFFFF;
     padding-left: 2rem;
 }
 
+/* FIXED: Active nav link - changed from #2C7BE5 to darker #1A5BB8 for better contrast */
 #primary-nav ul li a.active {
-    background: #2C7BE5;
+    background: #1A5BB8;
     color: #FFFFFF;
 }
 
@@ -173,7 +174,7 @@ section {
 .hero-section {
     display: grid;
     gap: 1.5rem;
-    background: linear-gradient(135deg, #2C7BE5 0%, #8C1B1B 100%);
+    background: linear-gradient(135deg, #1A5BB8 0%, #8C1B1B 100%);
     color: #FFFFFF;
     padding: 2rem;
     border-radius: 20px;
@@ -373,7 +374,7 @@ section {
 
 .view-actions button:hover,
 .view-actions button.active {
-    background: #2C7BE5;
+    background: #1A5BB8;
     color: #FFFFFF;
     transform: translateY(-1px);
 }
@@ -439,7 +440,7 @@ section {
 }
 
 .member-meta a {
-    color: #2C7BE5;
+    color: #1A5BB8;
 }
 
 .membership-pill {
@@ -576,13 +577,13 @@ footer {
     }
 
     #primary-nav ul li a:hover {
-        background: #2C7BE5;
+        background: #1A5BB8;
         color: #FFFFFF;
         padding-left: 1.25rem;
     }
 
     #primary-nav ul li a.active {
-        background: #2C7BE5;
+        background: #1A5BB8;
         color: #FFFFFF;
     }
 
