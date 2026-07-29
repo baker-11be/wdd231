@@ -775,6 +775,6 @@ footer p {
 }
 
 #lastModified {
-    color: hsl(116, 11%, 71%);
+    color: #333;
     font-size: 0.8rem;
 }

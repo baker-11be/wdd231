@@ -477,8 +477,8 @@ section {
 
 /* ===== FOOTER ===== */
 footer {
-    background: #1a2a3a;
-    color: #ffffff;
+    background: #333333;
+    color: #222222;
     padding: 2rem 1.5rem;
     border-radius: 12px 12px 0 0;
     text-align: center;
@@ -486,7 +486,7 @@ footer {
 }
 
 footer h2 {
-    color: #ffffff;
+    color: #33333333;
 }
 
 .social-links {
@@ -514,6 +514,6 @@ footer p {
 }
 
 #lastModified {
-    color: #adb5bd;
+    color: #3333;
     font-size: 0.8rem;
 }
