@@ -25,7 +25,6 @@ a {
     text-decoration: none;
 }
 
-/* ===== HEADER STYLES ===== */
 header {
     display: flex;
     justify-content: space-between;
@@ -76,7 +75,6 @@ header {
     transform: scale(1.1);
 }
 
-/* ===== NAVIGATION ===== */
 #primary-nav {
     background: #1A2A3A;
     border-radius: 0 0 8px 8px;
@@ -110,20 +108,17 @@ header {
     border-bottom-color: transparent;
 }
 
-/* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast (6.50:1) */
 #primary-nav ul li a:hover {
     background: #1A5BB8;
     color: #FFFFFF;
     padding-left: 2rem;
 }
 
-/* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast (6.50:1) */
 #primary-nav ul li a.active {
     background: #1A5BB8;
     color: #FFFFFF;
 }
 
-/* ===== SKIP LINK - FIXED CONTRAST ===== */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -144,7 +139,6 @@ header {
     background: #0F4A8A;
 }
 
-/* ===== MAIN ===== */
 main {
     padding: 1rem 0 2rem 0;
 }
@@ -171,7 +165,6 @@ section {
     margin-bottom: 1.5rem;
 }
 
-/* ===== HERO SECTION (index) ===== */
 .hero-section {
     display: grid;
     gap: 1.5rem;
@@ -227,7 +220,6 @@ section {
     border-radius: 16px;
 }
 
-/* ===== EVENTS (index) ===== */
 .events-section,
 .weather-section,
 .spotlight-section {
@@ -251,7 +243,6 @@ section {
     font-size: 0.95rem;
 }
 
-/* ===== WEATHER (index) ===== */
 .weather-grid {
     display: grid;
     gap: 1rem;
@@ -301,7 +292,6 @@ section {
     height: 48px;
 }
 
-/* ===== SPOTLIGHT (index) ===== */
 .spotlight-grid {
     display: grid;
     gap: 1.5rem;
@@ -353,7 +343,6 @@ section {
     color: #0F3D7A;
 }
 
-/* ===== DIRECTORY (directory) ===== */
 .view-actions {
     display: flex;
     gap: 0.75rem;
@@ -373,7 +362,6 @@ section {
     transition: background 0.25s ease, transform 0.2s ease;
 }
 
-/* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast */
 .view-actions button:hover,
 .view-actions button.active {
     background: #1A5BB8;
@@ -441,7 +429,6 @@ section {
     font-size: 0.95rem;
 }
 
-/* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast */
 .member-meta a {
     color: #1A5BB8;
 }
@@ -491,7 +478,6 @@ section {
     color: #856404;
 }
 
-/* ===== DISCOVER (discover) ===== */
 .image-montage {
     display: grid;
     gap: 1rem;
@@ -535,7 +521,6 @@ section {
     margin-bottom: 0.5rem;
 }
 
-/* ===== FOOTER ===== */
 footer {
     background: #1A3A22;
     color: #FFFFFF;
@@ -550,9 +535,7 @@ footer {
     color: #A0B8A8;
 }
 
-/* ===== RESPONSIVE ===== */
 @media screen and (min-width: 768px) {
-    /* Header nav becomes horizontal */
     #hamburger {
         display: none;
     }
@@ -579,20 +562,17 @@ footer {
         font-weight: 600;
     }
 
-    /* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast */
     #primary-nav ul li a:hover {
         background: #1A5BB8;
         color: #FFFFFF;
         padding-left: 1.25rem;
     }
 
-    /* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast */
     #primary-nav ul li a.active {
         background: #1A5BB8;
         color: #FFFFFF;
     }
 
-    /* Hero */
     .hero-section {
         grid-template-columns: 1.1fr 0.9fr;
         align-items: center;
@@ -610,7 +590,6 @@ footer {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    /* Discover */
     .image-montage {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -619,7 +598,6 @@ footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    /* Directory */
     #directory-cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -630,7 +608,6 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-    /* Directory */
     #directory-cards {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
