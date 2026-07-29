@@ -110,13 +110,14 @@ header {
     border-bottom-color: transparent;
 }
 
+/* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast (6.50:1) */
 #primary-nav ul li a:hover {
     background: #1A5BB8;
     color: #FFFFFF;
     padding-left: 2rem;
 }
 
-/* FIXED: Active nav link - changed from #2C7BE5 to darker #1A5BB8 for better contrast */
+/* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast (6.50:1) */
 #primary-nav ul li a.active {
     background: #1A5BB8;
     color: #FFFFFF;
@@ -372,6 +373,7 @@ section {
     transition: background 0.25s ease, transform 0.2s ease;
 }
 
+/* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast */
 .view-actions button:hover,
 .view-actions button.active {
     background: #1A5BB8;
@@ -439,6 +441,7 @@ section {
     font-size: 0.95rem;
 }
 
+/* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast */
 .member-meta a {
     color: #1A5BB8;
 }
@@ -576,12 +579,14 @@ footer {
         font-weight: 600;
     }
 
+    /* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast */
     #primary-nav ul li a:hover {
         background: #1A5BB8;
         color: #FFFFFF;
         padding-left: 1.25rem;
     }
 
+    /* FIXED: Changed from #2C7BE5 to #1A5BB8 for better contrast */
     #primary-nav ul li a.active {
         background: #1A5BB8;
         color: #FFFFFF;
