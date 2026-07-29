@@ -121,12 +121,12 @@ header {
     color: #FFFFFF;
 }
 
-/* ===== SKIP LINK ===== */
+/* ===== SKIP LINK - FIXED CONTRAST ===== */
 .skip-link {
     position: absolute;
     top: -40px;
     left: 1rem;
-    background: #2C7BE5;
+    background: #1A5BB8;
     color: #FFFFFF;
     padding: 0.75rem 1rem;
     border-radius: 8px;
@@ -136,6 +136,10 @@ header {
 
 .skip-link:focus {
     top: 1rem;
+}
+
+.skip-link:hover {
+    background: #0F4A8A;
 }
 
 /* ===== MAIN ===== */

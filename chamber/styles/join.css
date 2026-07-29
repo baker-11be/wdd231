@@ -43,8 +43,10 @@
     font-weight: 500;
 }
 
+/* FIXED: Required asterisk - changed from #E52C2C to darker red for better contrast */
 .required {
-    color: #E52C2C;
+    color: #B71C1C;
+    font-weight: 700;
 }
 
 #membership-form input,
@@ -171,7 +173,7 @@
 }
 
 .submit-btn:hover {
-    background: #1B5BB8;
+    background: #1A5BB8;
     transform: translateY(-2px);
 }
 
@@ -246,9 +248,10 @@
     font-size: 1.1rem;
 }
 
+/* FIXED: Cost text - changed from #2C7BE5 to darker blue for better contrast on light background */
 .cost {
     font-weight: 700;
-    color: #2C7BE5;
+    color: #1A5BB8;
     margin: 0.25rem 0;
     font-size: 1.1rem;
 }
@@ -467,7 +470,7 @@
 }
 
 .btn-primary:hover {
-    background: #1B5BB8;
+    background: #1A5BB8;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(44, 123, 229, 0.25);
 }
@@ -483,6 +486,16 @@
     color: #FFFFFF;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(44, 123, 229, 0.15);
+}
+
+/* FIXED: Skip link - changed background from #2C7BE5 to darker blue for better contrast */
+.skip-link {
+    background: #1A5BB8;
+    color: #FFFFFF;
+}
+
+.skip-link:hover {
+    background: #0F4A8A;
 }
 
 /* ===== RESPONSIVE ===== */
