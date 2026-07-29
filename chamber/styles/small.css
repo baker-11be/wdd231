@@ -1,4 +1,3 @@
-/* ===== RESET ===== — all colors: 6/8-digit HEX only */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +6,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: #f4f7fc;
-    color: #1a3a22;
+    background: #F4F7FC;
+    color: #1A3A22;
     line-height: 1.6;
     max-width: 1200px;
     margin: 0 auto;
@@ -22,18 +21,17 @@ img {
 }
 
 a {
-    color: #3a1a2c;
+    color: #1A5C5C;
     text-decoration: none;
 }
 
-/* ===== HEADER ===== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    border-bottom: 4px solid #e52c2c;
-    background: #ffffff;
+    border-bottom: 4px solid #E52C2C;
+    background: #FFFFFF;
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: 8px 8px 0 0;
@@ -53,17 +51,17 @@ header {
 .site-name {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #3a1a1a;
+    color: #3A1A1A;
 }
 
 #hamburger {
-    background: #00000000;
+    background: transparent;
     border-style: none;
-    border-color: #00000000;
+    border-color: transparent;
     font-size: 2.2rem;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
-    color: #1a2a3a;
+    color: #1A2A3A;
     transition: transform 0.3s ease;
 }
 
@@ -71,9 +69,8 @@ header {
     transform: scale(1.1);
 }
 
-/* ===== NAVIGATION ===== */
 #primary-nav {
-    background: #1a2a3a;
+    background: #1A2A3A;
     border-radius: 0 0 8px 8px;
     margin: 0 0 1.5rem 0;
     overflow: hidden;
@@ -94,56 +91,54 @@ header {
 #primary-nav ul li a {
     display: block;
     padding: 0.85rem 1.5rem;
-    color: #ffffff;
+    color: #FFFFFF;
     font-weight: 600;
-    border-bottom: 1px solid #ffffff1a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: background 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
 }
 
 #primary-nav ul li:last-child a {
     border-bottom-style: none;
-    border-bottom-color: #00000000;
+    border-bottom-color: transparent;
 }
 
 #primary-nav ul li a:hover {
-    background: #2c7be5;
-    color: #ffffff;
+    background: #2C7BE5;
+    color: #FFFFFF;
     padding-left: 2rem;
 }
 
 #primary-nav ul li a.active {
-    background: #2c7be5;
-    color: #ffffff;
+    background: #2C7BE5;
+    color: #FFFFFF;
 }
 
-/* ===== MAIN ===== */
 main {
     padding: 1rem 0 2rem 0;
 }
 
 h1 {
     font-size: 2.2rem;
-    color: #1a2a3a;
+    color: #1A2A3A;
     margin-bottom: 1.5rem;
     font-weight: 700;
 }
 
 h2 {
     font-size: 1.5rem;
-    color: #363a1a;
+    color: #2A4A2A;
     margin-bottom: 0.75rem;
     font-weight: 600;
 }
 
 section {
-    background: #ffffff;
+    background: #FFFFFF;
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 15px #0000000f;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
     margin-bottom: 1.5rem;
 }
 
-/* ===== ABOUT SECTION ===== */
 .about-content {
     display: flex;
     flex-direction: column;
@@ -160,10 +155,9 @@ section {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #2c7be5;
+    border: 4px solid #2C7BE5;
 }
 
-/* ===== COURSES SECTION ===== */
 .course-filters {
     display: flex;
     justify-content: center;
@@ -173,9 +167,9 @@ section {
 }
 
 .course-filters button {
-    background: #e9ecef;
+    background: #E9ECEF;
     border-style: none;
-    border-color: #00000000;
+    border-color: transparent;
     padding: 0.6rem 1.8rem;
     border-radius: 30px;
     font-weight: 700;
@@ -186,14 +180,14 @@ section {
 }
 
 .course-filters button:hover {
-    background: #1a2a3a;
-    color: #ffffff;
+    background: #1A2A3A;
+    color: #FFFFFF;
     transform: translateY(-2px);
 }
 
 .course-filters button.active {
-    background: #1a2a3a;
-    color: #ffffff;
+    background: #1A2A3A;
+    color: #FFFFFF;
 }
 
 .course-grid {
@@ -203,22 +197,22 @@ section {
 }
 
 .course-card {
-    background: #f8f9fb;
+    background: #F8F9FB;
     padding: 1.2rem;
     border-radius: 10px;
     text-align: center;
-    border-left: 6px solid #2c7be5;
+    border-left: 6px solid #2C7BE5;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .course-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 20px #00000014;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .course-card.completed {
-    background: #d4edda;
-    border-left-color: #28a745;
+    background: #D4EDDA;
+    border-left-color: #28A745;
 }
 
 .course-card.completed h3::after {
@@ -229,7 +223,7 @@ section {
 .course-card h3 {
     font-size: 1.1rem;
     margin-bottom: 0.25rem;
-    color: #1a2a3a;
+    color: #1A2A3A;
 }
 
 .course-card p {
@@ -242,12 +236,11 @@ section {
     font-weight: 700;
     margin-top: 1.2rem;
     font-size: 1.1rem;
-    color: #1a2a3a;
+    color: #1A2A3A;
     padding-top: 0.75rem;
-    border-top: 2px solid #e9ecef;
+    border-top: 2px solid #E9ECEF;
 }
 
-/* ===== LOCATION SECTION ===== */
 #location figure {
     margin: 0;
     text-align: center;
@@ -260,13 +253,12 @@ section {
     object-fit: cover;
 }
 
-/* ===== HOME PAGE ===== */
 .skip-link {
     position: absolute;
     top: -40px;
     left: 1rem;
-    background: #2c7be5;
-    color: #ffffff;
+    background: #2C7BE5;
+    color: #FFFFFF;
     padding: 0.75rem 1rem;
     border-radius: 8px;
     z-index: 1000;
@@ -280,8 +272,8 @@ section {
 .hero-section {
     display: grid;
     gap: 1.5rem;
-    background: linear-gradient(135deg, #2c7be5 0%, #8c1b1b 100%);
-    color: #ffffff;
+    background: linear-gradient(135deg, #2C7BE5 0%, #8C1B1B 100%);
+    color: #FFFFFF;
     padding: 2rem;
     border-radius: 20px;
 }
@@ -293,7 +285,7 @@ section {
 }
 
 .hero-copy .eyebrow {
-    color: #f7d554;
+    color: #F7D554;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -301,14 +293,14 @@ section {
 
 .hero-copy h1 {
     margin: 0;
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .cta-button {
     display: inline-block;
-    background: #f7d554;
-    color: #1a2a3a;
+    background: #F7D554;
+    color: #1A2A3A;
     padding: 0.95rem 1.5rem;
     border-radius: 999px;
     font-weight: 700;
@@ -317,12 +309,12 @@ section {
 
 .cta-button:hover,
 .cta-button:focus {
-    background: #ffd93d;
+    background: #FFD93D;
     transform: translateY(-1px);
 }
 
 .hero-figure {
-    background: #ffffff1a;
+    background: rgba(255, 255, 255, 0.1);
     padding: 1rem;
     border-radius: 20px;
     text-align: center;
@@ -344,7 +336,7 @@ section {
 }
 
 .event-grid article {
-    background: #eef4ff;
+    background: #EEF4FF;
     padding: 1.25rem;
     border-radius: 18px;
 }
@@ -362,10 +354,10 @@ section {
 
 .weather-current,
 .weather-forecast {
-    background: #ffffff;
+    background: #FFFFFF;
     padding: 1.5rem;
     border-radius: 18px;
-    box-shadow: 0 16px 30px #1a2a3a14;
+    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
 }
 
 .weather-current-card {
@@ -390,13 +382,13 @@ section {
     grid-template-columns: auto 1fr;
     gap: 0.75rem;
     align-items: center;
-    border-top: 1px solid #e9edf7;
+    border-top: 1px solid #E9EDF7;
     padding: 1rem 0;
 }
 
 .forecast-day:first-child {
     border-top-style: none;
-    border-top-color: #00000000;
+    border-top-color: transparent;
 }
 
 .forecast-day img {
@@ -413,9 +405,9 @@ section {
     display: grid;
     grid-template-columns: 120px 1fr;
     gap: 1rem;
-    background: #ffffff;
+    background: #FFFFFF;
     border-radius: 18px;
-    box-shadow: 0 16px 30px #1a2a3a14;
+    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
     padding: 1.25rem;
     align-items: center;
 }
@@ -446,13 +438,13 @@ section {
 }
 
 .member-badge.gold {
-    background: #ffd49b;
-    color: #7b5600;
+    background: #FFD49B;
+    color: #7B5600;
 }
 
 .member-badge.silver {
-    background: #d4e4ff;
-    color: #0f3d7a;
+    background: #D4E4FF;
+    color: #0F3D7A;
 }
 
 .footer-meta {
@@ -479,8 +471,6 @@ section {
     }
 }
 
-
-/* ===== DIRECTORY PAGE ===== */
 .view-actions {
     display: flex;
     gap: 0.75rem;
@@ -489,21 +479,21 @@ section {
 }
 
 .view-actions button {
-    background: #e9ecef;
+    background: #E9ECEF;
     border-style: none;
-    border-color: #00000000;
+    border-color: transparent;
     padding: 0.85rem 1.5rem;
     border-radius: 999px;
     cursor: pointer;
     font-weight: 700;
-    color: #1a2a3a;
+    color: #1A2A3A;
     transition: background 0.25s ease, transform 0.2s ease;
 }
 
 .view-actions button:hover,
 .view-actions button.active {
-    background: #2c7be5;
-    color: #ffffff;
+    background: #2C7BE5;
+    color: #FFFFFF;
     transform: translateY(-1px);
 }
 
@@ -522,9 +512,9 @@ section {
 }
 
 .member-card {
-    background: #ffffff;
+    background: #FFFFFF;
     border-radius: 18px;
-    box-shadow: 0 16px 35px #1a2a3a14;
+    box-shadow: 0 16px 35px rgba(26, 42, 58, 0.08);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -558,17 +548,17 @@ section {
 
 .member-description {
     margin: 0;
-    color: #49574a;
+    color: #49574A;
 }
 
 .member-meta {
     margin: 0;
-    color: #6b8c78;
+    color: #6B8C78;
     font-size: 0.95rem;
 }
 
 .member-meta a {
-    color: #2c7be5;
+    color: #2C7BE5;
 }
 
 .membership-pill {
@@ -580,18 +570,18 @@ section {
 }
 
 .member-card.gold .membership-pill {
-    background: #ffd49b;
-    color: #7b5a0f;
+    background: #FFD49B;
+    color: #7B5A0F;
 }
 
 .member-card.silver .membership-pill {
-    background: #ffd4d4;
-    color: #16407c;
+    background: #FFD4D4;
+    color: #16407C;
 }
 
 .member-card.basic .membership-pill {
-    background: #e8edf4;
-    color: #1a2a3a;
+    background: #E8EDF4;
+    color: #1A2A3A;
 }
 
 #directory-cards.list-view .member-card {
@@ -610,23 +600,22 @@ section {
 
 .error-message {
     padding: 1.5rem;
-    background: #ffcdcd;
-    border: 1px solid #ffeeba;
+    background: #FFCDCD;
+    border: 1px solid #FFEEBA;
     border-radius: 16px;
     color: #856404;
 }
 
-/* ===== DISCOVER PAGE ===== */
 .image-montage {
     display: grid;
     gap: 1rem;
 }
 
 .image-montage figure {
-    background: #ffffff;
+    background: #FFFFFF;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 16px 30px #1a2a3a14;
+    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
 }
 
 .image-montage figcaption {
@@ -635,17 +624,16 @@ section {
     font-size: 0.95rem;
 }
 
-/* ===== JOIN PAGE ===== */
 .membership-grid {
     display: grid;
     gap: 1rem;
 }
 
 .membership-card {
-    background: #ffffff;
+    background: #FFFFFF;
     border-radius: 18px;
     padding: 1.5rem;
-    box-shadow: 0 16px 30px #1a2a3a14;
+    box-shadow: 0 16px 30px rgba(26, 42, 58, 0.08);
 }
 
 .membership-card h3 {
@@ -675,17 +663,17 @@ section {
     width: 100%;
     padding: 0.9rem 1rem;
     border-radius: 12px;
-    border: 1px solid #dbe5ef;
+    border: 1px solid #DBE5EF;
     font-family: inherit;
     font-size: 1rem;
 }
 
 .join-form button {
     width: max-content;
-    background: #2c7be5;
-    color: #ffffff;
+    background: #2C7BE5;
+    color: #FFFFFF;
     border-style: none;
-    border-color: #00000000;
+    border-color: transparent;
     padding: 0.95rem 1.5rem;
     border-radius: 999px;
     cursor: pointer;
@@ -694,12 +682,12 @@ section {
 
 .join-form button:hover,
 .join-form button:focus {
-    background: #1b5bb8;
+    background: #1B5BB8;
 }
 
 .confirmation-message {
     margin-top: 1rem;
-    color: #1b5bb8;
+    color: #1B5BB8;
     font-weight: 700;
     display: none;
 }
@@ -718,7 +706,6 @@ section {
     }
 }
 
-
 #project-info img {
     width: 100%;
     max-width: 600px;
@@ -727,19 +714,18 @@ section {
     display: block;
     margin: 1rem auto 0;
     border-radius: 12px;
-    box-shadow: 0 8px 20px #00000014;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 #location figcaption {
     margin-top: 0.5rem;
     font-style: italic;
-    color: #6c757d;
+    color: #6C757D;
 }
 
-/* ===== FOOTER ===== */
 footer {
-    background: hwb(120 10% 77%);
-    color: #ffffff;
+    background: #1A3A22;
+    color: #FFFFFF;
     padding: 2rem 1.5rem;
     border-radius: 12px 12px 0 0;
     text-align: center;
@@ -747,7 +733,7 @@ footer {
 }
 
 footer h2 {
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 .social-links {
@@ -775,6 +761,6 @@ footer p {
 }
 
 #lastModified {
-    color: #333;
+    color: #AAAAAA;
     font-size: 0.8rem;
 }
