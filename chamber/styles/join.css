@@ -1,464 +1,541 @@
-/* ==========================================================
-   join.css — Custom Join + Thank-You Page Styles
-   Everything scoped under .chamber-alt-page so NO top-level
-   selector duplicates vs small.css/larger.css.
-   ALL COLORS: hex only (8-digit #RRGGBBAA for alpha channels)
-   ========================================================== */
 
-.chamber-alt-page {
-    font-family: 'Play', sans-serif;
-    background: #f5f7fa;
-    color: #3e1e1f;
+.join-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.form-section {
+    background: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 16px 35px rgba(26, 42, 58, 0.08);
+}
+
+.form-section h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #1A2A3A;
+}
+
+.form-intro {
+    margin-bottom: 2rem;
+    color: #566575;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
-/* ---------- ACCESSIBILITY: SKIP-LINK (pure CSS) ---------- */
-.chamber-alt-page .skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 0;
-    background: #5c1a1a;
-    color: #ffffff;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0 0 8px 8px;
-    font-weight: 600;
-    z-index: 9999;
-    text-decoration: none;
-}
-.chamber-alt-page .skip-link:focus,
-.chamber-alt-page .skip-link:focus-visible,
-.chamber-alt-page .skip-link:active {
-    left: 1rem;
-    color: #ffffff;
-    outline: 2px solid #ffffff;
-    outline-offset: 2px;
+/* ===== FORM GROUPS ===== */
+.form-group {
+    margin-bottom: 1.5rem;
 }
 
-/* ---------- HEADER ---------- */
-.chamber-alt-page header {
-    background: #1a5c24;
-    color: #ffffff;
-    padding: 0.8rem 2rem;
-}
-.chamber-alt-page .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-.chamber-alt-page .logo-area {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-.chamber-alt-page .logo-area span {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #ffffff;
-}
-.chamber-alt-page .logo-area img {
-    border-radius: 8px;
-}
-
-/* ==============================================================
-   CONTRAST ENFORCEMENT — single merged rule with comma-grouped
-   selectors (shares identical color:#ffffff body) beats the
-   small.css `a { color:#1a2a3a }` global for every link state,
-   inside the green header (bg #1a5c24).
-   ============================================================== */
-body.chamber-alt-page header,
-body.chamber-alt-page header *,
-body.chamber-alt-page header a:any-link,
-body.chamber-alt-page header a:link,
-body.chamber-alt-page header a:visited,
-body.chamber-alt-page header a:hover,
-body.chamber-alt-page header a:active,
-body.chamber-alt-page header a:focus-visible,
-body.chamber-alt-page header #primary-nav ul li a.active {
-    color: #ffffff;
-}
-
-/* ---------- NAV ---------- */
-body.chamber-alt-page header nav ul {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-}
-body.chamber-alt-page header #primary-nav ul li a {
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    transition: background 0.2s;
-}
-body.chamber-alt-page header #primary-nav ul li a:hover,
-body.chamber-alt-page header #primary-nav ul li a:focus-visible,
-body.chamber-alt-page header #primary-nav ul li a.active {
-    background: #ffffff33;
-}
-
-body.chamber-alt-page header .hamburger {
-    display: none;
-    background: #00000000;
-    border: #00000000;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-body.chamber-alt-page header .hamburger .bar {
-    width: 28px;
-    height: 3px;
-    background: #ffffff;
-    border-radius: 3px;
-}
-
-/* ---------- JOIN CONTAINER ---------- */
-.chamber-alt-page .join-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-}
-
-.chamber-alt-page .form-section {
-    flex: 2 1 300px;
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 2rem 2rem 2.5rem;
-    box-shadow: 0 4px 20px #0000000f;
-    border: 1px solid #e9edf2;
-    min-width: 280px;
-}
-.chamber-alt-page .form-section h1 {
-    font-size: 1.8rem;
-    color: #1a3a5c;
-    margin-bottom: 0.2rem;
-}
-.chamber-alt-page .form-intro {
-    color: #5a7a8a;
-    margin-bottom: 1.8rem;
-}
-
-/* ---------- FORM FIELDS ---------- */
-.chamber-alt-page label {
+#membership-form label {
     display: block;
-    margin-bottom: 1.2rem;
+    font-weight: 500;
+    color: #1A2A3A;
+    font-size: 0.95rem;
 }
-.chamber-alt-page .label-text {
+
+#membership-form .label-text {
     display: block;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
-    color: #1e2e3e;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
 }
-.chamber-alt-page .required {
-    color: #c0392b;
+
+.required {
+    color: #E52C2C;
 }
-.chamber-alt-page input,
-.chamber-alt-page textarea {
+
+#membership-form input,
+#membership-form textarea {
     width: 100%;
-    padding: 0.7rem 0.9rem;
-    border: 1px solid #d0d7df;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    border: 2px solid #E8EDF4;
     font-family: inherit;
-    transition: border 0.2s;
-    background: #fafbfc;
-    color: #1e2e3e;
-}
-.chamber-alt-page input:focus,
-.chamber-alt-page textarea:focus {
-    outline: #00000000;
-    border-color: #1a3a5c;
-    box-shadow: 0 0 0 3px #1a3a5c26;
-    background: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    background: #FAFBFD;
+    color: #1A2A3A;
 }
 
-.chamber-alt-page fieldset {
-    border: 1px solid #d0d7df;
-    border-radius: 8px;
-    padding: 1rem 1.2rem;
-    margin-bottom: 1.2rem;
+#membership-form input::placeholder,
+#membership-form textarea::placeholder {
+    color: #A0AAB5;
 }
-.chamber-alt-page legend {
-    font-weight: 700;
-    color: #1e2e3e;
-    padding: 0 0.3rem;
+
+#membership-form input:focus,
+#membership-form textarea:focus {
+    outline: none;
+    border-color: #2C7BE5;
+    box-shadow: 0 0 0 4px rgba(44, 123, 229, 0.1);
+    background: #FFFFFF;
 }
-.chamber-alt-page .radio-label {
+
+#membership-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ===== MEMBERSHIP LEVEL RADIO ===== */
+.membership-group {
+    margin-bottom: 1.5rem;
+}
+
+.membership-level-group {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.membership-level-group legend {
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: #1A2A3A;
+    font-size: 0.95rem;
+    padding: 0;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-label {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin: 0.4rem 0;
+    gap: 0.75rem;
+    font-weight: 400;
     cursor: pointer;
-    color: #1e2e3e;
-}
-.chamber-alt-page .radio-label input[type="radio"] {
-    width: auto;
-    margin: 0;
-    accent-color: #1a3a5c;
+    color: #1A2A3A;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    transition: background 0.2s ease;
 }
 
-.chamber-alt-page .submit-btn {
-    background: #1a3a5c;
-    color: #ffffff;
-    border: #00000000;
-    padding: 0.8rem 2.8rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border-radius: 40px;
+.radio-label:hover {
+    background: #F4F7FC;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+.radio-custom {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #CBD5E1;
+    position: relative;
+    flex-shrink: 0;
+    transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom {
+    border-color: #2C7BE5;
+    background: #2C7BE5;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+.radio-label input[type="radio"]:focus + .radio-custom {
+    box-shadow: 0 0 0 3px rgba(44, 123, 229, 0.2);
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.submit-btn {
+    background: #2C7BE5;
+    color: #FFFFFF;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
     cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.25s ease, transform 0.2s ease;
     width: 100%;
     margin-top: 0.5rem;
-    font-family: inherit;
 }
-.chamber-alt-page .submit-btn:hover,
-.chamber-alt-page .submit-btn:focus-visible {
-    background: #0f2a44;
+
+.submit-btn:hover {
+    background: #1B5BB8;
     transform: translateY(-2px);
-    color: #ffffff;
 }
 
-/* ---------- MEMBERSHIP CARDS ---------- */
-.chamber-alt-page .membership-cards-section {
-    flex: 1 1 260px;
-    min-width: 240px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-.chamber-alt-page .membership-cards-section > h2 {
-    font-size: 1.3rem;
-    color: #1a3a5c;
-    margin-bottom: 0.2rem;
-    border-bottom: 3px solid #1a3a5c;
-    padding-bottom: 0.5rem;
-    display: inline-block;
-    align-self: flex-start;
+.submit-btn:active {
+    transform: translateY(0);
 }
 
-.chamber-alt-page .membership-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 1.2rem 1.5rem 1.5rem;
-    border: 1px solid #e9edf2;
-    box-shadow: 0 2px 8px #0000000a;
-    transition: transform 0.3s, box-shadow 0.3s;
+/* ===== MEMBERSHIP CARDS ===== */
+.membership-cards-section {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 16px 35px rgba(26, 42, 58, 0.08);
+}
+
+.membership-cards-section h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #1A2A3A;
+}
+
+.membership-card {
+    background: #F8FAFC;
+    padding: 1.5rem;
+    border-radius: 14px;
+    margin-bottom: 1.25rem;
+    border-left: 5px solid #2C7BE5;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    
+    /* Animation - Slide in from left on page load */
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateX(-30px);
+    animation: slideIn 0.6s ease forwards;
 }
-.chamber-alt-page .membership-card:hover {
-    transform: translateY(-4px) !important;
-    box-shadow: 0 8px 25px #00000014;
+
+/* Staggered delays for each card */
+.membership-card:nth-child(2) {
+    animation-delay: 0.15s;
 }
-.chamber-alt-page .membership-card h3 {
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.membership-card:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.membership-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+}
+
+.membership-card h3 {
+    margin: 0 0 0.25rem;
+    color: #1A2A3A;
     font-size: 1.1rem;
-    color: #1a3a5c;
-    margin: 0 0 0.1rem;
 }
-.chamber-alt-page .membership-card .cost {
+
+.cost {
     font-weight: 700;
-    color: #2d7a6e;
-    font-size: 1rem;
+    color: #2C7BE5;
+    margin: 0.25rem 0;
+    font-size: 1.1rem;
 }
-.chamber-alt-page .membership-card .short-desc {
-    font-size: 0.85rem;
-    color: #5a6a7a;
-    margin: 0.3rem 0 0.8rem;
+
+.short-desc {
+    color: #566575;
+    margin: 0.25rem 0 0.75rem;
+    font-size: 0.95rem;
 }
-.chamber-alt-page .learn-more {
-    background: #1a3a5c;
-    color: #ffffff;
-    border: #00000000;
-    padding: 0.4rem 1.4rem;
-    border-radius: 30px;
+
+.learn-more {
+    background: transparent;
+    border: 2px solid #2C7BE5;
+    color: #2C7BE5;
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 0.85rem;
-    transition: background 0.2s;
-    font-family: inherit;
-}
-.chamber-alt-page .learn-more:hover,
-.chamber-alt-page .learn-more:focus-visible {
-    background: #0f2a44;
-    color: #ffffff;
+    font-size: 0.9rem;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
 }
 
-.chamber-alt-page .card-np     { border-left: 5px solid #2d7a6e; }
-.chamber-alt-page .card-bronze { border-left: 5px solid #b87333; }
-.chamber-alt-page .card-silver { border-left: 5px solid #8a9bb0; }
-.chamber-alt-page .card-gold   { border-left: 5px solid #c9a84c; }
+.learn-more:hover {
+    background: #2C7BE5;
+    color: #FFFFFF;
+    transform: scale(1.02);
+}
 
-/* ---------- MODALS ---------- */
-.chamber-alt-page .modal-overlay {
-    display: none;
+/* Card Colors */
+.card-np { border-left-color: #6C8C9C; }
+.card-bronze { border-left-color: #CD7F32; }
+.card-silver { border-left-color: #A0AAB5; }
+.card-gold { border-left-color: #FFB800; }
+
+/* ===== MODALS ===== */
+.modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #0000008c;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    padding: 1rem;
-}
-.chamber-alt-page .modal-box {
-    background: #ffffff;
-    max-width: 500px;
-    width: 100%;
-    padding: 2rem 2rem 2.2rem;
-    border-radius: 16px;
-    position: relative;
-    box-shadow: 0 20px 60px #0000004c;
-    max-height: 90vh;
-    overflow-y: auto;
-    color: #1e2e3e;
-}
-.chamber-alt-page .modal-close {
-    position: absolute;
-    top: 0.3rem;
-    right: 1.2rem;
-    font-size: 2.2rem;
-    background: #00000000;
-    border: #00000000;
-    cursor: pointer;
-    color: #888888;
-    transition: color 0.2s;
-    line-height: 1;
-}
-.chamber-alt-page .modal-close:hover,
-.chamber-alt-page .modal-close:focus-visible {
-    color: #222222;
-}
-.chamber-alt-page .modal-box h3 {
-    font-size: 1.4rem;
-    color: #1a3a5c;
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-.chamber-alt-page .modal-box ul {
-    list-style: none;
-    padding: 0;
-}
-.chamber-alt-page .modal-box ul li {
-    padding: 0.4rem 0;
-    border-bottom: 1px solid #f0f2f5;
-}
-.chamber-alt-page .modal-box ul li:last-child {
-    border-bottom: #00000000;
+    backdrop-filter: blur(4px);
 }
 
-/* ---------- FOOTER ---------- */
-.chamber-alt-page footer {
-    background: #1a3a5c;
-    color: #c0d0e0;
-    padding: 1.5rem 2rem;
-    margin-top: 2rem;
-}
-.chamber-alt-page footer p,
-.chamber-alt-page footer span {
-    color: #c0d0e0;
-}
-.chamber-alt-page footer strong {
-    color: #ffffff;
-}
-.chamber-alt-page .footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
+.modal-overlay.open {
     display: flex;
-    flex-wrap: wrap;
+}
+
+.modal-box {
+    background: #FFFFFF;
+    max-width: 500px;
+    width: 90%;
+    padding: 2rem;
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
+    animation: modalPop 0.3s ease;
+}
+
+@keyframes modalPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #566575;
+    transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+.modal-box h3 {
+    margin-top: 0;
+    color: #1A2A3A;
+}
+
+.modal-box ul {
+    padding-left: 1.2rem;
+    margin: 0.75rem 0 0;
+}
+
+.modal-box li {
+    margin-bottom: 0.6rem;
+    color: #1A2A3A;
+}
+
+/* ===== THANK YOU PAGE STYLES ===== */
+.thanks-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.thanks-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.thanks-header .checkmark {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.thanks-header h1 {
+    color: #1A2A3A;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.thanks-sub {
+    color: #566575;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== DATA CARD ===== */
+.data-card {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 16px 35px rgba(26, 42, 58, 0.08);
+    margin-bottom: 2rem;
+}
+
+.data-card h3 {
+    margin-top: 0;
+    color: #1A2A3A;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #F4F7FC;
+    padding-bottom: 1rem;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.data-row {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-}
-.chamber-alt-page .footer-contact {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-.chamber-alt-page .footer-contact img {
-    border-radius: 8px;
-}
-.chamber-alt-page .footer-contact p {
-    margin: 0.1rem 0;
-}
-.chamber-alt-page .footer-contact a,
-.chamber-alt-page .footer-contact a:visited {
-    color: #8ab8d8;
-    text-decoration: none;
-}
-.chamber-alt-page .footer-contact a:hover,
-.chamber-alt-page .footer-contact a:focus-visible {
-    color: #ffffff;
-    text-decoration: underline;
-}
-.chamber-alt-page .footer-copy {
-    text-align: right;
-    font-size: 0.85rem;
-}
-.chamber-alt-page .footer-copy p {
-    margin: 0.1rem 0;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #F4F7FC;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 767px) {
-    .chamber-alt-page .join-container {
+.data-row:last-child {
+    border-bottom: none;
+}
+
+.data-label {
+    font-weight: 600;
+    color: #1A2A3A;
+    font-size: 0.95rem;
+}
+
+.data-value {
+    color: #566575;
+    font-size: 0.95rem;
+    text-align: right;
+    word-break: break-word;
+    max-width: 60%;
+}
+
+.loading-placeholder {
+    color: #A0AAB5;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ===== ACTIONS ===== */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.85rem 1.8rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary {
+    background: #2C7BE5;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background: #1B5BB8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(44, 123, 229, 0.25);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #2C7BE5;
+    border: 2px solid #2C7BE5;
+}
+
+.btn-outline:hover {
+    background: #2C7BE5;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(44, 123, 229, 0.15);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (min-width: 768px) {
+    .join-container {
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    .form-section {
+        padding: 2.5rem;
+    }
+
+    .submit-btn {
+        width: auto;
+        min-width: 200px;
+    }
+    
+    .thanks-header h1 {
+        font-size: 2.8rem;
+    }
+    
+    .data-card {
+        padding: 2.5rem;
+    }
+    
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .data-row {
+        padding: 0.6rem 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .actions {
         flex-direction: column;
-        gap: 1.5rem;
-        padding: 0 1rem;
+        align-items: stretch;
     }
-    .chamber-alt-page .form-section {
-        padding: 1.2rem;
-    }
-    .chamber-alt-page .membership-cards-section { order: 2; }
-    .chamber-alt-page .form-section             { order: 1; }
-    .chamber-alt-page .membership-card {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-    }
-    .chamber-alt-page .footer-inner,
-    .chamber-alt-page .footer-copy,
-    .chamber-alt-page .footer-contact {
-        flex-direction: column;
+    
+    .btn {
         text-align: center;
     }
-    body.chamber-alt-page header .hamburger {
-        display: flex;
-    }
-    body.chamber-alt-page header nav ul {
-        display: none;
+    
+    .data-row {
         flex-direction: column;
-        gap: 0.5rem;
-        background: #0f2a44;
-        padding: 1rem;
-        border-radius: 8px;
-        position: absolute;
-        top: 70px;
-        right: 1rem;
-        width: 200px;
+        align-items: flex-start;
+        gap: 0.25rem;
     }
-    body.chamber-alt-page header nav ul.open {
-        display: flex;
-    }
-    body.chamber-alt-page header .header-inner {
-        position: relative;
-    }
-    body.chamber-alt-page header nav {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
-}
-
-@media (min-width: 768px) {
-    .chamber-alt-page .membership-card {
-        opacity: 0;
-        transform: translateY(25px);
+    
+    .data-value {
+        text-align: left;
+        max-width: 100%;
     }
 }

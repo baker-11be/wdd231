@@ -5,49 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thank You | Kisoro Chamber</title>
     <meta name="robots" content="noindex" />
-    <link rel="icon" href="images/favicon.ico" />
+    <link rel="icon" href="images/chamber.webp" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
     <link rel="stylesheet" href="styles/join.css" />
-    <link rel="stylesheet" href="styles/thankyou.css" />
 
 </head>
-<body class="chamber-alt-page">
+<body>
 
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- ===== HEADER ===== -->
+    <!-- ===== HEADER (matching index.html) ===== -->
     <header>
-        <div class="header-inner">
-            <div class="logo-area">
-                <img src="images/historic.webp" alt="Kisoro Chamber Logo" width="60" height="60" />
-                <span>Kisoro Chamber</span>
+        <div class="header-content">
+            <a class="logo-link" href="index.html" aria-label="Kisoro City Chamber Home">
+                <img src="images/chamber.webp" alt="Kisoro City Chamber logo" class="logo">
+            </a>
+            <div>
+                <p class="site-name">Kisoro City Chamber of Commerce</p>
+                <p class="site-tag">Connecting businesses, events, and visitors in our community.</p>
             </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <nav id="primary-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                </ul>
-            </nav>
         </div>
+        <button id="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
     </header>
+
+    <nav id="primary-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
 
     <!-- ===== MAIN ===== -->
     <main class="thanks-main" id="main-content">
 
         <div class="thanks-header">
-            <h2>✅ Application Received!</h2>
+            <div class="checkmark">✅</div>
+            <h1>Application Received!</h1>
             <p class="thanks-sub">Thank you for applying to join the chamber. We are thrilled to welcome new organizations to our business network.</p>
         </div>
 
@@ -59,32 +61,20 @@
         </div>
 
         <div class="actions">
-            <a href="join.html" class="btn">← Back to Join Page</a>
+            <a href="join.html" class="btn btn-primary">← Back to Join Page</a>
             <a href="index.html" class="btn btn-outline">🏠 Return to Homepage</a>
         </div>
 
     </main>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ===== FOOTER (matching index.html) ===== -->
     <footer>
-        <div class="footer-inner">
-            <div class="footer-contact">
-                <img src="images/historic.webp" alt="Kisoro Chamber Logo" width="50" height="50" />
-                <div>
-                    <p><strong>Kisoro Chamber of Commerce</strong></p>
-                    <p><a href="mailto:info@kisorochamber.com">info@kisorochamber.com</a></p>
-                    <p>+256 773 196 530</p>
-                </div>
-            </div>
-            <div class="footer-copy">
-                <p>&copy; <span id="footer-year"></span> Kisoro Chamber of Commerce</p>
-                <p>Built by Baker Mfitundinda</p>
-                <p>Last Updated: <span id="footer-modified"></span></p>
-            </div>
-        </div>
+        <p>Baker Mfitundinda | WDD 231</p>
+        <p class="footer-meta">&copy; <span id="current-year"></span> Kisoro City Chamber of Commerce</p>
     </footer>
 
     <!-- ===== SCRIPTS ===== -->
+    <script src="scripts/navigation.js" defer></script>
     <script src="scripts/thankyou.js" defer></script>
 
 </body>

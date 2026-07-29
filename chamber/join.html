@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Baker Mfitundinda">
     <meta name="description" content="Apply for NP, Bronze, Silver, or Gold membership with the Kisoro Chamber of Commerce and connect with local businesses, training, and community events.">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/chamber.webp" type="image/x-icon">
 
     <!-- Meta Graph -->
     <meta property="og:title" content="Apply for Kisoro Chamber of Commerce Membership Today">
@@ -23,36 +23,35 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <title>Kisoro Chamber of Commerce - Join</title>
 </head>
-<body class="chamber-alt-page">
-
+<body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- ===== HEADER ===== -->
+    <!-- ===== HEADER (matching index.html) ===== -->
     <header>
-        <div class="header-inner">
-            <div class="logo-area">
-                <img src="images/historic.webp" alt="Kisoro Chamber of Commerce Logo" width="60" height="60" />
-                <span>Kisoro Chamber</span>
+        <div class="header-content">
+            <a class="logo-link" href="index.html" aria-label="Kisoro City Chamber Home">
+                <img src="images/chamber.webp" alt="Kisoro City Chamber logo" class="logo">
+            </a>
+            <div>
+                <p class="site-name">Kisoro City Chamber of Commerce</p>
+                <p class="site-tag">Connecting businesses, events, and visitors in our community.</p>
             </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <nav id="primary-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html" class="active">Join</a></li>
-                </ul>
-            </nav>
         </div>
+        <button id="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
     </header>
+
+    <nav id="primary-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+        </ul>
+    </nav>
 
     <!-- ===== MAIN ===== -->
     <main class="join-container" id="main-content">
@@ -65,215 +64,228 @@
             <form method="get" action="thankyou.html" id="membership-form" novalidate>
 
                 <!-- First Name -->
-                <label for="firstname" title="Applicant's first name">
-                    <span class="label-text">First Name <span class="required">*</span></span>
-                    <input type="text" name="firstname" id="firstname"
-                    placeholder="Sarah" required
-                    autocomplete="given-name" title="Applicant's given (first) name" />
-                </label>
+                <div class="form-group">
+                    <label for="firstname">
+                        <span class="label-text">First Name <span class="required">*</span></span>
+                        <input type="text" name="firstname" id="firstname"
+                        placeholder="Sarah" required
+                        autocomplete="given-name" 
+                        title="Applicant's given (first) name" />
+                    </label>
+                </div>
 
                 <!-- Last Name -->
-                <label for="lastname" title="Applicant's last name">
-                    <span class="label-text">Last Name <span class="required">*</span></span>
-                    <input type="text" name="lastname" id="lastname"
-                    placeholder="Mugisha" required
-                    autocomplete="family-name" title="Applicant's family (last) name" />
-                </label>
+                <div class="form-group">
+                    <label for="lastname">
+                        <span class="label-text">Last Name <span class="required">*</span></span>
+                        <input type="text" name="lastname" id="lastname"
+                        placeholder="Mugisha" required
+                        autocomplete="family-name" 
+                        title="Applicant's family (last) name" />
+                    </label>
+                </div>
 
                 <!-- Organizational Title -->
-                <label for="orgtitle" title="Organizational title (alpha, hyphens, spaces only. Min 7 chars)">
-                    <span class="label-text">Organizational Title</span>
-                    <input type="text" name="orgtitle" id="orgtitle"
-                    placeholder="e.g. Chief Executive Officer"
-                    autocomplete="organization-title"
-                    pattern="[A-Za-z\s\-]{7,}"
-                    title="Only alpha characters, hyphens, and spaces. Minimum 7 characters." />
-                </label>
+                <div class="form-group">
+                    <label for="orgtitle">
+                        <span class="label-text">Organizational Title</span>
+                        <input type="text" name="orgtitle" id="orgtitle"
+                        placeholder="e.g. Chief Executive Officer"
+                        autocomplete="organization-title"
+                        pattern="[A-Za-z\s\-]{7,}"
+                        title="Only alpha characters, hyphens, and spaces. Minimum 7 characters." />
+                    </label>
+                </div>
 
                 <!-- Email -->
-                <label for="email" title="Applicant's email address">
-                    <span class="label-text">Email Address <span class="required">*</span></span>
-                    <input type="email" name="email" id="email"
-                    placeholder="sarah@kisorocraftworks.co.ug" required
-                    autocomplete="email"
-                    title="A professional email we can use to reach you about your application" />
-                </label>
+                <div class="form-group">
+                    <label for="email">
+                        <span class="label-text">Email Address <span class="required">*</span></span>
+                        <input type="email" name="email" id="email"
+                        placeholder="sarah@kisorocraftworks.co.ug" required
+                        autocomplete="email"
+                        title="A professional email we can use to reach you about your application" />
+                    </label>
+                </div>
 
                 <!-- Mobile Phone -->
-                <label for="phone" title="Applicant's mobile phone number">
-                    <span class="label-text">Mobile Phone Number <span class="required">*</span></span>
-                    <input type="tel" name="phone" id="phone"
-                    placeholder="+256 772 123 456" required
-                    autocomplete="tel" title="Ugandan or international mobile number we can call or text" />
-                </label>
+                <div class="form-group">
+                    <label for="phone">
+                        <span class="label-text">Mobile Phone Number <span class="required">*</span></span>
+                        <input type="tel" name="phone" id="phone"
+                        placeholder="+256 772 123 456" required
+                        autocomplete="tel" 
+                        title="Ugandan or international mobile number we can call or text" />
+                    </label>
+                </div>
 
                 <!-- Business Name -->
-                <label for="business" title="Business or organization name">
-                    <span class="label-text">Business/Organization Name <span class="required">*</span></span>
-                    <input type="text" name="business" id="business"
-                    placeholder="Kisoro Craft Works Ltd." required
-                    autocomplete="organization"
-                    title="The official name of your business, nonprofit, or organization" />
-                </label>
+                <div class="form-group">
+                    <label for="business">
+                        <span class="label-text">Business/Organization Name <span class="required">*</span></span>
+                        <input type="text" name="business" id="business"
+                        placeholder="Kisoro Craft Works Ltd." required
+                        autocomplete="organization"
+                        title="The official name of your business, nonprofit, or organization" />
+                    </label>
+                </div>
 
                 <!-- Membership Level -->
-                <fieldset class="membership-level-group">
-                    <legend>Membership Level <span class="required">*</span></legend>
-                    <label class="radio-label">
-                        <input type="radio" name="membership" value="np" required />
-                        NP Membership (Non-Profit - No Fee)
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="membership" value="bronze" />
-                        Bronze Membership
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="membership" value="silver" />
-                        Silver Membership
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="membership" value="gold" />
-                        Gold Membership
-                    </label>
-                </fieldset>
+                <div class="form-group membership-group">
+                    <fieldset class="membership-level-group">
+                        <legend>Membership Level <span class="required">*</span></legend>
+                        <div class="radio-options">
+                            <label class="radio-label">
+                                <input type="radio" name="membership" value="np" required />
+                                <span class="radio-custom"></span>
+                                NP Membership (Non-Profit - No Fee)
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="membership" value="bronze" />
+                                <span class="radio-custom"></span>
+                                Bronze Membership
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="membership" value="silver" />
+                                <span class="radio-custom"></span>
+                                Silver Membership
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="membership" value="gold" />
+                                <span class="radio-custom"></span>
+                                Gold Membership
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
 
                 <!-- Business Description -->
-                <label for="description" title="Brief description of your business or organization">
-                    <span class="label-text">Business Description</span>
-                    <textarea name="description" id="description"
-                    rows="4" placeholder="Tell us what your organization does, who you serve, and how you'd like to engage with the chamber community…"
-                title="Share a few sentences about your work, mission, and goals for joining the chamber"></textarea>
-            </label>
+                <div class="form-group">
+                    <label for="description">
+                        <span class="label-text">Business Description</span>
+                        <textarea name="description" id="description"
+                        rows="4" placeholder="Tell us what your organization does, who you serve, and how you'd like to engage with the chamber community…"
+                        title="Share a few sentences about your work, mission, and goals for joining the chamber"></textarea>
+                    </label>
+                </div>
 
-            <!-- Hidden Timestamp – populated by join.js on page load -->
-            <input type="hidden" name="timestamp" id="timestamp" value="" />
+                <!-- Hidden Timestamp -->
+                <input type="hidden" name="timestamp" id="timestamp" value="" />
 
-            <!-- Submit (input[type=submit] per assignment spec) -->
-            <input type="submit" class="submit-btn" value="Submit Application" />
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit Application</button>
 
-        </form>
-    </section>
+            </form>
+        </section>
 
-    <!-- RIGHT: MEMBERSHIP CARDS -->
-    <aside class="membership-cards-section">
-        <h2>Membership Levels &amp; Benefits</h2>
+        <!-- RIGHT: MEMBERSHIP CARDS -->
+        <aside class="membership-cards-section">
+            <h2>Membership Levels &amp; Benefits</h2>
 
-        <!-- NP -->
-        <div class="membership-card card-np" data-modal="modal-np">
-            <h3>NP Membership</h3>
-            <p class="cost">Free</p>
-            <p class="short-desc">For non-profit organizations</p>
-            <button class="learn-more" data-modal="modal-np" type="button">Learn More</button>
-        </div>
-
-        <!-- Bronze -->
-        <div class="membership-card card-bronze" data-modal="modal-bronze">
-            <h3>Bronze Membership</h3>
-            <p class="cost">$15,000 / year</p>
-            <p class="short-desc">Standard directory listing &amp; 10% training discount</p>
-            <button class="learn-more" data-modal="modal-bronze" type="button">Learn More</button>
-        </div>
-
-        <!-- Silver -->
-        <div class="membership-card card-silver" data-modal="modal-silver">
-            <h3>Silver Membership</h3>
-            <p class="cost">$30,000 / year</p>
-            <p class="short-desc">Enhanced profile, 20% discounts &amp; networking events</p>
-            <button class="learn-more" data-modal="modal-silver" type="button">Learn More</button>
-        </div>
-
-        <!-- Gold -->
-        <div class="membership-card card-gold" data-modal="modal-gold">
-            <h3>Gold Membership</h3>
-            <p class="cost">$50,000 / year</p>
-            <p class="short-desc">Premium spotlight, 30% discounts &amp; exclusive events</p>
-            <button class="learn-more" data-modal="modal-gold" type="button">Learn More</button>
-        </div>
-    </aside>
-
-</main>
-
-<!-- ===== MODALS ===== -->
-<div class="modal-overlay" id="modal-np">
-    <div class="modal-box">
-        <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
-        <h3>NP Membership Benefits</h3>
-        <ul>
-            <li>✓ Free membership for non-profit organizations</li>
-            <li>✓ Basic directory listing with organization name</li>
-            <li>✓ Access to community networking events</li>
-            <li>✓ Newsletter subscription with updates</li>
-            <li>✓ 5% discount on select training sessions</li>
-        </ul>
-    </div>
-</div>
-
-<div class="modal-overlay" id="modal-bronze">
-    <div class="modal-box">
-        <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
-        <h3>Bronze Membership Benefits</h3>
-        <ul>
-            <li>✓ Standard directory profile with business logo link</li>
-            <li>✓ 10% discount on chamber training and seminar entry fees</li>
-            <li>✓ Access to regional B2B networking hubs</li>
-            <li>✓ Monthly business newsletter featuring your updates</li>
-            <li>✓ Invitation to quarterly chamber meetings</li>
-        </ul>
-    </div>
-</div>
-
-<div class="modal-overlay" id="modal-silver">
-    <div class="modal-box">
-        <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
-        <h3>Silver Membership Benefits</h3>
-        <ul>
-            <li>✓ Enhanced directory profile with photo gallery</li>
-            <li>✓ 20% discount on all training and events</li>
-            <li>✓ Priority access to exclusive networking events</li>
-            <li>✓ Featured in monthly chamber spotlight email</li>
-            <li>✓ Free tickets to 2 chamber events per year</li>
-            <li>✓ Business referral program participation</li>
-        </ul>
-    </div>
-</div>
-
-<div class="modal-overlay" id="modal-gold">
-    <div class="modal-box">
-        <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
-        <h3>Gold Membership Benefits</h3>
-        <ul>
-            <li>✓ Premium directory profile with video and social links</li>
-            <li>✓ 30% discount on all training, events, and sponsorships</li>
-            <li>✓ Exclusive invitation to CEO roundtable events</li>
-            <li>✓ Home page spotlight position (rotating)</li>
-            <li>✓ Free tickets to 4 chamber events per year</li>
-            <li>✓ Dedicated account manager support</li>
-            <li>✓ First access to government and business opportunities</li>
-        </ul>
-    </div>
-</div>
-
-<!-- ===== FOOTER ===== -->
-<footer>
-    <div class="footer-inner">
-        <div class="footer-contact">
-            <img src="images/historic.webp" alt="Kisoro Chamber Logo" width="50" height="50" />
-            <div>
-                <p><strong>Kisoro Chamber of Commerce</strong></p>
-                <p><a href="mailto:info@kisorochamber.com">info@kisorochamber.com</a></p>
-                <p>+256 773 196 530</p>
+            <!-- NP -->
+            <div class="membership-card card-np" data-modal="modal-np">
+                <h3>NP Membership</h3>
+                <p class="cost">Free</p>
+                <p class="short-desc">For non-profit organizations</p>
+                <button class="learn-more" data-modal="modal-np" type="button">Learn More</button>
             </div>
-        </div>
-        <div class="footer-copy">
-            <p>&copy; <span id="footer-year"></span> Kisoro Chamber of Commerce</p>
-            <p>Built by Baker Mfitundinda</p>
-            <p>Last Updated: <span id="footer-modified"></span></p>
+
+            <!-- Bronze -->
+            <div class="membership-card card-bronze" data-modal="modal-bronze">
+                <h3>Bronze Membership</h3>
+                <p class="cost">$15,000 / year</p>
+                <p class="short-desc">Standard directory listing &amp; 10% training discount</p>
+                <button class="learn-more" data-modal="modal-bronze" type="button">Learn More</button>
+            </div>
+
+            <!-- Silver -->
+            <div class="membership-card card-silver" data-modal="modal-silver">
+                <h3>Silver Membership</h3>
+                <p class="cost">$30,000 / year</p>
+                <p class="short-desc">Enhanced profile, 20% discounts &amp; networking events</p>
+                <button class="learn-more" data-modal="modal-silver" type="button">Learn More</button>
+            </div>
+
+            <!-- Gold -->
+            <div class="membership-card card-gold" data-modal="modal-gold">
+                <h3>Gold Membership</h3>
+                <p class="cost">$50,000 / year</p>
+                <p class="short-desc">Premium spotlight, 30% discounts &amp; exclusive events</p>
+                <button class="learn-more" data-modal="modal-gold" type="button">Learn More</button>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- ===== MODALS ===== -->
+    <div class="modal-overlay" id="modal-np">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
+            <h3>NP Membership Benefits</h3>
+            <ul>
+                <li>✓ Free membership for non-profit organizations</li>
+                <li>✓ Basic directory listing with organization name</li>
+                <li>✓ Access to community networking events</li>
+                <li>✓ Newsletter subscription with updates</li>
+                <li>✓ 5% discount on select training sessions</li>
+            </ul>
         </div>
     </div>
-</footer>
 
-<!-- ===== SCRIPTS ===== -->
-<script src="scripts/join.js" defer></script>
+    <div class="modal-overlay" id="modal-bronze">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
+            <h3>Bronze Membership Benefits</h3>
+            <ul>
+                <li>✓ Standard directory profile with business logo link</li>
+                <li>✓ 10% discount on chamber training and seminar entry fees</li>
+                <li>✓ Access to regional B2B networking hubs</li>
+                <li>✓ Monthly business newsletter featuring your updates</li>
+                <li>✓ Invitation to quarterly chamber meetings</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-silver">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
+            <h3>Silver Membership Benefits</h3>
+            <ul>
+                <li>✓ Enhanced directory profile with photo gallery</li>
+                <li>✓ 20% discount on all training and events</li>
+                <li>✓ Priority access to exclusive networking events</li>
+                <li>✓ Featured in monthly chamber spotlight email</li>
+                <li>✓ Free tickets to 2 chamber events per year</li>
+                <li>✓ Business referral program participation</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-gold">
+        <div class="modal-box">
+            <button class="modal-close" aria-label="Close modal" type="button">&times;</button>
+            <h3>Gold Membership Benefits</h3>
+            <ul>
+                <li>✓ Premium directory profile with video and social links</li>
+                <li>✓ 30% discount on all training, events, and sponsorships</li>
+                <li>✓ Exclusive invitation to CEO roundtable events</li>
+                <li>✓ Home page spotlight position (rotating)</li>
+                <li>✓ Free tickets to 4 chamber events per year</li>
+                <li>✓ Dedicated account manager support</li>
+                <li>✓ First access to government and business opportunities</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER (matching index.html) ===== -->
+    <footer>
+        <p>Baker Mfitundinda | WDD 231</p>
+        <p class="footer-meta">&copy; <span id="current-year"></span> Kisoro City Chamber of Commerce</p>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 
 </body>
 </html>
