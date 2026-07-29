@@ -26,7 +26,7 @@
     }
 
     #primary-nav ul li a {
-        color: #1a2a3a;
+        color: hsl(141, 38%, 16%);
         border-bottom: none;
         padding: 0.6rem 1.8rem;
         border-radius: 30px;
@@ -35,15 +35,15 @@
     }
 
     #primary-nav ul li a:hover {
-        background: #1a2a3a;
-        color: #ffffff;
+        background: hsl(317, 38%, 16%);
+        color: rgb(255, 255, 255);
         padding-left: 1.8rem; /* No twitching - consistent padding */
         transform: translateY(-2px);
     }
 
     #primary-nav ul li a.active {
-        background: #1a2a3a;
-        color: #ffffff;
+        background: hsl(133, 38%, 16%);
+        color: rgb(255, 255, 255);
     }
 
     /* --- COURSE GRID --- */
