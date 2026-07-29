@@ -31,14 +31,14 @@
     }
 
     #primary-nav ul li a:hover {
-        background: #1A2A3A;
+        background: #1A5BB8;
         color: #FFFFFF;
         padding-left: 1.8rem;
         transform: translateY(-2px);
     }
 
     #primary-nav ul li a.active {
-        background: #2C7BE5;
+        background: #1A5BB8;
         color: #FFFFFF;
     }
 
