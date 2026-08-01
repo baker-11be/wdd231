@@ -3,17 +3,14 @@
 }
 
 .visit-banner {
-  background-color: #eef6f9;
-  border-left: 4px solid #00757f;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 12px;
+  background-color: var(--color-panel-alt);
+  border-left: 4px solid var(--color-banner-border);
 }
 
 .visit-banner p {
   margin: 0;
   font-weight: 700;
-  color: #0f3c4b;
+  color: var(--color-banner-text);
 }
 
 .discover-grid {
@@ -31,11 +28,11 @@
 }
 
 .discover-card {
-  background: #ffffff;
-  border: 1px solid #d7dde1;
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
   border-radius: 0.75rem;
   padding: 1rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 4px var(--color-shadow);
 }
 
 .discover-card h2 {
@@ -63,18 +60,18 @@
 .discover-card address {
   display: block;
   font-style: normal;
-  color: #55606a;
+  color: var(--color-card-text-muted);
   margin-bottom: 0.85rem;
 }
 
 .discover-card p {
   margin-bottom: 1rem;
-  color: #2a3b46;
+  color: var(--color-muted-strong);
 }
 
 .detail-panel {
-  background: #f6fbff;
-  border: 1px solid #d3e3ea;
+  background: var(--color-panel-bg);
+  border: 1px solid var(--color-border-strong);
   border-radius: 0.75rem;
   padding: 1rem;
   margin-top: 0.75rem;
@@ -84,14 +81,14 @@
   margin-top: 0;
   margin-bottom: 0.65rem;
   font-size: 1rem;
-  color: #154849;
+  color: var(--color-accent-alt-strong);
 }
 
 .detail-panel ul {
   list-style: disc inside;
   margin: 0;
   padding-left: 1rem;
-  color: #2a3b46;
+  color: var(--color-muted-strong);
 }
 
 .detail-panel li {
@@ -100,8 +97,8 @@
 
 .discover-card button {
   margin-top: 0.5rem;
-  background: #1a5c5c;
-  color: #ffffff;
+  background: var(--color-button-bg);
+  color: var(--color-surface);
   border: none;
   padding: 0.85rem 1rem;
   border-radius: 999px;
@@ -111,7 +108,7 @@
 
 .discover-card button:hover,
 .discover-card button:focus {
-  background: #154849;
+  background: var(--color-button-bg-strong);
   transform: translateY(-1px);
 }
 
