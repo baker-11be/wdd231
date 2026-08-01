@@ -36,6 +36,9 @@
     --color-border-strong: #D3E3EA;
     --color-card-border: #d7dde1;
     --color-panel-bg: #f6fbff;
+    --color-panel-alt: #eef6f9;
+    --color-banner-border: #00757F;
+    --color-banner-text: #0F3C4B;
     --color-overlay: rgba(0, 0, 0, 0.5);
     --color-shadow-rgb: 26 42 58;
     --color-shadow-rgb-dark: 0 0 0;
@@ -55,6 +58,8 @@
     clip-path: inset(0 0 0 0);
     white-space: nowrap;
     border: 0;
+    color: transparent;
+    background: transparent;
 }
 
 body {
