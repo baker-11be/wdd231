@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Discover Kisoro | Kisoro City Chamber of Commerce</title>
-  <meta name="description" content="Discover Kisoro City — a growing regional center in western Uganda with a vibrant small-business community, historic downtown, and stunning natural surroundings." />
+  <meta name="description" content="Discover Kisoro City — a regional center in western Uganda with a vibrant small-business community, historic downtown, and natural surroundings." />
   <meta property="og:title" content="Discover Kisoro City | Kisoro City Chamber of Commerce" >
   <meta property="og:description" content="Learn about Kisoro's local history, current demographics, upcoming community events, and image highlights from around the city." />
   <meta property="og:image" content="https://baker-11be.github.io/wdd231/chamber/images/historic.webp" >
@@ -99,11 +99,6 @@
     <p>Baker Mfitundinda | WDD 231</p>
     <p class="footer-meta">&copy; <span id="current-year"></span> Kisoro City Chamber of Commerce</p>
   </footer>
-  <script>
-    (function () {
-      var y = document.getElementById('current-year');
-      if (y) y.textContent = new Date().getFullYear();
-    })();
-  </script>
+  <script src="scripts/year.js" defer></script>
 </body>
 </html>
