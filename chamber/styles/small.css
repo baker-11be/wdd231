@@ -31,10 +31,18 @@ header {
     align-items: center;
     padding: 1rem 0;
     border-bottom: 4px solid #E52C2C;
-    background: #FFFFFF;
+    background: #d9f2d8;
+    /* make header full-bleed while keeping inner content centered */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
-    border-radius: 8px 8px 0 0;
+    border-radius: 0;
 }
 
 .header-content {
@@ -76,7 +84,7 @@ header {
 }
 
 #primary-nav {
-    background: #1A2A3A;
+    background: #d9f2d8;
     border-radius: 0 0 8px 8px;
     margin: 0 0 1.5rem 0;
     overflow: hidden;
@@ -97,9 +105,9 @@ header {
 #primary-nav ul li a {
     display: block;
     padding: 0.85rem 1.5rem;
-    color: #FFFFFF;
+    color: #1A2A3A;
     font-weight: 600;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     transition: background 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
 }
 
@@ -542,7 +550,7 @@ footer {
 
     #primary-nav {
         max-height: none !important;
-        background: transparent;
+        background: #d9f2d8;
         margin: 0;
         border-radius: 0;
     }

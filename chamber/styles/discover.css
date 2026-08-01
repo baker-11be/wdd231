@@ -18,6 +18,17 @@
 
 header {
   background-color: #d9f2d8;
+  /* make header full-bleed while keeping inner content centered */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0; /* remove rounding so background spans edge-to-edge */
 }
 
 .discover-grid {
@@ -129,22 +140,35 @@ header {
 .card-8 { grid-area: h; }
 
 @media (min-width: 641px) {
+  /* Medium screens: two-column layout where first card spans both columns
+     (similar to the course sample medium layout). */
   .discover-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-areas:
-      "a a b"
-      "c d e"
-      "f g h";
+      "a a"
+      "b c"
+      "d e"
+      "f g"
+      "h h";
+  }
+  /* Slightly increase card padding on medium screens for readability */
+  .discover-card {
+    padding: 1.25rem;
   }
 }
 
 @media (min-width: 1025px) {
+  /* Large screens: a more varied 4-column layout using named areas */
   .discover-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-areas:
       "a a b c"
-      "d e e f"
-      "g h h h";
+      "d e f g"
+      "h h h h";
+    align-items: start;
+  }
+  .discover-card {
+    padding: 1.5rem;
   }
 }
 
