@@ -25,6 +25,13 @@
     --color-accent-strong: #0F4A8A;
     --color-accent-alt: #00757F;
     --color-accent-alt-strong: #154849;
+    --color-button-bg: #166a69;
+    --color-button-bg-strong: #0f4a4a;
+    --color-detail-bg: #0f1726;
+    --color-detail-border: #d4af37;
+    --color-detail-text: #F8F3DC;
+    --color-detail-heading: #F8D56E;
+    --color-detail-muted: #c9c2a4;
     --color-header-bg: #d9f2d8;
     --color-header-border: #E52C2C;
     --color-warning: #F7D554;

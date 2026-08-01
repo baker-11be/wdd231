@@ -29,11 +29,19 @@
 }
 
 .discover-card {
+  position: relative;
+  overflow: visible;
   background: var(--color-surface);
   border: 1px solid var(--color-card-border);
   border-radius: 0.75rem;
   padding: 1rem;
   box-shadow: 0 1px 4px var(--color-shadow);
+}
+
+.discover-card .card-inner {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
 }
 
 .discover-card h2 {
@@ -71,29 +79,65 @@
 }
 
 .detail-panel {
-  background: var(--color-panel-bg);
-  border: 1px solid var(--color-border-strong);
+  position: static;
+  width: 100%;
+  background: var(--color-detail-bg);
+  border: 1px solid var(--color-detail-border);
   border-radius: 0.75rem;
-  padding: 1rem;
-  margin-top: 0.75rem;
+  padding: 1.25rem;
+  margin: 0;
+  color: var(--color-detail-text);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.detail-panel header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1rem;
 }
 
 .detail-panel h3 {
-  margin-top: 0;
-  margin-bottom: 0.65rem;
-  font-size: 1rem;
-  color: var(--color-accent-alt-strong);
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--color-detail-heading);
 }
+
+.detail-panel .detail-close {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--color-detail-text);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.detail-panel .detail-close:hover,
+.detail-panel .detail-close:focus {
+  color: var(--color-detail-heading);
+}
+
+.detail-text {
+  margin: 0 0 1rem;
+  line-height: 1.8;
+  color: var(--color-detail-muted);
+}
+
 
 .detail-panel ul {
   list-style: disc inside;
   margin: 0;
   padding-left: 1rem;
-  color: var(--color-muted-strong);
+  color: var(--color-surface);
 }
 
 .detail-panel li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .discover-card button {
@@ -111,6 +155,13 @@
 .discover-card button:focus {
   background: var(--color-button-bg-strong);
   transform: translateY(-1px);
+}
+
+@media (min-width: 1025px) {
+  .detail-panel {
+    top: 1.5rem;
+    width: min(24rem, calc(100% - 3rem));
+  }
 }
 
 .card-1 { grid-area: a; }
@@ -134,9 +185,14 @@
       "f g"
       "h h";
   }
-  /* Slightly increase card padding on medium screens for readability */
   .discover-card {
     padding: 1.25rem;
+  }
+  .discover-card .card-inner {
+    grid-template-columns: 1.55fr auto;
+  }
+  .detail-panel {
+    width: auto;
   }
 }
 
@@ -152,6 +208,12 @@
   }
   .discover-card {
     padding: 1.5rem;
+  }
+  .discover-card .card-inner {
+    grid-template-columns: 1.5fr auto;
+  }
+  .detail-panel {
+    width: 22rem;
   }
 }
 

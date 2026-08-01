@@ -17,33 +17,66 @@ if (cardsContainer) {
     const card = document.createElement("article");
     card.className = `discover-card card-${index + 1}`;
 
+    const detailText = [place.description, ...place.details]
+      .map((sentence) => sentence.trim().endsWith('.') ? sentence.trim() : `${sentence.trim()}.`)
+      .filter(Boolean)
+      .slice(0, 3)
+      .join(' ');
+
     card.innerHTML = `
-      <h2>${place.name}</h2>
-      <figure>
-        <img src="${place.image}" alt="${place.name}" loading="lazy" />
-        <figcaption>${place.name}</figcaption>
-      </figure>
-      <address>${place.address}</address>
-      <p>${place.description}</p>
-      <div class="detail-panel" hidden>
-        <h3>${place.detailTitle}</h3>
-        <ul>
-          ${place.details.map((detail) => `<li>${detail}</li>`).join("")}
-        </ul>
+      <div class="card-inner">
+        <div>
+          <h2>${place.name}</h2>
+          <figure>
+            <img src="${place.image}" alt="${place.name}" loading="lazy" />
+            <figcaption>${place.name}</figcaption>
+          </figure>
+          <address>${place.address}</address>
+          <p>${place.description}</p>
+          <button type="button" class="more-button" aria-expanded="false">Learn more</button>
+        </div>
+        <div class="detail-panel" hidden>
+          <header>
+            <h3>Other to know</h3>
+            <button type="button" class="detail-close" aria-label="Close details">×</button>
+          </header>
+          <p class="detail-text">${detailText}</p>
+        </div>
       </div>
-      <button type="button" class="more-button" aria-expanded="false">Learn more</button>
     `;
 
     const button = card.querySelector(".more-button");
     const detailPanel = card.querySelector(".detail-panel");
 
     if (button && detailPanel) {
-      button.addEventListener("click", () => {
-        const wasHidden = detailPanel.hidden;
+      const closeButton = detailPanel.querySelector(".detail-close");
+
+      const openDetails = () => {
         closeAllDetails();
-        if (wasHidden) {
-          detailPanel.hidden = false;
-          button.setAttribute("aria-expanded", "true");
+        detailPanel.hidden = false;
+        button.setAttribute("aria-expanded", "true");
+      };
+
+      const hideDetails = () => {
+        detailPanel.hidden = true;
+        button.setAttribute("aria-expanded", "false");
+      };
+
+      button.addEventListener("click", () => {
+        if (detailPanel.hidden) {
+          openDetails();
+        } else {
+          hideDetails();
+        }
+      });
+
+      if (closeButton) {
+        closeButton.addEventListener("click", hideDetails);
+      }
+
+      card.addEventListener("mouseleave", () => {
+        if (!detailPanel.hidden) {
+          hideDetails();
         }
       });
     }
