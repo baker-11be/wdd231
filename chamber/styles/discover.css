@@ -16,21 +16,6 @@
   color: #0f3c4b;
 }
 
-header {
-  background-color: #d9f2d8;
-  /* make header full-bleed while keeping inner content centered */
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  box-sizing: border-box;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 0; /* remove rounding so background spans edge-to-edge */
-}
-
 .discover-grid {
   display: grid;
   gap: 1rem;
