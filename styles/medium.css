@@ -1,0 +1,42 @@
+/* Medium screens: 641px to 1024px */
+
+.cards-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.place-card {
+  grid-template-areas:
+    "title title"
+    "image address"
+    "image description"
+    "button button";
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 0.5rem 1rem;
+  padding: 1.25rem;
+}
+
+.place-card h2 {
+  font-size: 1.3rem;
+}
+.place-card address {
+  align-self: start;
+}
+.place-card button {
+  justify-self: start;
+}
+
+/* Hover effect active only in medium and large */
+.place-card figure img {
+  transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.place-card figure img:hover {
+  filter: brightness(1.05) contrast(1.1);
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.visit-message {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}

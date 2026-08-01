@@ -20,7 +20,9 @@
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="stylesheet" href="styles/discover.css" />
   <script src="scripts/navigation.js" defer></script>
+  <script type="module" src="scripts/discover.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -50,6 +52,10 @@
     <section>
       <h1>Discover Kisoro City</h1>
       <p>Explore the history, culture, and local events that make Kisoro City a welcoming place for business and community life.</p>
+    </section>
+
+    <section class="visit-banner" aria-live="polite">
+      <p id="visit-message">Loading your visit details...</p>
     </section>
 
     <section>
@@ -83,22 +89,9 @@
       </div>
     </section>
 
-    <section>
-      <h2>Image Highlights</h2>
-      <div class="image-montage">
-        <figure>
-          <img src="images/historic.webp" alt="Historic downtown Kisoro City" />
-          <figcaption>Historic downtown main street.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/storebusiness.webp" alt="Local business storefront" />
-          <figcaption>Local business storefronts.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/events.webp" alt="Community events and gatherings" />
-          <figcaption>Community events and gatherings.</figcaption>
-        </figure>
-      </div>
+    <section class="discover-grid-section">
+      <h2>Discover Local Destinations</h2>
+      <div id="discover-cards" class="discover-grid"></div>
     </section>
   </main>
 
