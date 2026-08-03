@@ -32,8 +32,8 @@
     --color-detail-text: #F8F3DC;
     --color-detail-heading: #F8D56E;
     --color-detail-muted: #c9c2a4;
-    --color-header-bg: #d9f2d8;
-    --color-header-border: #E52C2C;
+    --color-header-bg: #0b3d91;
+    --color-header-border: #072a66;
     --color-warning: #F7D554;
     --color-warning-strong: #FFD93D;
     --color-danger: #B71C1C;
@@ -124,7 +124,7 @@ header {
 .site-name {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-heading-strong);
+    color: #ffffff;
 }
 
 .site-tag {
@@ -134,12 +134,12 @@ header {
 }
 
 #hamburger {
-    background: var(--color-transparent);
+    background: transparent;
     border: none;
     font-size: 2.2rem;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
-    color: var(--color-heading);
+    color: #ffffff;
     transition: transform 0.3s ease;
 }
 
@@ -169,9 +169,9 @@ header {
 #primary-nav ul li a {
     display: block;
     padding: 0.85rem 1.5rem;
-    color: var(--color-heading);
+    color: #ffffff;
     font-weight: 600;
-    border-bottom: 1px solid var(--color-shadow);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
     transition: background 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
 }
 
@@ -181,14 +181,14 @@ header {
 }
 
 #primary-nav ul li a:hover {
-    background: var(--color-accent);
-    color: var(--color-surface);
+    background: var(--color-accent-strong);
+    color: #ffffff;
     padding-left: 2rem;
 }
 
 #primary-nav ul li a.active {
-    background: var(--color-accent);
-    color: var(--color-surface);
+    background: var(--color-accent-strong);
+    color: #ffffff;
 }
 
 .skip-link {
@@ -569,7 +569,7 @@ section {
 }
 
 footer {
-    background: #1A3A22;
+    background: var(--color-header-bg);
     color: #FFFFFF;
     padding: 2rem 1.5rem;
     border-radius: 12px 12px 0 0;
@@ -579,7 +579,33 @@ footer {
 
 .footer-meta {
     margin-top: 0.5rem;
-    color: #A0B8A8;
+    color: #cfe0ff;
+}
+
+/* Highlight specific nav items with red text on white pill for contrast */
+#primary-nav a[href="index.html"],
+#primary-nav a[href="about.html"],
+#primary-nav a[href="get-us.html"],
+#primary-nav a[href="attributions.html"],
+footer a[href="get-us.html"],
+footer a[href="attributions.html"] {
+    background: #ffffff;
+    color: #b71c1c;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#primary-nav a[href="index.html"]:hover,
+#primary-nav a[href="about.html"]:hover,
+#primary-nav a[href="get-us.html"]:hover,
+#primary-nav a[href="attributions.html"]:hover,
+footer a[href="get-us.html"]:hover,
+footer a[href="attributions.html"]:hover {
+    background: #fff0f0;
+    color: #b71c1c;
+    padding-left: 0.9rem; /* prevent global hover indent */
 }
 
 @media screen and (min-width: 768px) {

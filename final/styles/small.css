@@ -278,12 +278,38 @@ section {
 
 /* ===== FOOTER ===== */
 footer {
-    background: #1a2a3a;
+        background: #0b3d91;
     color: #ffffff;
     padding: 2rem 1.5rem;
     border-radius: 12px 12px 0 0;
     text-align: center;
     margin-top: 2rem;
+}
+
+/* Highlight specific nav items with red text on white pill for contrast */
+#primary-nav a[href="index.html"],
+#primary-nav a[href="about.html"],
+#primary-nav a[href="get-us.html"],
+#primary-nav a[href="attributions.html"],
+footer a[href="get-us.html"],
+footer a[href="attributions.html"] {
+    background: #ffffff;
+    color: #b71c1c;
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#primary-nav a[href="index.html"]:hover,
+#primary-nav a[href="about.html"]:hover,
+#primary-nav a[href="get-us.html"]:hover,
+#primary-nav a[href="attributions.html"]:hover,
+footer a[href="get-us.html"]:hover,
+footer a[href="attributions.html"]:hover {
+    background: #fff0f0;
+    color: #b71c1c;
+    padding-left: 0.9rem; /* prevent global hover indent */
 }
 
 .social-links {

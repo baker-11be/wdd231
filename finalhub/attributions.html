@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributions  CattleHub</title>
+    <meta name="description" content="Content attributions and source credits for CattleHub.">
+    <meta name="author" content="CattleHub Team">
+    <meta property="og:title" content="Attributions CattleHub">
+    <meta property="og:description" content="Sources and credits for CattleHub content.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <div class="header-inner">
+            <div class="header-content">
+                <a class="logo-link" href="index.html" aria-label="CattleHub Home">
+                    <img src="images/logo.webp" alt="CattleHub logo" width="48" height="48" loading="lazy" class="logo">
+                </a>
+                <div>
+                    <p class="site-name">CattleHub</p>
+                    <p class="site-tag">Uganda's cattle farms &amp; agritourism network.</p>
+                </div>
+            </div>
+            <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <nav id="primary-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="get-us.html">Get Us</a></li>
+            <li><a href="attributions.html" class="active">Attributions</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <h1>📚 Attributions</h1>
+            <p>Giving credit where it's due — sources and inspirations behind CattleHub.</p>
+        </section>
+
+        <section class="attributions-content" style="max-width:1000px;margin:2rem auto;padding:0 1.5rem;">
+            <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
+
+                <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:1.5rem;border-left:4px solid #222;">
+                    <h2 style="font-size:1.2rem;margin:0 0 0.5rem 0;">📊 Farm Data</h2>
+                    <p style="margin:0;color:#333;">Farm information compiled from public sources, official farm websites, and Uganda tourism directories.</p>
+                </div>
+
+                <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:1.5rem;border-left:4px solid #222;">
+                    <h2 style="font-size:1.2rem;margin:0 0 0.5rem 0;">🐄 Breed Descriptions</h2>
+                    <p style="margin:0;color:#333;">
+                        Adapted from 
+                        <a href="https://www.pexels.com/photo/cattle-grazing-in-scenic-ugandan-landscape-34040646/" target="_blank" rel="noopener" style="font-weight:600;color:#111;text-decoration:underline;">
+                            Western Uganda  Breeds of Livestock
+                        </a>.
+                    </p>
+                </div>
+
+                <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:1.5rem;border-left:4px solid #222;">
+                    <h2 style="font-size:1.2rem;margin:0 0 0.5rem 0;">🖼️ Images</h2>
+                    <p style="margin:0;color:#333;">
+                        Hero, ankole, friesian, jersey, farmer, and market images sourced from 
+                        <a href="https://unsplash.com/" target="_blank" rel="noopener" style="font-weight:600;color:#111;text-decoration:underline;">Unsplash</a> 
+                        and 
+                        <a href="https://www.pexels.com/" target="_blank" rel="noopener" style="font-weight:600;color:#111;text-decoration:underline;">Pexels</a> 
+                        = free for commercial use with no attribution required.
+                    </p>
+                </div>
+
+                <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:1.5rem;border-left:4px solid #222;">
+                    <h2 style="font-size:1.2rem;margin:0 0 0.5rem 0;">🎨 Logo &amp; Favicon</h2>
+                    <p style="margin:0;color:#333;">Designed in house by the CattleHub team. All rights reserved.</p>
+                </div>
+
+                <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:1.5rem;border-left:4px solid #222;">
+                    <h2 style="font-size:1.2rem;margin:0 0 0.5rem 0;">🌐 Other Resources</h2>
+                    <p style="margin:0;color:#333;">
+                        Icons and symbols sourced from standard Unicode sets. 
+                        Farm cost estimates based on publicly available visitor data.
+                    </p>
+                </div>
+
+            </div>
+
+            <div style="margin-top:2.5rem;text-align:center;">
+                <a href="index.html" class="btn btn-primary" style="display:inline-block;">
+                    ← Back to Home
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand"><img src="images/logo.webp" alt="CattleHub logo" width="40" height="40" loading="lazy" /><span>CattleHub &mdash; Uganda's Cattle Network</span></div>
+            <div class="footer-links"><a href="attributions.html">Attributions</a><a href="get-us.html">Contact</a></div>
+            <p class="footer-copy">&copy; 2026 CattleHub. Baker Mfitundinda.</p>
+        </div>
+    </footer>
+
+    <div id="farm-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content"><button class="modal-close" aria-label="Close modal">&times;</button><div id="modal-body"></div></div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

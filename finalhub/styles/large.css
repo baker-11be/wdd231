@@ -1,0 +1,74 @@
+/* =============================================
+   large.css – Desktop enhancements (≥768px)
+   Cleanly overrides mobile rules using natural cascade
+   ============================================= */
+
+@media (min-width: 768px) {
+  /* Hide hamburger */
+  #hamburger {
+    display: none;
+  }
+
+  /* Show navigation as inline row – handles both default and .open states */
+  #primary-nav,
+  #primary-nav.open {
+    display: flex;
+    width: auto;
+    padding-top: 0;
+    align-items: center;
+  }
+
+  #primary-nav ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .header-inner {
+    flex-wrap: nowrap;
+  }
+
+  /* Hero overlay */
+  .hero-content {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    max-width: 450px;
+    text-align: left;
+    border-radius: 8px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  /* 3‑column grids */
+  .farm-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .breed-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Side‑by‑side layouts */
+  .about-content {
+    grid-template-columns: 3fr 2fr;
+  }
+  .contact-wrapper {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  /* Horizontal footer */
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* ---------- Extra large (≥1024px) ---------- */
+@media (min-width: 1024px) {
+  .farm-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
