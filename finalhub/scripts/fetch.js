@@ -30,12 +30,12 @@ export function renderFarmGrid(farms) {
         const card = document.createElement('div');
         card.className = 'farm-card';
         card.setAttribute('data-id', String(f.id || ''));
-                card.innerHTML = `
-                        <img src="${f.photoUrl || 'images/grazing.webp'}" alt="${f.name || 'Farm'}" loading="lazy" width="600" height="360" />
-                        <div class="farm-info">
-              <h3>${f.name || 'Farm'}</h3>
-              <p class="breeds">${(f.mainBreeds || []).join(', ')}</p>
-              <p class="farm-address">${f.address || ''}</p>
+        card.innerHTML = `
+            <img src="${f.photoUrl || 'images/grazing.webp'}" alt="${f.name || 'Farm'}" loading="lazy" width="600" height="360" />
+            <div class="farm-info">
+                <h3>${f.name || 'Farm'}</h3>
+                <p class="breeds">${(f.mainBreeds || []).join(', ')}</p>
+                <p class="farm-address">${f.address || ''}</p>
             </div>
         `;
         frag.appendChild(card);
@@ -63,9 +63,14 @@ export function animateStats(farms) {
     }
 
     els.forEach((el, i) => {
-        let target = computedTargets[i] ?? parseInt(el.getAttribute('data-target') || '0', 10) || 0;
-        // if already non-zero, skip
-        if (parseInt(el.textContent?.replace(/,/g, '') || '0', 10) >= target) return;
+        // ---- FIX: replace `??` with a ternary check ----
+        let target = (computedTargets[i] !== undefined && computedTargets[i] !== null)
+            ? computedTargets[i]
+            : parseInt(el.getAttribute('data-target') || '0', 10) || 0;
+
+        // ---- FIX: replace optional chaining `?.` with a conditional ----
+        let textContent = el.textContent ? el.textContent.replace(/,/g, '') : '0';
+        if (parseInt(textContent, 10) >= target) return;
 
         // duration adapts to size but stays reasonable
         const duration = Math.min(2200, 800 + (target * 12));

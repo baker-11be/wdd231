@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (farms) {
         renderFarmGrid(farms);
         animateStats(farms);
-        // reopen last viewed if any
+    
         const lastId = getLastViewedFarm();
         if (lastId) {
             const farm = farms.find(f => f.id === parseInt(lastId));
             if (farm) openModal(farm);
         }
-        // Delegated click handler to open modal and save last viewed
+    
         const grid = document.getElementById('farm-grid');
         if (grid) {
             grid.addEventListener('click', (e) => {
