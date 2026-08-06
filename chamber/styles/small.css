@@ -15,8 +15,8 @@
     --color-heading: #1A2A3A;
     --color-heading-alt: #2A4A2A;
     --color-heading-strong: #3A1A1A;
-    --color-muted: #566575;
-    --color-muted-dark: #55606a;
+    --color-muted: #3E4C59; 
+    --color-muted-dark: #3E4C59;
     --color-muted-strong: #2A3B46;
     --color-muted-darker: #0F3C4B;
     --color-link: #1A5C5C;
@@ -97,7 +97,6 @@ header {
     padding: 1rem 0;
     border-bottom: 4px solid var(--color-header-border);
     background: var(--color-header-bg);
-    /* make header full-bleed while keeping inner content centered */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -108,6 +107,21 @@ header {
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: 0;
+}
+
+
+#hamburger {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#hamburger span,
+#hamburger svg {
+    fill: #ffffff;
+    background-color: #ffffff;
 }
 
 .header-content {
@@ -129,8 +143,8 @@ header {
 
 .site-tag {
     font-size: 0.85rem;
-        color: var(--color-surface);
-        margin-top: -0.2rem;
+    color: var(--color-surface);
+    margin-top: -0.2rem;
     border-radius: 0 0 8px 8px;
     margin: 0 0 1.5rem 0;
     overflow: hidden;
@@ -234,8 +248,9 @@ section {
     gap: 1rem;
 }
 
+/* Fix: High-contrast eyebrow text over gradient background */
 .hero-copy .eyebrow {
-    color: var(--color-warning);
+    color: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -293,7 +308,7 @@ section {
 
 .event-meta {
     margin-top: 1rem;
-    color: #566575;
+    color: #3E4C59;
     font-size: 0.95rem;
 }
 
@@ -324,7 +339,7 @@ section {
 
 .weather-desc {
     margin: 0.5rem 0 0;
-    color: #566575;
+    color: #3E4C59;
 }
 
 .forecast-day {
@@ -387,9 +402,10 @@ section {
     font-weight: 700;
 }
 
+/* Fix: Darkened Gold member badge text for AA compliance */
 .member-badge.gold {
     background: #FFD49B;
-    color: #7B5600;
+    color: #5C4000;
 }
 
 .member-badge.silver {
@@ -479,7 +495,7 @@ section {
 
 .member-meta {
     margin: 0;
-    color: #6B8C78;
+    color: #3E4C59;
     font-size: 0.95rem;
 }
 
@@ -495,9 +511,10 @@ section {
     font-size: 0.85rem;
 }
 
+
 .member-card.gold .membership-pill {
     background: #FFD49B;
-    color: #7B5A0F;
+    color: #5C4000;
 }
 
 .member-card.silver .membership-pill {
@@ -529,7 +546,7 @@ section {
     background: #FFCDCD;
     border: 1px solid #FFEEBA;
     border-radius: 16px;
-    color: #856404;
+    color: #630000;
 }
 
 .image-montage {
@@ -546,7 +563,7 @@ section {
 
 .image-montage figcaption {
     padding: 0.85rem 1rem;
-    color: #566575;
+    color: #3E4C59;
     font-size: 0.95rem;
 }
 
@@ -564,7 +581,6 @@ footer {
     color: #cfe0ff;
 }
 
-/* Highlight specific nav items with red text on white pill for contrast */
 #primary-nav a[href="index.html"],
 #primary-nav a[href="about.html"],
 #primary-nav a[href="get-us.html"],
@@ -587,7 +603,7 @@ footer a[href="get-us.html"]:hover,
 footer a[href="attributions.html"]:hover {
     background: #fff0f0;
     color: #b71c1c;
-    padding-left: 0.9rem; /* prevent global hover indent */
+    padding-left: 0.9rem;
 }
 
 @media screen and (min-width: 768px) {
