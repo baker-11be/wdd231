@@ -128,12 +128,12 @@
   color: var(--color-detail-muted);
 }
 
-
+/* Fix: Changed text color from white (#FFFFFF) to high-contrast panel text color (#F8F3DC) */
 .detail-panel ul {
   list-style: disc inside;
   margin: 0;
   padding-left: 1rem;
-  color: var(--color-surface);
+  color: var(--color-detail-text);
 }
 
 .detail-panel li {
@@ -174,8 +174,6 @@
 .card-8 { grid-area: h; }
 
 @media (min-width: 641px) {
-  /* Medium screens: two-column layout where first card spans both columns
-     (similar to the course sample medium layout). */
   .discover-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-areas:
@@ -197,7 +195,6 @@
 }
 
 @media (min-width: 1025px) {
-  /* Large screens: a more varied 4-column layout using named areas */
   .discover-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-areas:
