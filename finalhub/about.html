@@ -6,14 +6,14 @@
     <title>CattleHub About Us | Uganda's Cattle Heritage & Agritourism</title>
     <meta name="description" content="Learn about CattleHub's mission to promote Uganda's cattle farming, agritourism, and indigenous breeds. Discover our story and values.">
     <meta name="author" content="Baker Mfitundinda">
-    
+
     <!-- Open Graph tags for social sharing -->
     <meta property="og:title" content="CattleHub About Us Uganda's Cattle Heritage & Agritourism">
     <meta property="og:description" content="We connect visitors with authentic cattle ranches, cultural experiences, and sustainable agritourism across Uganda's cattle corridor.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://baker-11be.github.io/wdd231/finalhub/about.html">
     <meta property="og:image" content="https://baker-11be.github.io/wdd231/finalhub/images/hero.webp">
-    
+
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
@@ -25,26 +25,31 @@
     <link rel="stylesheet" href="styles/large.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <div class="header-inner">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.webp" alt="CattleHub logo" width="48" height="48" loading="lazy">
-                    <span class="site-name">CattleHub</span> <!-- added class for white color -->
+            <div class="header-content">
+                <a class="logo-link" href="index.html" aria-label="CattleHub Home">
+                    <img src="images/logo.webp" alt="CattleHub logo" width="48" height="48" loading="lazy" class="logo">
+                    <span class="site-name">CattleHub</span>
                 </a>
+                <div>
+                    <p class="site-tag">Uganda's cattle farms &amp; agritourism network.</p>
+                </div>
             </div>
-            <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
-            <nav id="primary-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="get-us.html">Get Us</a></li>
-                </ul>
-            </nav>
+            <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
         </div>
     </header>
 
-    <main>
+    <nav id="primary-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="get-us.html">Get Us</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
         <section class="page-hero">
             <h1>About CattleHub</h1>
             <p>Preserving Uganda's cattle heritage through sustainable agritourism.</p>
