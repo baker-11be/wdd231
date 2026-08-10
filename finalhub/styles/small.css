@@ -43,7 +43,8 @@ header {
   padding: 0.5rem 1rem;
 }
 
-header a {
+/* --- specific rule for the logo link to fix contrast --- */
+header .header-content a.logo-link {
   color: #ffffff;
 }
 
