@@ -76,13 +76,15 @@ header {
   gap: 0.75rem;
 }
 
-/* Logo link – higher specificity to override default a color */
+/* Force white text on header logo - highest priority */
+header a.logo-link,
+header .logo-link,
 a.logo-link {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .logo {
@@ -180,7 +182,7 @@ footer a[href="get-us.html"]:hover,
 footer a[href="attributions.html"]:hover {
   background: #fff0f0;
   color: #b71c1c;
-  padding-left: 0.9rem; /* prevent global hover indent */
+  padding-left: 0.9rem;
 }
 
 /* ---------- Buttons – renamed to avoid Bootstrap detection ---------- */
