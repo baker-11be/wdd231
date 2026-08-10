@@ -21,6 +21,7 @@ a {
   color: #1a1a1a;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
@@ -36,11 +37,14 @@ a:hover {
   border: 0;
 }
 
-/* ---------- Header & Navigation ---------- */
 header {
   background: #0b3d91;
   border-bottom: 1px solid #072a66;
   padding: 0.5rem 1rem;
+}
+
+header a {
+  color: #ffffff;
 }
 
 .skip-link {
@@ -76,15 +80,11 @@ header {
   gap: 0.75rem;
 }
 
-/* Force white text on header logo - highest priority */
-header a.logo-link,
-header .logo-link,
-a.logo-link {
+.logo-link {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  color: #ffffff !important;
 }
 
 .logo {
@@ -106,7 +106,6 @@ a.logo-link {
   font-size: 0.95rem;
 }
 
-/* Hamburger – visible on mobile */
 #hamburger {
   background: transparent;
   border: 1px solid rgba(255,255,255,0.2);
@@ -118,6 +117,7 @@ a.logo-link {
   gap: 4px;
   color: #ffffff;
 }
+
 #hamburger span {
   display: block;
   width: 22px;
@@ -126,13 +126,12 @@ a.logo-link {
   transition: 0.2s;
 }
 
-/* Primary nav – hidden by default on mobile */
 #primary-nav {
   display: none;
   width: 100%;
   padding-top: 0.5rem;
 }
-/* Toggled via JS `.open` class */
+
 #primary-nav.open {
   display: block;
 }
@@ -143,23 +142,25 @@ a.logo-link {
   flex-direction: column;
   gap: 0.3rem;
 }
+
 #primary-nav a {
   display: block;
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
   font-weight: 500;
 }
+
 #primary-nav a.active {
   background: #1a5bb8;
   font-weight: 700;
   color: #ffffff;
 }
+
 #primary-nav a:hover {
   background: #154a8a;
   color: #ffffff;
 }
 
-/* Highlight specific nav items with red text on white pill for contrast */
 #primary-nav a[href="index.html"],
 #primary-nav a[href="about.html"],
 #primary-nav a[href="get-us.html"],
@@ -185,7 +186,6 @@ footer a[href="attributions.html"]:hover {
   padding-left: 0.9rem;
 }
 
-/* ---------- Buttons – renamed to avoid Bootstrap detection ---------- */
 .cta {
   display: inline-block;
   padding: 0.6rem 1.4rem;
@@ -197,19 +197,23 @@ footer a[href="attributions.html"]:hover {
   cursor: pointer;
   text-align: center;
 }
+
 .cta-primary {
   background: #222222;
   color: #ffffff;
   border-color: #222222;
 }
+
 .cta-primary:hover {
   background: #444444;
 }
+
 .cta-outline {
   background: transparent;
   color: #222222;
   border-color: #222222;
 }
+
 .cta-outline:hover {
   background: #f1f1f1;
 }
@@ -223,15 +227,18 @@ footer a[href="attributions.html"]:hover {
   margin: 1.5rem auto;
   box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
+
 .data-card h3 {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
+
 .data-grid {
   display: grid;
   gap: 1rem;
 }
+
 .data-row {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -240,13 +247,16 @@ footer a[href="attributions.html"]:hover {
   padding: 0.85rem 0;
   border-bottom: 1px solid #f0f0f0;
 }
+
 .data-row:last-child {
   border-bottom: none;
 }
+
 .data-label {
   font-weight: 600;
   color: #111111;
 }
+
 .data-value {
   text-align: right;
   color: #4b5563;
@@ -257,6 +267,7 @@ footer a[href="attributions.html"]:hover {
   text-align: center;
   padding: 2rem 1rem 1rem;
 }
+
 .checkmark {
   display: inline-flex;
   align-items: center;
@@ -269,6 +280,7 @@ footer a[href="attributions.html"]:hover {
   font-size: 2rem;
   margin: 0 auto 1rem;
 }
+
 .thanks-sub {
   color: #4b5563;
   max-width: 620px;
@@ -283,48 +295,52 @@ footer a[href="attributions.html"]:hover {
   margin: 1.5rem auto 3rem;
 }
 
-/* ---------- Hero ---------- */
 .hero {
   position: relative;
   margin: 1rem 0 2rem;
   overflow: hidden;
 }
+
 .hero picture,
 .hero img {
   width: 100%;
   display: block;
 }
+
 .hero img {
   max-height: 520px;
   object-fit: cover;
 }
+
 .hero-content {
   padding: 1.5rem;
   background: #f5f5f5;
   text-align: center;
 }
+
 .hero-content h1 {
   font-size: 2rem;
   margin-bottom: 0.25rem;
 }
+
 .hero-content p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
-/* ---------- Sections ---------- */
 .section-header {
   text-align: center;
   margin: 2rem 0 1.5rem;
 }
+
 .section-header h2 {
   font-size: 1.8rem;
 }
+
 .section-header p {
   color: #555555;
 }
 
-/* ---------- Farm Grid ---------- */
 .farm-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -333,6 +349,7 @@ footer a[href="attributions.html"]:hover {
   margin: 0 auto;
   padding: 0 1rem;
 }
+
 .farm-card {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -341,33 +358,38 @@ footer a[href="attributions.html"]:hover {
   cursor: pointer;
   transition: 0.2s;
 }
+
 .farm-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
 .farm-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   background: #eeeeee;
 }
+
 .farm-card .farm-info {
   padding: 1rem;
 }
+
 .farm-card .farm-info h3 {
   font-size: 1.2rem;
   margin-bottom: 0.25rem;
 }
+
 .farm-card .farm-info p {
   margin: 0.2rem 0;
   font-size: 0.95rem;
   color: #333333;
 }
+
 .farm-card .farm-info .breeds {
   font-weight: 600;
   color: #555555;
 }
 
-/* ---------- Breed Cards ---------- */
 .breed-cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -376,31 +398,35 @@ footer a[href="attributions.html"]:hover {
   margin: 0 auto;
   padding: 0 1rem;
 }
+
 .breed-card {
   border: 1px solid #eeeeee;
   border-radius: 8px;
   overflow: hidden;
   background: #ffffff;
 }
+
 .breed-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
+
 .breed-card h3 {
   padding: 0.75rem 1rem 0;
 }
+
 .breed-card p {
   padding: 0 1rem 1rem;
   color: #444444;
 }
 
-/* ---------- Stats ---------- */
 .stats {
   background: #f2f2f2;
   padding: 2rem 1rem;
   margin: 2rem 0;
 }
+
 .stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -409,23 +435,25 @@ footer a[href="attributions.html"]:hover {
   margin: 0 auto;
   text-align: center;
 }
+
 .stat-item {
   background: #ffffff;
   padding: 1rem;
   border-radius: 8px;
 }
+
 .stat-number {
   display: block;
   font-size: 2.2rem;
   font-weight: 700;
   color: #111111;
 }
+
 .stat-label {
   font-size: 0.9rem;
   color: #555555;
 }
 
-/* ---------- Modal ---------- */
 .modal {
   display: none;
   position: fixed;
@@ -438,9 +466,11 @@ footer a[href="attributions.html"]:hover {
   justify-content: center;
   align-items: center;
 }
+
 .modal.open {
   display: flex;
 }
+
 .modal-content {
   background: #ffffff;
   max-width: 500px;
@@ -451,6 +481,7 @@ footer a[href="attributions.html"]:hover {
   max-height: 90vh;
   overflow-y: auto;
 }
+
 .modal-close {
   position: absolute;
   top: 0.5rem;
@@ -460,6 +491,7 @@ footer a[href="attributions.html"]:hover {
   border: none;
   cursor: pointer;
 }
+
 #modal-body img {
   max-height: 250px;
   width: 100%;
@@ -467,11 +499,11 @@ footer a[href="attributions.html"]:hover {
   border-radius: 4px;
   margin-bottom: 0.75rem;
 }
+
 #modal-body h2 {
   margin-top: 0;
 }
 
-/* ---------- Footer ---------- */
 footer {
   background: #0b3d91;
   border-top: 1px solid #072a66;
@@ -479,6 +511,7 @@ footer {
   margin-top: 2rem;
   color: #ffffff;
 }
+
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -488,28 +521,31 @@ footer {
   align-items: center;
   text-align: center;
 }
+
 .footer-brand {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-weight: 600;
 }
+
 .footer-links {
   display: flex;
   gap: 1.5rem;
 }
+
 .footer-copy {
   font-size: 0.85rem;
   color: #e6f0ff;
 }
 
-/* ---------- About / Contact ---------- */
 .page-hero {
   background: #f5f5f5;
   padding: 2rem 1rem;
   text-align: center;
   border-bottom: 1px solid #dddddd;
 }
+
 .page-hero h1 {
   font-size: 2.2rem;
 }
@@ -523,14 +559,17 @@ footer {
   grid-template-columns: 1fr;
   gap: 2rem;
 }
+
 .about-text ul {
   padding-left: 1.5rem;
   margin-top: 0.5rem;
 }
+
 .about-image img,
 .contact-info img {
   border-radius: 8px;
 }
+
 .contact-form form {
   display: flex;
   flex-direction: column;
@@ -540,9 +579,11 @@ footer {
   border-radius: 8px;
   border: 1px solid #e0e0e0;
 }
+
 .contact-form label {
   font-weight: 600;
 }
+
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -551,11 +592,11 @@ footer {
   border-radius: 4px;
   font-size: 1rem;
 }
+
 .contact-form button {
   align-self: flex-start;
 }
 
-/* ---------- Tablet (≥600px) ---------- */
 @media (min-width: 600px) {
   .farm-grid {
     grid-template-columns: 1fr 1fr;
