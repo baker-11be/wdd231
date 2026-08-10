@@ -3,45 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CattleHub Home | Uganda Cattle Farms & Agritourism</title>
+
     <meta name="description" content="CattleHub connects you with Uganda's premier cattle farms, ranches, and agritourism experiences. Discover Ankole, Friesian, Jersey & more.">
     <meta name="author" content="Baker Mfitundinda">
+
     <meta property="og:title" content="CattleHub Home | Uganda's Premier Cattle Farms & Agritourism">
     <meta property="og:description" content="Explore Uganda's rich cattle heritage. Find top farms, learn about native breeds, and plan your unforgettable agritourism adventure.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://baker-11be.github.io/wdd231/finalhub/index.html">
     <meta property="og:image" content="https://baker-11be.github.io/wdd231/finalhub/images/hero.webp">
+
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts: Preconnect Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Google Fonts: Stylesheet Link -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
+
+    <script type="module" src="scripts/main.js"></script>
 </head>
+
 <body>
+
     <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
         <div class="header-inner">
+
             <div class="header-content">
+
                 <a class="logo-link" href="index.html" aria-label="CattleHub Home">
-                    <img src="images/logo.webp" alt="CattleHub logo" width="48" height="48" loading="lazy" class="logo">
+                    <img
+                        src="images/logo.webp"
+                        alt="CattleHub logo"
+                        width="48"
+                        height="48"
+                        loading="lazy"
+                        class="logo">
                     <span class="site-name">CattleHub</span>
                 </a>
+
                 <div>
-                    <p class="site-tag">Uganda's cattle farms &amp; agritourism network.</p>
+                    <p class="site-tag">
+                        Uganda's cattle farms &amp; agritourism network.
+                    </p>
                 </div>
+
             </div>
-            <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+
+            <button
+                id="hamburger"
+                type="button"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
         </div>
     </header>
 
-    <nav id="primary-nav">
+    <nav id="primary-nav" aria-label="Main navigation">
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -50,95 +77,215 @@
     </nav>
 
     <main id="main-content">
+
         <section class="hero" aria-label="Hero banner">
+
             <picture>
-                <source srcset="images/hero.webp" type="image/webp" />
-                <img src="images/hero.webp" alt="Cattle grazing in the Uganda countryside" loading="lazy" width="1200" height="520" />
+                <source srcset="images/hero.webp" type="image/webp">
+                <img
+                    src="images/hero.webp"
+                    alt="Cattle grazing in the Uganda countryside"
+                    loading="lazy"
+                    width="1200"
+                    height="520">
             </picture>
+
             <div class="hero-content">
                 <h1>Uganda's Cattle Heritage</h1>
-                <p>Discover farms, breeds &amp; agritourism across the cattle corridor.</p>
-                <a href="get-us.html" class="cta cta-primary">Plan Your Visit</a>
+
+                <p>
+                    Discover farms, breeds &amp; agritourism across the cattle corridor.
+                </p>
+
+                <a href="get-us.html" class="cta cta-primary">
+                    Plan Your Visit
+                </a>
             </div>
+
         </section>
 
         <section class="featured-farms" aria-labelledby="featured-heading">
+
             <div class="section-header">
                 <h2 id="featured-heading">Featured Farms</h2>
-                <p>Explore hand-picked cattle farms and ranches across Uganda</p>
+
+                <p>
+                    Explore hand-picked cattle farms and ranches across Uganda
+                </p>
             </div>
+
             <div id="farm-grid" class="farm-grid"></div>
+
         </section>
 
         <section class="breeds-snapshot" aria-labelledby="breeds-heading">
+
             <div class="section-header">
                 <h2 id="breeds-heading">Breeds We Celebrate</h2>
-                <p>From the iconic Ankole to high-yielding Friesian &amp; Jersey</p>
+
+                <p>
+                    From the iconic Ankole to high-yielding Friesian &amp; Jersey
+                </p>
             </div>
+
             <div class="breed-cards">
+
                 <div class="breed-card">
-                    <img src="images/ankole.webp" alt="Ankole cattle with long horns" loading="lazy" width="300" height="200" />
+                    <img
+                        src="images/ankole.webp"
+                        alt="Ankole cattle with long horns"
+                        loading="lazy"
+                        width="300"
+                        height="200">
+
                     <h3>Ankole</h3>
-                    <p>Long-horned, drought-resistant, culturally iconic.</p>
+
+                    <p>
+                        Long-horned, drought-resistant, culturally iconic.
+                    </p>
                 </div>
+
                 <div class="breed-card">
-                    <img src="images/friesian.webp" alt="Friesian dairy cattle" loading="lazy" width="300" height="200" />
+                    <img
+                        src="images/friesian.webp"
+                        alt="Friesian dairy cattle"
+                        loading="lazy"
+                        width="300"
+                        height="200">
+
                     <h3>Friesian</h3>
-                    <p>High milk yield, black-and-white, top dairy choice.</p>
+
+                    <p>
+                        High milk yield, black-and-white, top dairy choice.
+                    </p>
                 </div>
+
                 <div class="breed-card">
-                    <img src="images/jersey.webp" alt="Jersey cattle" loading="lazy" width="300" height="200" />
+                    <img
+                        src="images/jersey.webp"
+                        alt="Jersey cattle"
+                        loading="lazy"
+                        width="300"
+                        height="200">
+
                     <h3>Jersey</h3>
-                    <p>Rich milk, small frame, excellent for tropical climates.</p>
+
+                    <p>
+                        Rich milk, small frame, excellent for tropical climates.
+                    </p>
                 </div>
+
             </div>
+
         </section>
 
         <section class="stats" aria-labelledby="stats-heading">
-            <h2 id="stats-heading" class="visually-hidden">CattleHub by the numbers</h2>
+
+            <h2 id="stats-heading" class="visually-hidden">
+                CattleHub by the numbers
+            </h2>
+
             <div class="stats-grid">
+
                 <div class="stat-item">
                     <span class="stat-number" data-target="15">0</span>
                     <span class="stat-label">Farms Featured</span>
                 </div>
+
                 <div class="stat-item">
                     <span class="stat-number" data-target="6">0</span>
                     <span class="stat-label">Breeds Represented</span>
                 </div>
+
                 <div class="stat-item">
                     <span class="stat-number" data-target="4">0</span>
                     <span class="stat-label">Districts Covered</span>
                 </div>
+
                 <div class="stat-item">
                     <span class="stat-number" data-target="100">0</span>
                     <span class="stat-label">Visitors Guided</span>
                 </div>
+
             </div>
+
         </section>
+
     </main>
 
     <footer>
+
         <div class="footer-inner">
+
             <div class="footer-brand">
-                <img src="images/logo.webp" alt="CattleHub logo" width="40" height="40" loading="lazy" />
-                <span>CattleHub &mdash; Uganda's Cattle Network</span>
+
+                <img
+                    src="images/logo.webp"
+                    alt="CattleHub logo"
+                    width="40"
+                    height="40"
+                    loading="lazy">
+
+                <span>
+                    CattleHub &mdash; Uganda's Cattle Network
+                </span>
+
             </div>
+
             <div class="footer-links">
-                <a href="attributions.html">Attributions</a>
-                <a href="get-us.html">Contact</a>
-                <a href="https://www.loom.com/share/b119cbef7d8b4a49bd952e09c75851fb" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+
+                <a href="attributions.html">
+                    Attributions
+                </a>
+
+                <a href="get-us.html">
+                    Contact
+                </a>
+
+                <a
+                    href="https://www.loom.com/share/b119cbef7d8b4a49bd952e09c75851fb"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    📹 Video Demo
+                </a>
+
             </div>
-            <p class="footer-copy">&copy; 2026 CattleHub. Baker Mfitundinda.</p>
+
+            <p class="footer-copy">
+                &copy; 2026 CattleHub. Baker Mfitundinda.
+            </p>
+
         </div>
+
     </footer>
 
-    <div id="farm-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div
+        id="farm-modal"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title">
+
         <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <div id="modal-body"></div>
+
+            <button
+                class="modal-close"
+                type="button"
+                aria-label="Close modal">
+                &times;
+            </button>
+
+            <div id="modal-body">
+
+                <h2 id="modal-title" class="visually-hidden">
+                    Farm Details
+                </h2>
+
+            </div>
+
         </div>
+
     </div>
 
-    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
