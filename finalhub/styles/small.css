@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   background: #ffffff;
   color: #1e1e1e;
   line-height: 1.6;
@@ -43,29 +43,6 @@ header {
   padding: 0.5rem 1rem;
 }
 
-/* --- specific rule for the logo link to fix contrast --- */
-header .header-content a.logo-link {
-  color: #ffffff;
-}
-
-.skip-link {
-  position: absolute;
-  top: 0.75rem;
-  left: 1rem;
-  transform: translateY(-100%);
-  background: #111111;
-  color: #ffffff;
-  padding: 0.45rem 0.75rem;
-  border-radius: 4px;
-  z-index: 1000;
-  font-size: 0.95rem;
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-  outline: 3px solid #ffffff;
-}
-
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -86,6 +63,7 @@ header .header-content a.logo-link {
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
+  color: #ffffff;
 }
 
 .logo {
@@ -107,24 +85,32 @@ header .header-content a.logo-link {
   font-size: 0.95rem;
 }
 
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  transform: translateY(-100%);
+  background: #111111;
+  color: #ffffff;
+  padding: 0.45rem 0.75rem;
+  border-radius: 4px;
+  z-index: 1000;
+  font-size: 0.95rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 3px solid #ffffff;
+}
+
 #hamburger {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   padding: 0.3rem 0.6rem;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
   color: #ffffff;
-}
-
-#hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #222222;
-  transition: 0.2s;
+  font-size: 1.5rem;
 }
 
 #primary-nav {
@@ -149,42 +135,21 @@ header .header-content a.logo-link {
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
   font-weight: 500;
+  background: #ffffff;
+  color: #b71c1c;
+  text-decoration: none;
 }
 
 #primary-nav a.active {
-  background: #1a5bb8;
-  font-weight: 700;
+  background: #0b3d91;
   color: #ffffff;
+  font-weight: 700;
 }
 
 #primary-nav a:hover {
   background: #154a8a;
   color: #ffffff;
-}
-
-#primary-nav a[href="index.html"],
-#primary-nav a[href="about.html"],
-#primary-nav a[href="get-us.html"],
-#primary-nav a[href="attributions.html"],
-footer a[href="get-us.html"],
-footer a[href="attributions.html"] {
-  background: #ffffff;
-  color: #b71c1c;
-  padding: 0.45rem 0.9rem;
-  border-radius: 8px;
-  font-weight: 700;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-#primary-nav a[href="index.html"]:hover,
-#primary-nav a[href="about.html"]:hover,
-#primary-nav a[href="get-us.html"]:hover,
-#primary-nav a[href="attributions.html"]:hover,
-footer a[href="get-us.html"]:hover,
-footer a[href="attributions.html"]:hover {
-  background: #fff0f0;
-  color: #b71c1c;
-  padding-left: 0.9rem;
+  text-decoration: none;
 }
 
 .cta {
@@ -226,7 +191,7 @@ footer a[href="attributions.html"]:hover {
   background: #ffffff;
   max-width: 900px;
   margin: 1.5rem auto;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
 .data-card h3 {
@@ -491,6 +456,7 @@ footer a[href="attributions.html"]:hover {
   background: none;
   border: none;
   cursor: pointer;
+  color: #111111;
 }
 
 #modal-body img {
@@ -533,6 +499,21 @@ footer {
 .footer-links {
   display: flex;
   gap: 1.5rem;
+}
+
+.footer-links a {
+  background: #ffffff;
+  color: #b71c1c;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.footer-links a:hover {
+  background: #fff0f0;
+  color: #b71c1c;
+  text-decoration: none;
 }
 
 .footer-copy {
@@ -596,16 +577,4 @@ footer {
 
 .contact-form button {
   align-self: flex-start;
-}
-
-@media (min-width: 600px) {
-  .farm-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .breed-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-  .stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
