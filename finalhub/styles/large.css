@@ -24,7 +24,7 @@
     position: absolute;
     bottom: 10%;
     left: 5%;
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--color-hero-overlay);
     padding: 2rem;
     max-width: 450px;
     text-align: left;
