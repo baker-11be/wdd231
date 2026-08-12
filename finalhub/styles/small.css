@@ -21,7 +21,6 @@ a {
   color: #1a1a1a;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
@@ -53,7 +52,6 @@ button {
   z-index: 1000;
   font-size: 0.95rem;
 }
-
 .skip-link:focus {
   transform: translateY(0);
   outline: 3px solid #ffffff;
@@ -121,11 +119,9 @@ header {
   width: 100%;
   padding-top: 0.5rem;
 }
-
 #primary-nav.open {
   display: block;
 }
-
 #primary-nav ul {
   list-style: none;
   display: flex;
@@ -133,7 +129,8 @@ header {
   gap: 0.3rem;
 }
 
-#primary-nav a {
+#primary-nav a,
+.footer-links a {
   display: block;
   padding: 0.45rem 0.9rem;
   border-radius: 8px;
@@ -143,41 +140,42 @@ header {
   text-decoration: none;
 }
 
-#primary-nav a.active {
-  background: #0b3d91;
+#primary-nav a.active,
+#primary-nav a:hover {
   color: #ffffff;
 }
-
+#primary-nav a.active {
+  background: #0b3d91;
+}
 #primary-nav a:hover {
   background: #154a8a;
-  color: #ffffff;
   text-decoration: none;
 }
 
-.cta {
+.cta,
+.cta-outline {
   display: inline-block;
   padding: 0.6rem 1.4rem;
   border: 1px solid #222222;
   border-radius: 4px;
-  background: #222222;
-  color: #ffffff;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
 }
-
+.cta {
+  background: #222222;
+  color: #ffffff;
+}
+.cta-outline {
+  background: #ffffff;
+  color: #222222;
+}
 .cta:hover,
 .cta-primary:hover {
   background: #444444;
   color: #ffffff;
   text-decoration: none;
 }
-
-.cta-outline {
-  background: #ffffff;
-  color: #222222;
-}
-
 .cta-outline:hover {
   background: #f1f1f1;
   color: #222222;
@@ -188,13 +186,11 @@ header {
   margin: 1rem 0 2rem;
   overflow: hidden;
 }
-
 .hero picture,
 .hero img {
   width: 100%;
   display: block;
 }
-
 .hero img {
   max-height: 520px;
   object-fit: cover;
@@ -205,12 +201,10 @@ header {
   background: #f5f5f5;
   text-align: center;
 }
-
 .hero-content h1 {
   font-size: 2rem;
   margin-bottom: 0.25rem;
 }
-
 .hero-content p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
@@ -220,11 +214,9 @@ header {
   text-align: center;
   margin: 2rem 0 1.5rem;
 }
-
 .section-header h2 {
   font-size: 1.8rem;
 }
-
 .section-header p {
   color: #555555;
 }
@@ -246,53 +238,47 @@ header {
   overflow: hidden;
   background: #ffffff;
 }
-
 .farm-card {
   cursor: pointer;
   transition: box-shadow 0.2s ease;
 }
-
 .farm-card:hover {
   box-shadow: 0 4px 12px #00000014;
 }
 
-.farm-card img {
+.farm-card img,
+.breed-card img {
   width: 100%;
-  height: 180px;
   object-fit: cover;
+}
+.farm-card img {
+  height: 180px;
   background: #eeeeee;
+}
+.breed-card img {
+  height: 200px;
 }
 
 .farm-info {
   padding: 1rem;
 }
-
 .farm-info h3 {
   font-size: 1.2rem;
   margin-bottom: 0.25rem;
 }
-
 .farm-info p {
   margin: 0.2rem 0;
   font-size: 0.95rem;
   color: #333333;
 }
-
 .farm-info .breeds {
   font-weight: 600;
   color: #555555;
 }
 
-.breed-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
 .breed-card h3 {
   padding: 0.75rem 1rem 0;
 }
-
 .breed-card p {
   padding: 0 1rem 1rem;
   color: #444444;
@@ -303,7 +289,6 @@ header {
   padding: 2rem 1rem;
   margin: 2rem 0;
 }
-
 .stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -312,20 +297,17 @@ header {
   margin: 0 auto;
   text-align: center;
 }
-
 .stat-item {
   background: #ffffff;
   padding: 1rem;
   border-radius: 8px;
 }
-
 .stat-number {
   display: block;
   font-size: 2.2rem;
   font-weight: 700;
   color: #111111;
 }
-
 .stat-label {
   font-size: 0.9rem;
   color: #555555;
@@ -335,14 +317,11 @@ header {
   display: none;
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
   background: #00000099;
   z-index: 1000;
   justify-content: center;
   align-items: center;
 }
-
 .modal.open {
   display: flex;
 }
@@ -376,7 +355,6 @@ header {
   border-radius: 4px;
   margin-bottom: 0.75rem;
 }
-
 #modal-body h2 {
   margin-top: 0;
 }
@@ -390,7 +368,6 @@ header {
   background: #ffffff;
   box-shadow: 0 8px 24px #0000000d;
 }
-
 .data-card h3 {
   margin-bottom: 1rem;
   font-size: 1.2rem;
@@ -409,7 +386,6 @@ header {
   padding: 0.85rem 0;
   border-bottom: 1px solid #f0f0f0;
 }
-
 .data-row:last-child {
   border-bottom: 0;
 }
@@ -418,7 +394,6 @@ header {
   font-weight: 600;
   color: #111111;
 }
-
 .data-value {
   text-align: right;
   color: #4b5563;
@@ -429,7 +404,6 @@ header {
   text-align: center;
   padding: 2rem 1rem 1rem;
 }
-
 .checkmark {
   display: inline-flex;
   align-items: center;
@@ -442,7 +416,6 @@ header {
   color: #ffffff;
   font-size: 2rem;
 }
-
 .thanks-sub {
   max-width: 620px;
   margin: 0.75rem auto 0;
@@ -487,15 +460,6 @@ footer {
   flex-wrap: wrap;
   gap: 1.5rem;
 }
-
-.footer-links a {
-  padding: 0.45rem 0.9rem;
-  border-radius: 8px;
-  background: #ffffff;
-  color: #b71c1c;
-  font-weight: 700;
-}
-
 .footer-links a:hover {
   background: #fff0f0;
   color: #b71c1c;
@@ -513,7 +477,6 @@ footer {
   text-align: center;
   border-bottom: 1px solid #dddddd;
 }
-
 .page-hero h1 {
   font-size: 2.2rem;
 }
@@ -532,7 +495,6 @@ footer {
   padding-left: 1.5rem;
   margin-top: 0.5rem;
 }
-
 .about-image img,
 .contact-info img {
   border-radius: 8px;
@@ -547,11 +509,9 @@ footer {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
 }
-
 .contact-form label {
   font-weight: 600;
 }
-
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -560,7 +520,6 @@ footer {
   border-radius: 4px;
   font-size: 1rem;
 }
-
 .contact-form button {
   align-self: flex-start;
 }
@@ -570,7 +529,6 @@ footer {
   .breed-cards {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .stats-grid {
     grid-template-columns: repeat(4, 1fr);
   }
