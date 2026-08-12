@@ -26,6 +26,10 @@ a:hover {
   text-decoration: underline;
 }
 
+button {
+  font: inherit;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -35,6 +39,24 @@ a:hover {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  transform: translateY(-100%);
+  background: #111111;
+  color: #ffffff;
+  padding: 0.45rem 0.75rem;
+  border-radius: 4px;
+  z-index: 1000;
+  font-size: 0.95rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 3px solid #ffffff;
 }
 
 header {
@@ -62,50 +84,31 @@ header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  text-decoration: none;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .logo {
-  border-radius: 4px;
   width: 48px;
   height: 48px;
+  border-radius: 4px;
 }
 
 .site-name {
-  margin: 0;
   font-size: 1.15rem;
   font-weight: 700;
   color: #ffffff;
 }
 
 .site-tag {
-  margin: 0.15rem 0 0;
+  margin-top: 0.15rem;
   color: #e6f0ff;
   font-size: 0.95rem;
 }
 
-.skip-link {
-  position: absolute;
-  top: 0.75rem;
-  left: 1rem;
-  transform: translateY(-100%);
-  background: #111111;
-  color: #ffffff;
-  padding: 0.45rem 0.75rem;
-  border-radius: 4px;
-  z-index: 1000;
-  font-size: 0.95rem;
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-  outline: 3px solid #ffffff;
-}
-
 #hamburger {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
   border-radius: 4px;
   padding: 0.3rem 0.6rem;
   cursor: pointer;
@@ -132,9 +135,9 @@ header {
 
 #primary-nav a {
   display: block;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  font-weight: 500;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 700;
   background: #ffffff;
   color: #b71c1c;
   text-decoration: none;
@@ -143,7 +146,6 @@ header {
 #primary-nav a.active {
   background: #0b3d91;
   color: #ffffff;
-  font-weight: 700;
 }
 
 #primary-nav a:hover {
@@ -155,110 +157,30 @@ header {
 .cta {
   display: inline-block;
   padding: 0.6rem 1.4rem;
-  border-radius: 4px;
-  font-weight: 600;
   border: 1px solid #222222;
+  border-radius: 4px;
   background: #222222;
   color: #ffffff;
-  cursor: pointer;
+  font-weight: 600;
   text-align: center;
+  cursor: pointer;
 }
 
-.cta-primary {
-  background: #222222;
-  color: #ffffff;
-  border-color: #222222;
-}
-
+.cta:hover,
 .cta-primary:hover {
   background: #444444;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .cta-outline {
-  background: transparent;
+  background: #ffffff;
   color: #222222;
-  border-color: #222222;
 }
 
 .cta-outline:hover {
   background: #f1f1f1;
-}
-
-.data-card {
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 1.5rem;
-  background: #ffffff;
-  max-width: 900px;
-  margin: 1.5rem auto;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-}
-
-.data-card h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.data-grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.data-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1rem;
-  align-items: center;
-  padding: 0.85rem 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.data-row:last-child {
-  border-bottom: none;
-}
-
-.data-label {
-  font-weight: 600;
-  color: #111111;
-}
-
-.data-value {
-  text-align: right;
-  color: #4b5563;
-  word-break: break-word;
-}
-
-.thanks-header {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-}
-
-.checkmark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 72px;
-  height: 72px;
-  border-radius: 18px;
-  background: #10b981;
-  color: #ffffff;
-  font-size: 2rem;
-  margin: 0 auto 1rem;
-}
-
-.thanks-sub {
-  color: #4b5563;
-  max-width: 620px;
-  margin: 0.75rem auto 0;
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1.5rem auto 3rem;
+  color: #222222;
 }
 
 .hero {
@@ -307,55 +229,7 @@ header {
   color: #555555;
 }
 
-.farm-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.farm-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fafafa;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.farm-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.farm-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  background: #eeeeee;
-}
-
-.farm-card .farm-info {
-  padding: 1rem;
-}
-
-.farm-card .farm-info h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.25rem;
-}
-
-.farm-card .farm-info p {
-  margin: 0.2rem 0;
-  font-size: 0.95rem;
-  color: #333333;
-}
-
-.farm-card .farm-info .breeds {
-  font-weight: 600;
-  color: #555555;
-}
-
+.farm-grid,
 .breed-cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -365,11 +239,48 @@ header {
   padding: 0 1rem;
 }
 
+.farm-card,
 .breed-card {
-  border: 1px solid #eeeeee;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
   background: #ffffff;
+}
+
+.farm-card {
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.farm-card:hover {
+  box-shadow: 0 4px 12px #00000014;
+}
+
+.farm-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #eeeeee;
+}
+
+.farm-info {
+  padding: 1rem;
+}
+
+.farm-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.farm-info p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+.farm-info .breeds {
+  font-weight: 600;
+  color: #555555;
 }
 
 .breed-card img {
@@ -423,11 +334,10 @@ header {
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: #00000099;
   z-index: 1000;
   justify-content: center;
   align-items: center;
@@ -438,30 +348,30 @@ header {
 }
 
 .modal-content {
-  background: #ffffff;
-  max-width: 500px;
-  width: 90%;
-  border-radius: 8px;
-  padding: 1.5rem;
   position: relative;
+  width: 90%;
+  max-width: 500px;
   max-height: 90vh;
+  padding: 1.5rem;
   overflow-y: auto;
+  background: #ffffff;
+  border-radius: 8px;
 }
 
 .modal-close {
   position: absolute;
   top: 0.5rem;
   right: 0.75rem;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
+  border: 0;
+  background: transparent;
   color: #111111;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 #modal-body img {
-  max-height: 250px;
   width: 100%;
+  max-height: 250px;
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 0.75rem;
@@ -471,11 +381,87 @@ header {
   margin-top: 0;
 }
 
+.data-card {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px #0000000d;
+}
+
+.data-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.data-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.data-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.data-row:last-child {
+  border-bottom: 0;
+}
+
+.data-label {
+  font-weight: 600;
+  color: #111111;
+}
+
+.data-value {
+  text-align: right;
+  color: #4b5563;
+  word-break: break-word;
+}
+
+.thanks-header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1rem;
+  border-radius: 18px;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.thanks-sub {
+  max-width: 620px;
+  margin: 0.75rem auto 0;
+  color: #4b5563;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto 3rem;
+}
+
 footer {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
   background: #0b3d91;
   border-top: 1px solid #072a66;
-  padding: 1.5rem 1rem;
-  margin-top: 2rem;
   color: #ffffff;
 }
 
@@ -498,16 +484,16 @@ footer {
 
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
 .footer-links a {
-  background: #ffffff;
-  color: #b71c1c;
   padding: 0.45rem 0.9rem;
   border-radius: 8px;
+  background: #ffffff;
+  color: #b71c1c;
   font-weight: 700;
-  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .footer-links a:hover {
@@ -522,8 +508,8 @@ footer {
 }
 
 .page-hero {
-  background: #f5f5f5;
   padding: 2rem 1rem;
+  background: #f5f5f5;
   text-align: center;
   border-bottom: 1px solid #dddddd;
 }
@@ -556,10 +542,10 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: #fafafa;
   padding: 1.5rem;
-  border-radius: 8px;
+  background: #fafafa;
   border: 1px solid #e0e0e0;
+  border-radius: 8px;
 }
 
 .contact-form label {
@@ -577,4 +563,15 @@ footer {
 
 .contact-form button {
   align-self: flex-start;
+}
+
+@media (min-width: 600px) {
+  .farm-grid,
+  .breed-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
