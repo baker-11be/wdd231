@@ -5,6 +5,7 @@
   --color-link: #1a1a1a;
   --color-black-soft: #111111;
   --color-dark-cta: #222222;
+  --color-cta-hover: #444444;
   --color-gray-dark: #333333;
   --color-gray-medium: #555555;
   --color-gray-444: #444444;
@@ -75,7 +76,7 @@ a:hover {
   border: 0;
 }
 
-/* ---------- HEADER & FOOTER (shared background) ---------- */
+/* ---------- HEADER & FOOTER ---------- */
 header,
 footer {
   background: var(--color-blue);
@@ -121,14 +122,12 @@ footer {
 }
 
 .site-name {
-  margin: 0;
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--color-white);
 }
 
 .site-tag {
-  margin: 0.15rem 0 0;
   color: var(--color-footer-text);
   font-size: 0.95rem;
 }
@@ -175,7 +174,7 @@ footer {
   gap: 0.3rem;
 }
 
-/* ---------- NAV & FOOTER LINKS (shared base) ---------- */
+/* ---------- NAV & FOOTER LINKS (grouped) ---------- */
 #primary-nav a,
 .footer-links a {
   background: var(--color-white);
@@ -228,7 +227,7 @@ footer {
   border-color: var(--color-dark-cta);
 }
 .cta-primary:hover {
-  background: #444444; /* kept as literal because it's a one‑off darkening */
+  background: var(--color-cta-hover);
 }
 .cta-outline {
   background: transparent;
@@ -239,7 +238,7 @@ footer {
   background: var(--color-gray-faint);
 }
 
-/* ---------- CARDS & MODALS (shared shape) ---------- */
+/* ---------- CARDS & MODALS (grouped base) ---------- */
 .data-card,
 .modal-content {
   border-radius: 8px;
@@ -262,9 +261,8 @@ footer {
 }
 
 .data-card h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
   font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 .data-grid {
   display: grid;
@@ -320,7 +318,31 @@ footer {
   margin: 1.5rem auto 3rem;
 }
 
-/* ---------- HERO ---------- */
+/* ---------- HERO & PAGE HERO (grouped background) ---------- */
+.hero-content,
+.page-hero {
+  background: var(--color-gray-light);
+  text-align: center;
+}
+.hero-content {
+  padding: 1.5rem;
+}
+.hero-content h1 {
+  font-size: 2rem;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.page-hero {
+  padding: 2rem 1rem;
+  border-bottom: 1px solid var(--color-border-dark);
+}
+.page-hero h1 {
+  font-size: 2.2rem;
+}
+
 .hero {
   position: relative;
   margin: 1rem 0 2rem;
@@ -336,31 +358,6 @@ footer {
   object-fit: cover;
 }
 
-.hero-content,
-.page-hero {
-  background: var(--color-gray-light);
-  text-align: center;
-}
-.hero-content {
-  padding: 1.5rem;
-}
-.hero-content h1 {
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-}
-.hero-content p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.page-hero {
-  padding: 2rem 1rem;
-  border-bottom: 1px solid var(--color-border-dark);
-}
-.page-hero h1 {
-  font-size: 2.2rem;
-}
-
 /* ---------- SECTION HEADERS ---------- */
 .section-header {
   text-align: center;
@@ -373,16 +370,7 @@ footer {
   color: var(--color-gray-medium);
 }
 
-/* ---------- FARM GRID & CARDS ---------- */
-.farm-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
+/* ---------- FARM & BREED CARDS (grouped) ---------- */
 .farm-card,
 .breed-card {
   border: 1px solid var(--color-gray-ee);
@@ -411,7 +399,6 @@ footer {
   margin-bottom: 0.25rem;
 }
 .farm-card .farm-info p {
-  margin: 0.2rem 0;
   font-size: 0.95rem;
   color: var(--color-gray-dark);
 }
@@ -420,14 +407,6 @@ footer {
   color: var(--color-gray-medium);
 }
 
-.breed-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
 .breed-card {
   background: var(--color-white);
 }
@@ -442,6 +421,17 @@ footer {
 .breed-card p {
   padding: 0 1rem 1rem;
   color: var(--color-gray-444);
+}
+
+/* ---------- GRIDS ---------- */
+.farm-grid,
+.breed-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* ---------- STATS ---------- */
