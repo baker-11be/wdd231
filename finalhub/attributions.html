@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attributions  CattleHub</title>
-    <meta name="description" content="Content attributions and source credits for CattleHub.">
+    <title>Attributions – CattleHub</title>
+    
+    <!-- Meta -->
+    <meta name="description" content="Sources and credits for all content used on CattleHub – images, breed data, logos, and more.">
     <meta name="author" content="CattleHub Team">
-    <meta property="og:title" content="Attributions CattleHub">
-    <meta property="og:description" content="Sources and credits for CattleHub content.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Attributions – CattleHub">
+    <meta property="og:description" content="See where we got our images, breed information, and other resources for Uganda's cattle network.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://baker-11be.github.io/wdd231/finalhub/attributions.html">
+    <meta property="og:image" content="https://baker-11be.github.io/wdd231/finalhub/images/logo.webp">
+    
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
-
+    
     <script type="module" src="scripts/main.js"></script>
 </head>
 <body>
@@ -42,60 +57,54 @@
         </ul>
     </nav>
 
-    <main>
+    <main id="main-content">
         <section class="page-hero">
             <h1>📚 Attributions</h1>
             <p>Giving credit where it's due — sources and inspirations behind CattleHub.</p>
         </section>
 
-        <section class="attributions-content" style="max-width:1000px;margin:2rem auto;padding:0 1.5rem;">
-            <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
-
-                <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:1.5rem;border-left:4px solid #222;">
-                    <h2 style="font-size:1.2rem;margin:0 0 0.5rem 0;">📊 Farm Data</h2>
-                    <p style="margin:0;color:#333;">Farm information compiled from public sources, official farm websites, and Uganda tourism directories.</p>
+        <section class="attributions-content">
+            <div class="attrib-grid">
+                <!-- Card 1 -->
+                <div class="attrib-card">
+                    <h2>📊 Farm Data</h2>
+                    <p>Farm information compiled from public sources, official farm websites, and Uganda tourism directories.</p>
                 </div>
-
-                <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:1.5rem;border-left:4px solid #222;">
-                    <h2 style="font-size:1.2rem;margin:0 0 0.5rem 0;">🐄 Breed Descriptions</h2>
-                    <p style="margin:0;color:#333;">
+                <!-- Card 2 -->
+                <div class="attrib-card">
+                    <h2>🐄 Breed Descriptions</h2>
+                    <p>
                         Adapted from 
-                        <a href="https://www.pexels.com/photo/cattle-grazing-in-scenic-ugandan-landscape-34040646/" target="_blank" rel="noopener" style="font-weight:600;color:#111;text-decoration:underline;">
-                            Western Uganda  Breeds of Livestock
+                        <a href="https://www.pexels.com/photo/cattle-grazing-in-scenic-ugandan-landscape-34040646/" target="_blank" rel="noopener">
+                            Western Uganda – Breeds of Livestock
                         </a>.
                     </p>
                 </div>
-
-                <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:1.5rem;border-left:4px solid #222;">
-                    <h2 style="font-size:1.2rem;margin:0 0 0.5rem 0;">🖼️ Images</h2>
-                    <p style="margin:0;color:#333;">
+                <!-- Card 3 -->
+                <div class="attrib-card">
+                    <h2>🖼️ Images</h2>
+                    <p>
                         Hero, ankole, friesian, jersey, farmer, and market images sourced from 
-                        <a href="https://unsplash.com/" target="_blank" rel="noopener" style="font-weight:600;color:#111;text-decoration:underline;">Unsplash</a> 
+                        <a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a> 
                         and 
-                        <a href="https://www.pexels.com/" target="_blank" rel="noopener" style="font-weight:600;color:#111;text-decoration:underline;">Pexels</a> 
-                        = free for commercial use with no attribution required.
+                        <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a> 
+                        – free for commercial use with no attribution required.
                     </p>
                 </div>
-
-                <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:1.5rem;border-left:4px solid #222;">
-                    <h2 style="font-size:1.2rem;margin:0 0 0.5rem 0;">🎨 Logo &amp; Favicon</h2>
-                    <p style="margin:0;color:#333;">Designed in house by the CattleHub team. All rights reserved.</p>
+                <!-- Card 4 -->
+                <div class="attrib-card">
+                    <h2>🎨 Logo &amp; Favicon</h2>
+                    <p>Designed in‑house by the CattleHub team. All rights reserved.</p>
                 </div>
-
-                <div style="background:#fafafa;border:1px solid #e0e0e0;border-radius:8px;padding:1.5rem;border-left:4px solid #222;">
-                    <h2 style="font-size:1.2rem;margin:0 0 0.5rem 0;">🌐 Other Resources</h2>
-                    <p style="margin:0;color:#333;">
-                        Icons and symbols sourced from standard Unicode sets. 
-                        Farm cost estimates based on publicly available visitor data.
-                    </p>
+                <!-- Card 5 -->
+                <div class="attrib-card">
+                    <h2>🌐 Other Resources</h2>
+                    <p>Icons and symbols sourced from standard Unicode sets. Farm cost estimates based on publicly available visitor data.</p>
                 </div>
-
             </div>
 
-            <div style="margin-top:2.5rem;text-align:center;">
-                <a href="index.html" class="btn btn-primary" style="display:inline-block;">
-                    ← Back to Home
-                </a>
+            <div class="attrib-actions">
+                <a href="index.html" class="cta">← Back to Home</a>
             </div>
         </section>
     </main>

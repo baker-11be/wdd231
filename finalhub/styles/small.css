@@ -532,4 +532,50 @@ footer {
   .stats-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  /* ---- Attributions page ---- */
+.attributions-content {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.attrib-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.attrib-card {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid #222;
+}
+
+.attrib-card h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.attrib-card p {
+  margin: 0;
+  color: #333;
+}
+
+.attrib-card a {
+  font-weight: 600;
+  color: #111;
+  text-decoration: underline;
+}
+
+.attrib-actions {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.attrib-actions .cta {
+  display: inline-block;
+}
 }
